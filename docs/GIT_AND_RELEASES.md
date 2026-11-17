@@ -14,6 +14,20 @@ python scripts/validate_repository.py
 
 For future changes, create a feature branch, commit exported sources and related tests, push the branch and open a pull request. Do not send passwords or personal access tokens through chat.
 
+## Tenant-level Git Access configuration (required)
+
+Verified in this tenant: **Settings → Integrations → Git Access**. The Repository Details table was empty when checked; uploading exported source to GitHub does not populate this table or associate an iFlow with Git.
+
+1. Open Settings → Integrations → Git Access.
+2. Choose Edit, then Add.
+3. Enter a dedicated GitHub PAT directly in SAP and the repository URL above.
+4. Choose Connect, review the populated repository details, then Add and Save.
+5. Return to the package Artifacts tab. Use an artifact's Git Push with the configured repository and branch `cpi-sync` for the initial native integration test. Git Pull requires an existing Git association.
+
+The `cpi-sync` branch exists for this native-layout test; `main` contains the reviewed export layout. Tenant-level configuration and native push still require the dedicated PAT and have not been completed merely by the GitHub CLI upload.
+
+Official instructions: https://help.sap.com/docs/integration-suite/isuite-integrations-and-apis/git-access-ga
+
 ## Native SAP Git Push
 
 Observed in this tenant: package → Artifacts → artifact Actions → **Git Push**. Its dialog requests:
