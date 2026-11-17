@@ -11,5 +11,8 @@
 *.key
 training-secret*
 __pycache__/
+node_modules/
+service-key*.json
+*.service-key.json
 *.pyc
 work/

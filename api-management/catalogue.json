@@ -1,0 +1,207 @@
+[
+  {
+    "id": "TRN_API_001_ProxyBasics",
+    "title": "Proxy, paths and query parameters",
+    "number": 1,
+    "cases": [
+      {
+        "id": "API01_LIST",
+        "path": "/Products?$top=1",
+        "status": 200,
+        "valueCount": 1,
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API01_MULTIPLE",
+        "path": "/Products?$top=3",
+        "status": 200,
+        "valueCount": 3,
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API01_FILTER",
+        "path": "/Products?$filter=ProductID%20eq%201",
+        "status": 200,
+        "productId": 1,
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API01_UNKNOWN",
+        "path": "/NoSuchResource",
+        "status": 404,
+        "lastRecordedVerification": "PASS"
+      }
+    ],
+    "basePath": "/trn/api/001",
+    "backend": "https://services.odata.org/V4/Northwind/Northwind.svc",
+    "readiness": "NATIVE_DEPLOYED_VERIFIED"
+  },
+  {
+    "id": "TRN_API_002_Transform",
+    "title": "Headers and response transformation",
+    "number": 2,
+    "cases": [
+      {
+        "id": "API02_ONE",
+        "path": "/Products?$top=1",
+        "status": 200,
+        "count": 1,
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API02_TWO",
+        "path": "/Products?$top=2",
+        "status": 200,
+        "count": 2,
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API02_EMPTY",
+        "path": "/Products?$filter=ProductID%20eq%20-1",
+        "status": 200,
+        "count": 0,
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API02_HEADER",
+        "path": "/Products?$top=1",
+        "status": 200,
+        "header": "X-Training-Course",
+        "headerValue": "CPI-API-Training",
+        "lastRecordedVerification": "PASS"
+      }
+    ],
+    "basePath": "/trn/api/002",
+    "backend": "https://services.odata.org/V4/Northwind/Northwind.svc",
+    "readiness": "NATIVE_DEPLOYED_VERIFIED"
+  },
+  {
+    "id": "TRN_API_003_APIKey",
+    "title": "API key, product and application",
+    "number": 3,
+    "cases": [
+      {
+        "id": "API03_MISSING",
+        "path": "/Products?$top=1",
+        "status": 401,
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API03_INVALID",
+        "path": "/Products?$top=1",
+        "status": 401,
+        "apiKey": "invalid-training-key",
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API03_VALID",
+        "path": "/Products?$top=1",
+        "status": 200,
+        "keyFromEnvironment": true,
+        "lastRecordedVerification": "NOT_RUN"
+      },
+      {
+        "id": "API03_REVOKED",
+        "path": "/Products?$top=1",
+        "manual": "Revoke the dedicated training app key, then repeat; record the native rejection. Restore only the training app.",
+        "lastRecordedVerification": "NOT_RUN"
+      }
+    ],
+    "basePath": "/trn/api/003",
+    "backend": "https://services.odata.org/V4/Northwind/Northwind.svc",
+    "readiness": "NATIVE_DEPLOYED_WITH_NOT_RUN_KEY_LIFECYCLE_CASES"
+  },
+  {
+    "id": "TRN_API_004_Traffic",
+    "title": "Quota, spike arrest and 429 handling",
+    "number": 4,
+    "cases": [
+      {
+        "id": "API04_FIRST_THREE",
+        "path": "/Products?$top=1",
+        "sequenceStatuses": [
+          200,
+          200,
+          200
+        ],
+        "freshStudent": true,
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API04_FOURTH",
+        "path": "/Products?$top=1",
+        "sequenceStatuses": [
+          200,
+          200,
+          200,
+          429
+        ],
+        "freshStudent": true,
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API04_SEPARATE",
+        "path": "/Products?$top=1",
+        "objective": "A fresh student identifier has an independent quota",
+        "status": 200,
+        "freshStudent": true,
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API04_SPIKE",
+        "path": "/Products?$top=1",
+        "objective": "Send a controlled concurrent burst and observe rate rejection; exact acceptance count depends on scheduling",
+        "manual": "Burst test uses X-Training-Mode: spike; distinguish TRAINING_SPIKE from TRAINING_QUOTA.",
+        "lastRecordedVerification": "PASS"
+      }
+    ],
+    "basePath": "/trn/api/004",
+    "backend": "https://services.odata.org/V4/Northwind/Northwind.svc",
+    "readiness": "NATIVE_DEPLOYED_VERIFIED"
+  },
+  {
+    "id": "TRN_API_005_ValidationFaults",
+    "title": "Input validation and consistent fault responses",
+    "number": 5,
+    "cases": [
+      {
+        "id": "API05_VALID",
+        "path": "/Products?$top=2",
+        "status": 200,
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API05_ZERO",
+        "path": "/Products?$top=0",
+        "status": 400,
+        "errorCode": "INVALID_TOP",
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API05_TEXT",
+        "path": "/Products?$top=abc",
+        "status": 400,
+        "errorCode": "INVALID_TOP",
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API05_LARGE",
+        "path": "/Products?$top=6",
+        "status": 400,
+        "errorCode": "INVALID_TOP",
+        "lastRecordedVerification": "PASS"
+      },
+      {
+        "id": "API05_METHOD",
+        "path": "/Products",
+        "method": "POST",
+        "status": 405,
+        "errorCode": "METHOD_NOT_ALLOWED",
+        "lastRecordedVerification": "PASS"
+      }
+    ],
+    "basePath": "/trn/api/005",
+    "backend": "https://services.odata.org/V4/Northwind/Northwind.svc",
+    "readiness": "NATIVE_DEPLOYED_VERIFIED"
+  }
+]

@@ -1,0 +1,1 @@
+<VerifyAPIKey xmlns="http://www.sap.com/apimgmt" async="false" continueOnError="false" enabled="true"><APIKey ref="request.header.X-API-Key"/></VerifyAPIKey>

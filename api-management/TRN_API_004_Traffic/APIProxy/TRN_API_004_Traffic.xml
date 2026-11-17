@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy xmlns="http://www.sap.com/apimgmt">
+    <name>TRN_API_004_Traffic</name>
+    <title>Training 004 - Quota, spike arrest and 429 handling</title>
+    <description>Synthetic student training lab; see API Management and Mesh Handbook.</description>
+    <isVersioned>false</isVersioned>
+    <service_code>REST</service_code>
+    
+    <APIState>Active</APIState>
+    <life_cycle>
+        <changed_by>kandulasaikalyan@gmail.com</changed_by>
+        <created_by>kandulasaikalyan@gmail.com</created_by>
+    </life_cycle>
+    <proxyEndPoints>
+        <proxyEndPoint>
+            <proxyEndPointName>default</proxyEndPointName>
+            <apiResourceName>SWAGGER_JSON</apiResourceName>
+        </proxyEndPoint>
+    </proxyEndPoints>
+    <targetEndPoints>
+        <targetEndPoint>default</targetEndPoint>
+    </targetEndPoints>
+    <policies>
+        <policy type="AssignMessage">AcceptJson</policy>
+        <policy type="RaiseFault">QuotaExceeded</policy>
+        <policy type="Quota">TrainingQuota</policy>
+        <policy type="RaiseFault">SpikeExceeded</policy>
+        <policy type="SpikeArrest">TrainingSpikeArrest</policy>
+    </policies>
+    <fileResources/>
+</APIProxy>

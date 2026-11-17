@@ -1,0 +1,8 @@
+{
+  "specversion": "1.0",
+  "id": "training-order-1001-created-v1",
+  "source": "urn:training:orders",
+  "type": "com.training.order.created.v1",
+  "datacontenttype": "application/json",
+  "data": {"orderId": "SO1001", "customerId": "TRAINING01", "amount": 250, "currency": "INR"}
+}

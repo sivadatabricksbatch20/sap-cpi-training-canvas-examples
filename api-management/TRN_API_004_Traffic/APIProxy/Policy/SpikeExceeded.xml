@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RaiseFault xmlns="http://www.sap.com/apimgmt" continueOnError="false" enabled="true" async="false">
+  <FaultResponse>
+    <Set>
+      <Payload contentType="application/json">{"error": {"code": "TRAINING_SPIKE", "message": "Burst rate exceeded"}}</Payload>
+      <StatusCode>429</StatusCode>
+      <ReasonPhrase>Burst rate exceeded</ReasonPhrase>
+    </Set>
+  </FaultResponse>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>
+

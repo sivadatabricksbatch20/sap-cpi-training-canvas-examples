@@ -1,0 +1,1 @@
+<Quota xmlns="http://www.sap.com/apimgmt" async="false" continueOnError="true" enabled="true" type="rollingwindow"><Identifier ref="request.header.X-Training-Student"/><Allow count="3"/><Interval>1</Interval><Distributed>true</Distributed><Synchronous>true</Synchronous><TimeUnit>minute</TimeUnit></Quota>

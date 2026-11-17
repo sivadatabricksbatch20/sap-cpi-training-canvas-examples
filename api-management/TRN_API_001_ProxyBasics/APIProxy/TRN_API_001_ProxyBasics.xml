@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy xmlns="http://www.sap.com/apimgmt">
+    <name>TRN_API_001_ProxyBasics</name>
+    <title>Training 001 - Proxy, paths and query parameters</title>
+    <description>Synthetic student training lab; see API Management and Mesh Handbook.</description>
+    <isVersioned>false</isVersioned>
+    <service_code>REST</service_code>
+    
+    <APIState>Active</APIState>
+    <life_cycle>
+        <changed_by>kandulasaikalyan@gmail.com</changed_by>
+        <created_by>kandulasaikalyan@gmail.com</created_by>
+    </life_cycle>
+    <proxyEndPoints>
+        <proxyEndPoint>
+            <proxyEndPointName>default</proxyEndPointName>
+            <apiResourceName>SWAGGER_JSON</apiResourceName>
+        </proxyEndPoint>
+    </proxyEndPoints>
+    <targetEndPoints>
+        <targetEndPoint>default</targetEndPoint>
+    </targetEndPoints>
+    <policies>
+        <policy type="AssignMessage">AcceptJson</policy>
+    </policies>
+    <fileResources/>
+</APIProxy>

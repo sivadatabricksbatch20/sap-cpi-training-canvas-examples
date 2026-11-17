@@ -13,6 +13,12 @@ Practical SAP Cloud Integration lessons for `CPITrainingCanvasExamples`.
 
 Start with the [Complete Canvas Lab Handbook](docs/Complete_Canvas_Lab_Handbook.md) ([Word document](docs/Complete_Canvas_Lab_Handbook.docx)): flow tabs, component controls, scenarios, inputs, outputs, Groovy debugging, dependencies and DEV → UAT → PROD practices.
 
+## API Management and mesh extension
+
+Five coded, deployed Classic API Management proxies extend the course beyond iFlows: 19 native scenario passes, with two key-lifecycle cases documented but not run at the user’s request. See the [API Management and Mesh Guide](docs/API_MANAGEMENT_AND_MESH_GUIDE.md), [API labs](api-management/README.md), [SAP Event Mesh exercises](event-mesh/README.md) and [advanced event mesh exercises](advanced-event-mesh/README.md).
+
+The ten mesh exercises include clients and explicitly labelled local contract/protocol tests. Native mesh runs require services that this trial does not provide. Mesh exercises are separate from the 315 CPI scenarios; do not count prepared templates as native broker passes.
+
 ## Run a lesson
 
 1. Import into an authorized tenant or open the existing package. Provision training security aliases separately; keys and credentials are excluded from Git.

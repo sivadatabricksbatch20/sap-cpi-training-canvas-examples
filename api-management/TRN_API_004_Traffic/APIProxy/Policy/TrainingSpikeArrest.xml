@@ -1,0 +1,1 @@
+<SpikeArrest xmlns="http://www.sap.com/apimgmt" async="false" continueOnError="true" enabled="true"><Identifier ref="request.header.X-Training-Student"/><Rate>5ps</Rate></SpikeArrest>

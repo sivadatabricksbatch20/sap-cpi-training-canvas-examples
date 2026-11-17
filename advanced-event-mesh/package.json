@@ -1,0 +1,8 @@
+{
+  "name": "cpi-training-advanced-event-mesh",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AMQP 1.0 publish, consume and acknowledgement labs for an available advanced event mesh broker",
+  "dependencies": {"rhea": "3.0.5"},
+  "scripts": {"test": "node --check client.cjs"}
+}

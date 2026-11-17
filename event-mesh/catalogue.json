@@ -1,0 +1,42 @@
+[
+  {
+    "id": "EM01",
+    "topic": "Publish and consume",
+    "exercise": "Publish SO1001 to a topic subscribed by q.orders; consume with QoS 1, then acknowledge.",
+    "expected": "One matching event is consumed; the acknowledged event is removed.",
+    "readiness": "BLOCKED_SERVICE_UNAVAILABLE",
+    "verification": "HTTP client contract tests only; no SAP broker available"
+  },
+  {
+    "id": "EM02",
+    "topic": "Fan-out",
+    "exercise": "Create q.billing and q.shipping with the same topic subscription; publish one event.",
+    "expected": "Each queue receives its own copy; acknowledging one does not remove the other.",
+    "readiness": "BLOCKED_SERVICE_UNAVAILABLE",
+    "verification": "HTTP client contract tests only; no SAP broker available"
+  },
+  {
+    "id": "EM03",
+    "topic": "Competing consumers",
+    "exercise": "Run two consumers against one queue and publish ten distinct events.",
+    "expected": "Ten unique IDs processed in total; distribution between consumers is not guaranteed equal.",
+    "readiness": "BLOCKED_SERVICE_UNAVAILABLE",
+    "verification": "HTTP client contract tests only; no SAP broker available"
+  },
+  {
+    "id": "EM04",
+    "topic": "Offline durability and duplicates",
+    "exercise": "Publish while the consumer is stopped, then reconnect. Re-publish the same application event ID.",
+    "expected": "Durable queue retains the offline message; consumer deduplicates using event ID. Transport acknowledgement alone does not make business processing exactly-once.",
+    "readiness": "BLOCKED_SERVICE_UNAVAILABLE",
+    "verification": "HTTP client contract tests only; no SAP broker available"
+  },
+  {
+    "id": "EM05",
+    "topic": "Retry and dead-letter path",
+    "exercise": "Configure the product-supported retry/redelivery and dead-letter settings; force a handler failure.",
+    "expected": "Record actual retry count and dead-letter result. Do not assume another broker\u2019s failure semantics.",
+    "readiness": "BLOCKED_SERVICE_UNAVAILABLE",
+    "verification": "HTTP client contract tests only; no SAP broker available"
+  }
+]
