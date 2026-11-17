@@ -1,0 +1,582 @@
+{
+  "packageId": "CPITrainingCanvasExamples",
+  "snapshotDate": "2026-11-17",
+  "artifacts": [
+    {
+      "id": "IF_TRN_001_Hello_World",
+      "name": "TRN 001 - Hello World",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_001_Hello_World",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "751b506e93c2a8eacc3165b552c29b2eeca11c5292d7ec69f9e0bbb7195169f4",
+      "expected": "Hello, student!"
+    },
+    {
+      "id": "IF_TRN_002_JSON_to_XML",
+      "name": "TRN 002 - JSON to XML",
+      "version": "2.0.1",
+      "directory": "iflows/IF_TRN_002_JSON_to_XML",
+      "readiness": "REVIEW_PILOT_VERIFIED",
+      "exportSha256": "e697db24c7d1b960b618a24e43aadd6dfb862550385dc89797e3189101e26d2f",
+      "expected": "JSON assertion report: PASS, with native component output and byte/type details"
+    },
+    {
+      "id": "IF_TRN_003_XML_to_JSON",
+      "name": "TRN 003 - XML to JSON",
+      "version": "2.0.1",
+      "directory": "iflows/IF_TRN_003_XML_to_JSON",
+      "readiness": "REVIEW_PILOT_VERIFIED",
+      "exportSha256": "eb2dabc8abdbd44630e3d8dca1f473696d2e5aef342d368b1feea6d990536765",
+      "expected": "JSON assertion report: PASS, with native component output and byte/type details"
+    },
+    {
+      "id": "IF_TRN_004_XPath_Filter",
+      "name": "TRN 004 - XPath Filter",
+      "version": "2.0.1",
+      "directory": "iflows/IF_TRN_004_XPath_Filter",
+      "readiness": "REVIEW_PILOT_VERIFIED",
+      "exportSha256": "d2f74cd4b885fb4add1211b8091ca6cc6cbd8bf688928c0c7e3a7177dbcf0cc6",
+      "expected": "JSON assertion report: PASS, with native component output and byte/type details"
+    },
+    {
+      "id": "IF_TRN_005_Base64_Encode",
+      "name": "TRN 005 - Base64 Encode",
+      "version": "2.0.1",
+      "directory": "iflows/IF_TRN_005_Base64_Encode",
+      "readiness": "REVIEW_PILOT_VERIFIED",
+      "exportSha256": "828be0e69b5f82d090dd9310a40165a5a431f6e8c08f32ca61e80903e440b7ad",
+      "expected": "JSON assertion report: PASS, with native component output and byte/type details"
+    },
+    {
+      "id": "IF_TRN_006_Base64_Decode",
+      "name": "TRN 006 - Base64 Decode",
+      "version": "2.0.1",
+      "directory": "iflows/IF_TRN_006_Base64_Decode",
+      "readiness": "REVIEW_PILOT_VERIFIED",
+      "exportSha256": "11849c374bec018eda1c23da7127723c3f76a3cf202f390a01c502745153c7ff",
+      "expected": "JSON assertion report: PASS, with native component output and byte/type details"
+    },
+    {
+      "id": "IF_TRN_007_GZIP_Roundtrip",
+      "name": "TRN 007 - GZIP Roundtrip",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_007_GZIP_Roundtrip",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "cc604ae79209023cd5ec5c42e1d9fbba14f79ca226aeef9035e7e1d6a7ae973f",
+      "expected": "Hello, compression!"
+    },
+    {
+      "id": "IF_TRN_008_ZIP_Roundtrip",
+      "name": "TRN 008 - ZIP Roundtrip",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_008_ZIP_Roundtrip",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "99c965d961f49082611adfdbe35e3bbaeccb0069f425739edeab0e48b9102df4",
+      "expected": "Hello, archive!"
+    },
+    {
+      "id": "IF_TRN_009_XML_Declaration",
+      "name": "TRN 009 - XML Declaration",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_009_XML_Declaration",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "e1008e40f19bf40b6387e36339d96ccf052505e7c666945a502ee5e8db3d653c",
+      "expected": "<student><name>Anu</name></student>"
+    },
+    {
+      "id": "IF_TRN_010_XML_to_CSV",
+      "name": "TRN 010 - XML to CSV",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_010_XML_to_CSV",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "27a851f412f0aed1d8d3411507007830655cce494768d92b96456ea6d3834dc1",
+      "expected": "1,Anu\n2,Ravi"
+    },
+    {
+      "id": "IF_TRN_011_XML_JSON_Roundtrip",
+      "name": "TRN 011 - XML JSON Roundtrip",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_011_XML_JSON_Roundtrip",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "e63811afd26bb0afda24581f608373b27f053c27a609e3e98248725e5f664f93",
+      "expected": "<customer><name>Anu</name></customer>"
+    },
+    {
+      "id": "IF_TRN_012_Base64_Roundtrip",
+      "name": "TRN 012 - Base64 Roundtrip",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_012_Base64_Roundtrip",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "d5dcf7329c78ea8646e835c55a871b52832cd80563c1596540614a9977ec2aab",
+      "expected": "Welcome, student!"
+    },
+    {
+      "id": "IF_TRN_013_SHA256_Digest",
+      "name": "TRN 013 - SHA256 Digest",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_013_SHA256_Digest",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "85dab9e5126aec7c2232941cfefae53ef78fb5a03e414ea3e22c20dda4189229",
+      "expected": "Body remains Hello; header SAPMessageDigest holds SHA-256 digest; compare with independently calculated digest"
+    },
+    {
+      "id": "IF_TRN_014_General_Splitter_Gather",
+      "name": "TRN 014 - General Splitter Gather",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_014_General_Splitter_Gather",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "996f54c15bcc25e8ecea3bc02993b26d3af994dbce6fb93d46f833f5590943a9",
+      "expected": "Combined XML contains two processed order messages in the SAP multimap wrapper; general splitter retains enclosing orders element"
+    },
+    {
+      "id": "IF_TRN_015_Iterating_Splitter_Gather",
+      "name": "TRN 015 - Iterating Splitter Gather",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_015_Iterating_Splitter_Gather",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "8595bc8cd4fd4ad823826e7f82a6a7c63e128bd944a46ce79e0f10ce9a5a2160",
+      "expected": "Combined XML contains two processed order messages; each iterated message is an order element without its original orders envelope"
+    },
+    {
+      "id": "IF_TRN_016_Line_Splitter_Gather",
+      "name": "TRN 016 - Line Splitter Gather",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_016_Line_Splitter_Gather",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "d36a0484a460cab18ca19f8fab6552edbb405a058ad627f7a00d41706b44055d",
+      "expected": "Both names appear once in the gathered text, in source order"
+    },
+    {
+      "id": "IF_TRN_017_Data_Store_Roundtrip",
+      "name": "TRN 017 - Data Store Roundtrip",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_017_Data_Store_Roundtrip",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "a90b43a0397f50304afdb5371f30559ea3f41c7bd5f9ff48a0adaf5bdab9aa44",
+      "expected": "<student><id>1001</id><name>Anu</name></student>; own local training entry is deleted at end"
+    },
+    {
+      "id": "IF_TRN_018_Data_Store_Missing_Entry",
+      "name": "TRN 018 - Data Store Missing Entry",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_018_Data_Store_Missing_Entry",
+      "readiness": "BASELINE_EXPECTED_REJECTION",
+      "exportSha256": "a1e57399a9005c6ea098e2cd8861fa96a75531437334bea9d8adcbed4fe557eb",
+      "expected": "Intentional negative case: missing-entry exception; explain Failed status in Monitor"
+    },
+    {
+      "id": "IF_TRN_019_Persist_Message",
+      "name": "TRN 019 - Persist Message",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_019_Persist_Message",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "91403e148d6cebd93eb7920ce01d3c7077fd0061bd1dc0c383891e9bf1dc0585",
+      "expected": "<student><name>Anu</name></student>; inspect stored payload for TRN019PERSISTSTUDENT"
+    },
+    {
+      "id": "IF_TRN_020_MIME_Roundtrip",
+      "name": "TRN 020 - MIME Roundtrip",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_020_MIME_Roundtrip",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "526213e2c81efcee615c456a4560755ac530de3da99e472b4d0cabff93e97cd2",
+      "expected": "Hello, MIME!"
+    },
+    {
+      "id": "IF_TRN_021_Timer_Hello",
+      "name": "TRN 021 - Timer Hello",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_021_Timer_Hello",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "3c8cb37a70c5812073368a36525bdddd96a3a9ee90df5c3fb7b2f90dba9d746f",
+      "expected": "Hello, timer!"
+    },
+    {
+      "id": "IF_TRN_022_Local_Process_Call",
+      "name": "TRN 022 - Local Process Call",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_022_Local_Process_Call",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "b1295c94b404ff2df92a5996c4a56bdb36bfaacc25995ce8413bd82ba41c3abc",
+      "expected": "Hello from local process"
+    },
+    {
+      "id": "IF_TRN_023_Router",
+      "name": "TRN 023 - Router",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_023_Router",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "71df28b5f889143e675c5d139685bf7b3035997b6d5618e385e8e1ebd7b5685d",
+      "expected": "PRIORITY; amount 500 => STANDARD"
+    },
+    {
+      "id": "IF_TRN_024_Parallel_Multicast",
+      "name": "TRN 024 - Parallel Multicast",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_024_Parallel_Multicast",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "1d44d63afc4ff151a4fd6d85e7d8dbcb37f73d5e34ec79690097eb3a4d486361",
+      "expected": "XML containing result A and result B once each"
+    },
+    {
+      "id": "IF_TRN_025_Groovy_Uppercase",
+      "name": "TRN 025 - Groovy Uppercase",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_025_Groovy_Uppercase",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "10aade662d5fb8529514cea6e7c204c43a052c251436914408aebb1246ccbe52",
+      "expected": "HELLO, STUDENT!"
+    },
+    {
+      "id": "IF_TRN_026_JavaScript_Uppercase",
+      "name": "TRN 026 - JavaScript Uppercase",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_026_JavaScript_Uppercase",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "6b2c669d4e505fc7ff636da3a608e5b51602b7b34d016d60efeb506d5d41b03b",
+      "expected": "HELLO, STUDENT!"
+    },
+    {
+      "id": "IF_TRN_027_XSLT_Mapping",
+      "name": "TRN 027 - XSLT Mapping",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_027_XSLT_Mapping",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "d58ef042639902078b61dea7a88d8bd80bea71e6db88707cbedb38badddfe72d",
+      "expected": "<greeting>Hello, Anu!</greeting>"
+    },
+    {
+      "id": "IF_TRN_028_XML_Validator_Valid",
+      "name": "TRN 028 - XML Validator Valid",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_028_XML_Validator_Valid",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "7a90005c69bd29d3c884d98e3e54086e060b22d98aef11fd56b73e9d1e8dc646",
+      "expected": "Same valid student XML"
+    },
+    {
+      "id": "IF_TRN_029_XML_Validator_Invalid",
+      "name": "TRN 029 - XML Validator Invalid",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_029_XML_Validator_Invalid",
+      "readiness": "BASELINE_EXPECTED_REJECTION",
+      "exportSha256": "a470dfdb478bfebfef00b785ecc68ec2976bf929c43b5cd666a70c56850c8470",
+      "expected": "Intentional failure: id ABC is not a positive integer"
+    },
+    {
+      "id": "IF_TRN_030_CSV_to_XML",
+      "name": "TRN 030 - CSV to XML",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_030_CSV_to_XML",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "84211a4064783a99d6238c93d955db56709d533bec7bd9d7aba3df0a0a74b0d0",
+      "expected": "students XML containing ids 1,2 and names Anu,Ravi"
+    },
+    {
+      "id": "IF_TRN_031_Sequential_Multicast",
+      "name": "TRN 031 - Sequential Multicast",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_031_Sequential_Multicast",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "1e00317615980e0aab79ec9ebccdd36d0eaca8ecb6fd41c1cd8e06900f319576",
+      "expected": "Combined XML results A then B"
+    },
+    {
+      "id": "IF_TRN_032_Looping_Process_Call",
+      "name": "TRN 032 - Looping Process Call",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_032_Looping_Process_Call",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "9c3556782e826747875dd05694996e826325029a3f7095cbfa2c42e9ab8f1551",
+      "expected": "<counter>1</counter>"
+    },
+    {
+      "id": "IF_TRN_033_Loop_Maximum_Guard",
+      "name": "TRN 033 - Loop Maximum Guard",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_033_Loop_Maximum_Guard",
+      "readiness": "BASELINE_EXPECTED_REJECTION",
+      "exportSha256": "900ef3115ab6fd312568339f7ec64473aee3611129f1a73fea74825f1b8a37ef",
+      "expected": "Intentional failure after 3 iterations: condition stays true"
+    },
+    {
+      "id": "IF_TRN_034_Idempotent_Process_Call",
+      "name": "TRN 034 - Idempotent Process Call",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_034_Idempotent_Process_Call",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "e6dfce79aa3b192f860d1957dd82489d80aee1231af4665b8ba6c4f6c4538968",
+      "expected": "First: Hello from local process. Duplicate: Hello from main."
+    },
+    {
+      "id": "IF_TRN_035_Exception_Handled",
+      "name": "TRN 035 - Exception Handled",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_035_Exception_Handled",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "4f6d34a1804c6b6326aed9fc43c6382267179e1b564106d59b3eff5fb5d8acc7",
+      "expected": "Handled validation error"
+    },
+    {
+      "id": "IF_TRN_036_Exception_Rethrown",
+      "name": "TRN 036 - Exception Rethrown",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_036_Exception_Rethrown",
+      "readiness": "BASELINE_EXPECTED_REJECTION",
+      "exportSha256": "aa58735a6afd40bba548bcb0423fd0acf973abf23e4f3e8e49a6148c598f742d",
+      "expected": "Failed after error handler executes; TRN_Result=Handled validation error"
+    },
+    {
+      "id": "IF_TRN_037_Error_End_Event",
+      "name": "TRN 037 - Error End Event",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_037_Error_End_Event",
+      "readiness": "BASELINE_EXPECTED_REJECTION",
+      "exportSha256": "56eb3f887077f73ee8e45931a76149863d288fef2b525219cf5692af00dc7674",
+      "expected": "Intentional Failed message at Error End Event"
+    },
+    {
+      "id": "IF_TRN_038_Escalation_End_Event",
+      "name": "TRN 038 - Escalation End Event",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_038_Escalation_End_Event",
+      "readiness": "BASELINE_EXPECTED_ESCALATION",
+      "exportSha256": "faeb5a2afc2d18bba89ecb582c1a8d58fd3b4d5e990a503a81db80456b093a36",
+      "expected": "Intentional Escalated message; category ReceiverNotFound"
+    },
+    {
+      "id": "IF_TRN_039_Terminate_Message",
+      "name": "TRN 039 - Terminate Message",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_039_Terminate_Message",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "a837bf9a97834127d9562964ea5ffbdddbb050a4c0b771ac44337f8f0d59201c",
+      "expected": "Terminate processing of the message"
+    },
+    {
+      "id": "IF_TRN_040_Plain_End_Event",
+      "name": "TRN 040 - Plain End Event",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_040_Plain_End_Event",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "be2ec83ab00d0c67e26ecb28458596fa3a6959fe3a3a6fb04399c102c39a8d72",
+      "expected": "Completed with body Hello, end event!"
+    },
+    {
+      "id": "IF_TRN_041_ID_Mapping",
+      "name": "TRN 041 - ID Mapping",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_041_ID_Mapping",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "38243cdc3f17a8b9a4c2c15d8fc81a3038ac8827e0c5572c0bfc3b50afa2402f",
+      "expected": "Stable target ID for repeated source and context"
+    },
+    {
+      "id": "IF_TRN_042_Write_Variables",
+      "name": "TRN 042 - Write Variables",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_042_Write_Variables",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "8dd004a72a5c5f0720bfcf51919a615a7a5e8cf3c918cf2d9e4e95d1b1083270",
+      "expected": "Hello from a persisted variable"
+    },
+    {
+      "id": "IF_TRN_043_Data_Store_Select",
+      "name": "TRN 043 - Data Store Select",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_043_Data_Store_Select",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "5f4d0460be2acc3586f0c9f365cb0b1a65e490b9185b8adf8b8f255fe90319a1",
+      "expected": "Both records One and Two selected; own entries removed after completion"
+    },
+    {
+      "id": "IF_TRN_044_ZIP_Splitter",
+      "name": "TRN 044 - ZIP Splitter",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_044_ZIP_Splitter",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "f67bb32c5299f3bdf02f670789aab3652233c0480c26ce1e2ed1c2851c0bc69f",
+      "expected": "AB"
+    },
+    {
+      "id": "IF_TRN_045_Tar_Splitter",
+      "name": "TRN 045 - Tar Splitter",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_045_Tar_Splitter",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "4fafb44abe19ba953c72d17a311d576b22ed033d35846d16d51bf694f8c5fa6d",
+      "expected": "AB"
+    },
+    {
+      "id": "IF_TRN_046_Headers_Properties",
+      "name": "TRN 046 - Headers Properties",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_046_Headers_Properties",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "e7422490710443d987951631b5204322da43c7cb67b778ac84754149165d9f55",
+      "expected": "Hello Anu, welcome to CPI!"
+    },
+    {
+      "id": "IF_TRN_047_XPath_Property",
+      "name": "TRN 047 - XPath Property",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_047_XPath_Property",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "f055673737cba19e0c120fb5839a7a152408a18e84afdcf9349275eb73b8afb2",
+      "expected": "Hello Anu!"
+    },
+    {
+      "id": "IF_TRN_048_Request_Reply",
+      "name": "TRN 048 - Request Reply",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_048_Request_Reply",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "51c81096a48a33c1655cf532c9b727e78208342dbfd065b51bff8aec2a1c984f",
+      "expected": "Sales department reply"
+    },
+    {
+      "id": "IF_TRN_049_Local_Mock_Receiver",
+      "name": "TRN 049 - Local Mock Receiver",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_049_Local_Mock_Receiver",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "8fa490b320a1315adf88eccc5cbfb6d16aaa37a85ff48016b694ad1c947df82c",
+      "expected": "<lookup><department><id>1</id><name>Sales</name></department></lookup>"
+    },
+    {
+      "id": "IF_TRN_050_Send_Local_Message",
+      "name": "TRN 050 - Send Local Message",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_050_Send_Local_Message",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "f491734346c1a1b588cbae138d75d5b9d036677fbc0351817bab64dcf5a6781b",
+      "expected": "Original student XML; receiver is invoked without using its reply"
+    },
+    {
+      "id": "IF_TRN_051_Content_Enricher",
+      "name": "TRN 051 - Content Enricher",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_051_Content_Enricher",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "4783f0714d0a7ff2236687bdbfc0d2de5964837f1ff24e37c3392aacdbb1cf71",
+      "expected": "Original student Anu with added department Sales"
+    },
+    {
+      "id": "IF_TRN_053_Aggregator",
+      "name": "TRN 053 - Aggregator",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_053_Aggregator",
+      "readiness": "NOT_READY_RUNTIME_ERROR",
+      "exportSha256": "c4dfb72b3f7118810155090095da264e5d3b01cb98fd068c793b5703ebfb6e4b",
+      "expected": "One combined XML document with sequence 1 then 2"
+    },
+    {
+      "id": "IF_TRN_054_EDI_Extractor",
+      "name": "TRN 054 - EDI Extractor",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_054_EDI_Extractor",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "973cbb879cbee81b4f112141723d62e5b1e182e40602a3439b6b09a8f857c2f2",
+      "expected": "EDIFACT remains readable and extracted envelope/message metadata is available in headers"
+    },
+    {
+      "id": "IF_TRN_055_EDI_Splitter",
+      "name": "TRN 055 - EDI Splitter",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_055_EDI_Splitter",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "5825d694a6afa0dadaa8e7c25a55a869eb959ac65fb7edd6951ed7ff4fc35695",
+      "expected": "Two ORDERS messages containing PO123 and PO124"
+    },
+    {
+      "id": "IF_TRN_056_EDI_XML_Roundtrip",
+      "name": "TRN 056 - EDI XML Roundtrip",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_056_EDI_XML_Roundtrip",
+      "readiness": "PREREQUISITE_REQUIRED",
+      "exportSha256": "d0eab63ef9c3370c7a0487bbf9288cf5b6c692da45e80e21aba7006edba9b618",
+      "expected": "EDIFACT ORDERS PO123 is preserved through XML conversion; a matching EDI schema may be required by the tenant"
+    },
+    {
+      "id": "IF_TRN_057_Aggregator_Trigger",
+      "name": "TRN 057 - Aggregator Trigger",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_057_Aggregator_Trigger",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "b51ae4f5f9122ac1510382a34bcf416ad3109271b6c95d5e4156348be32fbc31",
+      "expected": "Aggregator 053 completes with TRN_Sequences=1,2"
+    },
+    {
+      "id": "IF_TRN_058_Message_Mapping",
+      "name": "TRN 058 - Message Mapping",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_058_Message_Mapping",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "974893983dfcb2c5f2ad98fe725253dff8083416bed86209582b9458dbcd30f9",
+      "expected": "customer/fullName=Anu"
+    },
+    {
+      "id": "IF_TRN_059_Externalized_Parameter",
+      "name": "TRN 059 - Externalized Parameter",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_059_Externalized_Parameter",
+      "readiness": "PREREQUISITE_REQUIRED",
+      "exportSha256": "2f87d2659512670786bbfc55b731576ae148146207ecec23930ced3dd380ad38",
+      "expected": "Hello, external parameter!"
+    },
+    {
+      "id": "IF_TRN_060_CMS_Encrypt_Decrypt",
+      "name": "TRN 060 - CMS Encrypt Decrypt",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_060_CMS_Encrypt_Decrypt",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "a37a9807f7a1a33b9a2a8d7ce0ed8e607d9af4bf2cce3deb16ce52c93f0fd73a",
+      "expected": "Original body after encryption and decryption"
+    },
+    {
+      "id": "IF_TRN_061_CMS_Sign_Verify",
+      "name": "TRN 061 - CMS Sign Verify",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_061_CMS_Sign_Verify",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "2cfedfbed912b7da221f73f6ead29204468c25a4799e550bb497a9de2001ee26",
+      "expected": "Original body; verification succeeds. Tampering must fail."
+    },
+    {
+      "id": "IF_TRN_062_Simple_Signer",
+      "name": "TRN 062 - Simple Signer",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_062_Simple_Signer",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "dbc96de7ce174781b01cc7efc917189cb441c59a419ffee49d063b7564735fec",
+      "expected": "Body unchanged; signature appears in SAPSimpleSignatureValue header"
+    },
+    {
+      "id": "IF_TRN_063_XML_Sign_Verify",
+      "name": "TRN 063 - XML Sign Verify",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_063_XML_Sign_Verify",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "82931af9b592a90c8f0c7eb6caa70c9410115f6857443e8dc2c2fcbf9ef3e6f4",
+      "expected": "XML signature verifies and original student XML is extracted"
+    },
+    {
+      "id": "IF_TRN_064_PGP_Encrypt_Decrypt",
+      "name": "TRN 064 - PGP Encrypt Decrypt",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_064_PGP_Encrypt_Decrypt",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "e4f09065fd94cd25673ddfb61e4f04ee79b249c628dbfb9098478beca20400d5",
+      "expected": "Original body after PGP encryption and decryption"
+    },
+    {
+      "id": "IF_TRN_065_CMS_Signature_Splitter",
+      "name": "TRN 065 - CMS Signature Splitter",
+      "version": "1.0.2",
+      "directory": "iflows/IF_TRN_065_CMS_Signature_Splitter",
+      "readiness": "BASELINE_RUNTIME_COMPLETED",
+      "exportSha256": "1eec1d68cc10b3bd6ebf41b577f1de83cfcf977b87e472d893187a01abf17898",
+      "expected": "Content and signature data are separated; inspect the splitter XML wrapper"
+    }
+  ]
+}

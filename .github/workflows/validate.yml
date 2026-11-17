@@ -1,0 +1,14 @@
+name: Validate CPI training sources
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate exported artifacts and sanitized evidence
+        run: python3 scripts/validate_repository.py

@@ -1,0 +1,13 @@
+import com.sap.gateway.ip.core.customdev.util.Message
+import groovy.json.JsonSlurper
+Message processData(Message message) {
+ def catalog=new JsonSlurper().parseText('''[{"id": "BE01", "variant": "standard", "input": "Hello", "objective": "Plain text", "base64Of": "Hello", "expectedBase64": "SGVsbG8="}, {"id": "BE02", "variant": "standard", "input": "{\\"orderId\\":\\"SO1001\\",\\"amount\\":250}", "objective": "Encode a business JSON payload", "base64Of": "{\\"orderId\\":\\"SO1001\\",\\"amount\\":250}", "expectedBase64": "eyJvcmRlcklkIjoiU08xMDAxIiwiYW1vdW50IjoyNTB9"}, {"id": "BE03", "variant": "standard", "input": "<order id=\\"SO1001\\">A &amp; B</order>", "objective": "Encode XML exactly, without XML parsing", "base64Of": "<order id=\\"SO1001\\">A &amp; B</order>", "expectedBase64": "PG9yZGVyIGlkPSJTTzEwMDEiPkEgJmFtcDsgQjwvb3JkZXI+"}, {"id": "BE04", "variant": "standard", "input": "José సాయి 😀", "objective": "UTF-8 Unicode bytes", "base64Of": "José సాయి 😀", "expectedBase64": "Sm9zw6kg4LC44LC+4LCv4LC/IPCfmIA="}, {"id": "BE05", "variant": "standard", "input": "line1\\nline2\\r\\nline3", "objective": "Preserve line-ending bytes", "base64Of": "line1\\nline2\\r\\nline3", "expectedBase64": "bGluZTEKbGluZTINCmxpbmUz"}, {"id": "BE06", "variant": "standard", "input": "", "objective": "Empty payload", "base64Of": "", "expectedBase64": ""}, {"id": "BE07", "variant": "standard", "input": "", "objective": "Binary file bytes including NUL", "inputBinary": "AAEC/w0K", "expectedBase64": "AAEC/w0K"}, {"id": "BE08", "variant": "standard", "input": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", "objective": "MIME line wrapping and large-enough payload", "base64Of": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", "expectedBase64": "eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4"}]''')
+ def id=message.getBody(String).trim()
+ def c=catalog.find {it.id==id}
+ if(c==null) throw new IllegalArgumentException("Unknown ScenarioId "+id+". Choices: "+catalog.collect {it.id}.join(","))
+ if(c.strict) java.util.Base64.getDecoder().decode(c.input)
+ message.setProperty("TRN_Case",c);message.setProperty("Variant",c.variant)
+ message.setHeader("TRN_ScenarioId",id)
+ message.setBody(c.inputBinary ? c.inputBinary.decodeBase64() : c.input)
+ return message
+}

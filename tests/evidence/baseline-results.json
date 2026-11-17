@@ -1,0 +1,454 @@
+[
+  {
+    "id": "IF_TRN_001_Hello_World",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_002_JSON_to_XML",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": "Pilot evidence supersedes baseline for 002-006"
+  },
+  {
+    "id": "IF_TRN_003_XML_to_JSON",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": "Pilot evidence supersedes baseline for 002-006"
+  },
+  {
+    "id": "IF_TRN_004_XPath_Filter",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": "Pilot evidence supersedes baseline for 002-006"
+  },
+  {
+    "id": "IF_TRN_005_Base64_Encode",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": "Pilot evidence supersedes baseline for 002-006"
+  },
+  {
+    "id": "IF_TRN_006_Base64_Decode",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": "Pilot evidence supersedes baseline for 002-006"
+  },
+  {
+    "id": "IF_TRN_007_GZIP_Roundtrip",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_008_ZIP_Roundtrip",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_009_XML_Declaration",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_010_XML_to_CSV",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_011_XML_JSON_Roundtrip",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_012_Base64_Roundtrip",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_013_SHA256_Digest",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_014_General_Splitter_Gather",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_015_Iterating_Splitter_Gather",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_016_Line_Splitter_Gather",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_017_Data_Store_Roundtrip",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_018_Data_Store_Missing_Entry",
+    "recordedStatuses": [
+      "FAILED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_019_Persist_Message",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_020_MIME_Roundtrip",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_021_Timer_Hello",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_022_Local_Process_Call",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_023_Router",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_024_Parallel_Multicast",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_025_Groovy_Uppercase",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_026_JavaScript_Uppercase",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_027_XSLT_Mapping",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_028_XML_Validator_Valid",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_029_XML_Validator_Invalid",
+    "recordedStatuses": [
+      "FAILED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_030_CSV_to_XML",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_031_Sequential_Multicast",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_032_Looping_Process_Call",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_033_Loop_Maximum_Guard",
+    "recordedStatuses": [
+      "FAILED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_034_Idempotent_Process_Call",
+    "recordedStatuses": [
+      "COMPLETED",
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_035_Exception_Handled",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_036_Exception_Rethrown",
+    "recordedStatuses": [
+      "FAILED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_037_Error_End_Event",
+    "recordedStatuses": [
+      "FAILED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_038_Escalation_End_Event",
+    "recordedStatuses": [
+      "ESCALATED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_039_Terminate_Message",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_040_Plain_End_Event",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_041_ID_Mapping",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_042_Write_Variables",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_043_Data_Store_Select",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_044_ZIP_Splitter",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_045_Tar_Splitter",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_046_Headers_Properties",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_047_XPath_Property",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_048_Request_Reply",
+    "recordedStatuses": [
+      "COMPLETED",
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_049_Local_Mock_Receiver",
+    "recordedStatuses": [
+      "COMPLETED",
+      "COMPLETED",
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_050_Send_Local_Message",
+    "recordedStatuses": [
+      "COMPLETED",
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_051_Content_Enricher",
+    "recordedStatuses": [
+      "COMPLETED",
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_053_Aggregator",
+    "recordedStatuses": [
+      "FAILED",
+      "COMPLETED",
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_054_EDI_Extractor",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_055_EDI_Splitter",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_056_EDI_XML_Roundtrip",
+    "recordedStatuses": [],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_057_Aggregator_Trigger",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_058_Message_Mapping",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_059_Externalized_Parameter",
+    "recordedStatuses": [],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_060_CMS_Encrypt_Decrypt",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_061_CMS_Sign_Verify",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_062_Simple_Signer",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_063_XML_Sign_Verify",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_064_PGP_Encrypt_Decrypt",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  },
+  {
+    "id": "IF_TRN_065_CMS_Signature_Splitter",
+    "recordedStatuses": [
+      "COMPLETED"
+    ],
+    "note": ""
+  }
+]

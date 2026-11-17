@@ -1,0 +1,13 @@
+import com.sap.gateway.ip.core.customdev.util.Message
+import groovy.json.JsonSlurper
+Message processData(Message message) {
+ def catalog=new JsonSlurper().parseText('''[{"id": "JX01", "variant": "plain", "input": "{\\"order\\":{\\"id\\":\\"SO1001\\",\\"customer\\":{\\"name\\":\\"Anu\\"},\\"amount\\":250}}", "objective": "Nested sales order", "xmlRoot": "order", "contains": ["SO1001", "Anu", "250"]}, {"id": "JX02", "variant": "plain", "input": "{\\"order\\":{\\"items\\":[{\\"sku\\":\\"A1\\",\\"qty\\":2},{\\"sku\\":\\"B2\\",\\"qty\\":1}]}}", "objective": "Repeated order items", "xmlRoot": "order", "contains": ["A1", "B2"]}, {"id": "JX03", "variant": "plain", "input": "{\\"customer\\":{\\"name\\":\\"సాయి José 😀\\",\\"note\\":\\"A & B < C\\"}}", "objective": "Unicode and XML escaping", "xmlRoot": "customer", "contains": ["సాయి José 😀", "A & B < C"]}, {"id": "JX04", "variant": "plain", "input": "{\\"order\\":{\\"active\\":true,\\"note\\":\\"\\",\\"optional\\":null}}", "objective": "Boolean, empty string and JSON null", "xmlRoot": "order", "contains": ["true"]}, {"id": "JX05", "variant": "wrap", "input": "{\\"id\\":\\"SO1002\\",\\"amount\\":10}", "objective": "Add a root to sibling JSON fields", "xmlRoot": "orders", "contains": ["SO1002", "10"]}, {"id": "JX06", "variant": "ns", "input": "{\\"p:order\\":{\\"p:id\\":\\"SO1003\\"}}", "objective": "Colon-prefixed namespace mapping", "xmlRoot": "order", "xmlNamespace": "urn:training:orders", "contains": ["SO1003"]}, {"id": "JX07", "variant": "dot", "input": "{\\"p.order\\":{\\"p.id\\":\\"SO1004\\"}}", "objective": "Dot as JSON prefix separator", "xmlRoot": "order", "xmlNamespace": "urn:training:orders", "contains": ["SO1004"]}, {"id": "JX08", "variant": "plain", "input": "{\\"order\\":", "objective": "Malformed JSON is rejected", "negative": true}, {"id": "JX09", "variant": "plain", "input": "{\\"1invalid\\":\\"x\\"}", "objective": "JSON key invalid as an XML name", "negative": true}]''')
+ def id=message.getBody(String).trim()
+ def c=catalog.find {it.id==id}
+ if(c==null) throw new IllegalArgumentException("Unknown ScenarioId "+id+". Choices: "+catalog.collect {it.id}.join(","))
+ if(c.strict) java.util.Base64.getDecoder().decode(c.input)
+ message.setProperty("TRN_Case",c);message.setProperty("Variant",c.variant)
+ message.setHeader("TRN_ScenarioId",id)
+ message.setBody(c.inputBinary ? c.inputBinary.decodeBase64() : c.input)
+ return message
+}

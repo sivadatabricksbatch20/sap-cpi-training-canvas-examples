@@ -1,0 +1,13 @@
+import com.sap.gateway.ip.core.customdev.util.Message
+import groovy.json.JsonSlurper
+Message processData(Message message) {
+ def catalog=new JsonSlurper().parseText('''[{"id": "XJ01", "variant": "plain", "input": "<order><id>SO1001</id><amount>250</amount></order>", "objective": "Sales order and JSON value types", "jsonRoot": "order", "contains": ["SO1001", "250"]}, {"id": "XJ02", "variant": "plain", "input": "<order><item>A1</item><item>B2</item></order>", "objective": "Repeated elements become an array", "jsonRoot": "order", "arrayPath": ["order", "item"]}, {"id": "XJ03", "variant": "suppress", "input": "<order><id>SO1001</id></order>", "objective": "Suppress the enclosing root key", "jsonRoot": "id", "absentRoot": "order"}, {"id": "XJ04", "variant": "arrays", "input": "<order><item>A1</item><qty>2</qty></order>", "objective": "Force all leaf elements into arrays", "contains": ["A1", "2"]}, {"id": "XJ05", "variant": "specific", "input": "<order><item>A1</item></order>", "objective": "Keep a one-item field as an array", "arrayPath": ["order", "item"]}, {"id": "XJ06", "variant": "stream", "input": "<order><item>A1</item><item>B2</item></order>", "objective": "Streaming conversion with repeated items", "contains": ["A1", "B2"]}, {"id": "XJ07", "variant": "ns", "input": "<p:order xmlns:p=\\"urn:training:orders\\"><p:id>SO1003</p:id></p:order>", "objective": "Map XML namespaces to colon JSON keys", "jsonRoot": "p:order"}, {"id": "XJ08", "variant": "utf16", "input": "<customer><name>José సాయి</name></customer>", "objective": "UTF-16LE output bytes", "encoding": "UTF-16LE", "jsonRoot": "customer", "contains": ["José", "సాయి"]}, {"id": "XJ09", "variant": "plain", "input": "<order><note/><active>true</active></order>", "objective": "Empty elements and boolean-looking text", "jsonRoot": "order"}, {"id": "XJ10", "variant": "plain", "input": "<order><id>1</order>", "objective": "Malformed XML is rejected", "negative": true}, {"id": "XJ11", "variant": "dot", "input": "<p:order xmlns:p=\\"urn:training:orders\\"><p:id>SO1004</p:id></p:order>", "objective": "Dot JSON namespace separator", "jsonRoot": "p.order"}]''')
+ def id=message.getBody(String).trim()
+ def c=catalog.find {it.id==id}
+ if(c==null) throw new IllegalArgumentException("Unknown ScenarioId "+id+". Choices: "+catalog.collect {it.id}.join(","))
+ if(c.strict) java.util.Base64.getDecoder().decode(c.input)
+ message.setProperty("TRN_Case",c);message.setProperty("Variant",c.variant)
+ message.setHeader("TRN_ScenarioId",id)
+ message.setBody(c.inputBinary ? c.inputBinary.decodeBase64() : c.input)
+ return message
+}

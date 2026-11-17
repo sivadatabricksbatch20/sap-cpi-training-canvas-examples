@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+*session*.json
+*csrf*.json
+*request*headers*.json
+*.pem
+*.p12
+*.pfx
+*.jks
+*.key
+training-secret*
+__pycache__/
+*.pyc
+work/

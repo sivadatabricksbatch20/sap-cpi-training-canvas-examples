@@ -1,0 +1,922 @@
+[
+  {
+    "flowId": "IF_TRN_002_JSON_to_XML",
+    "scenarioId": "JX01",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "JX01",
+      "status": "PASS",
+      "objective": "Nested sales order",
+      "variant": "plain",
+      "input": "{\"order\":{\"id\":\"SO1001\",\"customer\":{\"name\":\"Anu\"},\"amount\":250}}",
+      "output": "<?xml version='1.0' encoding='UTF-8'?><order><id>SO1001</id><customer><name>Anu</name></customer><amount>250</amount></order>",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 125,
+      "outputBase64": "PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48b3JkZXI+PGlkPlNPMTAwMTwvaWQ+PGN1c3RvbWVyPjxuYW1lPkFudTwvbmFtZT48L2N1c3RvbWVyPjxhbW91bnQ+MjUwPC9hbW91bnQ+PC9vcmRlcj4="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_002_JSON_to_XML",
+    "scenarioId": "JX02",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "JX02",
+      "status": "PASS",
+      "objective": "Repeated order items",
+      "variant": "plain",
+      "input": "{\"order\":{\"items\":[{\"sku\":\"A1\",\"qty\":2},{\"sku\":\"B2\",\"qty\":1}]}}",
+      "output": "<?xml version='1.0' encoding='UTF-8'?><order><items><sku>A1</sku><qty>2</qty></items><items><sku>B2</sku><qty>1</qty></items></order>",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 133,
+      "outputBase64": "PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48b3JkZXI+PGl0ZW1zPjxza3U+QTE8L3NrdT48cXR5PjI8L3F0eT48L2l0ZW1zPjxpdGVtcz48c2t1PkIyPC9za3U+PHF0eT4xPC9xdHk+PC9pdGVtcz48L29yZGVyPg=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_002_JSON_to_XML",
+    "scenarioId": "JX03",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "JX03",
+      "status": "PASS",
+      "objective": "Unicode and XML escaping",
+      "variant": "plain",
+      "input": "{\"customer\":{\"name\":\"సాయి José 😀\",\"note\":\"A & B < C\"}}",
+      "output": "<?xml version='1.0' encoding='UTF-8'?><customer><name>సాయి José 😀</name><note>A &amp; B &lt; C</note></customer>",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 124,
+      "outputBase64": "PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48Y3VzdG9tZXI+PG5hbWU+4LC44LC+4LCv4LC/IEpvc8OpIPCfmIA8L25hbWU+PG5vdGU+QSAmYW1wOyBCICZsdDsgQzwvbm90ZT48L2N1c3RvbWVyPg=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_002_JSON_to_XML",
+    "scenarioId": "JX04",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "JX04",
+      "status": "PASS",
+      "objective": "Boolean, empty string and JSON null",
+      "variant": "plain",
+      "input": "{\"order\":{\"active\":true,\"note\":\"\",\"optional\":null}}",
+      "output": "<?xml version='1.0' encoding='UTF-8'?><order><active>true</active><note></note><optional/></order>",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 98,
+      "outputBase64": "PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48b3JkZXI+PGFjdGl2ZT50cnVlPC9hY3RpdmU+PG5vdGU+PC9ub3RlPjxvcHRpb25hbC8+PC9vcmRlcj4="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_002_JSON_to_XML",
+    "scenarioId": "JX05",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "JX05",
+      "status": "PASS",
+      "objective": "Add a root to sibling JSON fields",
+      "variant": "wrap",
+      "input": "{\"id\":\"SO1002\",\"amount\":10}",
+      "output": "<?xml version='1.0' encoding='UTF-8'?><orders><id>SO1002</id><amount>10</amount></orders>",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 89,
+      "outputBase64": "PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48b3JkZXJzPjxpZD5TTzEwMDI8L2lkPjxhbW91bnQ+MTA8L2Ftb3VudD48L29yZGVycz4="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_002_JSON_to_XML",
+    "scenarioId": "JX06",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "JX06",
+      "status": "PASS",
+      "objective": "Colon-prefixed namespace mapping",
+      "variant": "ns",
+      "input": "{\"p:order\":{\"p:id\":\"SO1003\"}}",
+      "output": "<?xml version='1.0' encoding='UTF-8'?><p:order xmlns:p=\"urn:training:orders\"><p:id>SO1003</p:id></p:order>",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 106,
+      "outputBase64": "PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48cDpvcmRlciB4bWxuczpwPSJ1cm46dHJhaW5pbmc6b3JkZXJzIj48cDppZD5TTzEwMDM8L3A6aWQ+PC9wOm9yZGVyPg=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_002_JSON_to_XML",
+    "scenarioId": "JX07",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "JX07",
+      "status": "PASS",
+      "objective": "Dot as JSON prefix separator",
+      "variant": "dot",
+      "input": "{\"p.order\":{\"p.id\":\"SO1004\"}}",
+      "output": "<?xml version='1.0' encoding='UTF-8'?><p:order xmlns:p=\"urn:training:orders\"><p:id>SO1004</p:id></p:order>",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 106,
+      "outputBase64": "PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz48cDpvcmRlciB4bWxuczpwPSJ1cm46dHJhaW5pbmc6b3JkZXJzIj48cDppZD5TTzEwMDQ8L3A6aWQ+PC9wOm9yZGVyPg=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_002_JSON_to_XML",
+    "scenarioId": "JX08",
+    "status": "TEST_EXECUTION_FAILED",
+    "expectedRejection": true,
+    "assertionReport": null,
+    "error": "End of input at line 1 column 10 path $.order on the exchange: Exchange[CC146CCF5AB4018-0000000000000001]"
+  },
+  {
+    "flowId": "IF_TRN_002_JSON_to_XML",
+    "scenarioId": "JX09",
+    "status": "TEST_EXECUTION_FAILED",
+    "expectedRejection": true,
+    "assertionReport": null,
+    "error": "The JSON member name \"1invalid\" cannot be converted to an XML element name or attribute name, because it contains invalid XML name characters. Instead of using the JSON-to-XML Converter, use the Message Mapping to convert the JSON document. on the exchange: Exchange[8EA0972A5C85B05-0000000000000001]"
+  },
+  {
+    "flowId": "IF_TRN_003_XML_to_JSON",
+    "scenarioId": "XJ01",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XJ01",
+      "status": "PASS",
+      "objective": "Sales order and JSON value types",
+      "variant": "plain",
+      "input": "<order><id>SO1001</id><amount>250</amount></order>",
+      "output": "{\"order\":{\"id\":\"SO1001\",\"amount\":\"250\"}}",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 40,
+      "outputBase64": "eyJvcmRlciI6eyJpZCI6IlNPMTAwMSIsImFtb3VudCI6IjI1MCJ9fQ=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_003_XML_to_JSON",
+    "scenarioId": "XJ02",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XJ02",
+      "status": "PASS",
+      "objective": "Repeated elements become an array",
+      "variant": "plain",
+      "input": "<order><item>A1</item><item>B2</item></order>",
+      "output": "{\"order\":{\"item\":[\"A1\",\"B2\"]}}",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 30,
+      "outputBase64": "eyJvcmRlciI6eyJpdGVtIjpbIkExIiwiQjIiXX19"
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_003_XML_to_JSON",
+    "scenarioId": "XJ03",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XJ03",
+      "status": "PASS",
+      "objective": "Suppress the enclosing root key",
+      "variant": "suppress",
+      "input": "<order><id>SO1001</id></order>",
+      "output": "{\"id\":\"SO1001\"}",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 15,
+      "outputBase64": "eyJpZCI6IlNPMTAwMSJ9"
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_003_XML_to_JSON",
+    "scenarioId": "XJ04",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XJ04",
+      "status": "PASS",
+      "objective": "Force all leaf elements into arrays",
+      "variant": "arrays",
+      "input": "<order><item>A1</item><qty>2</qty></order>",
+      "output": "{\"order\":[{\"item\":[\"A1\"],\"qty\":[\"2\"]}]}",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 39,
+      "outputBase64": "eyJvcmRlciI6W3siaXRlbSI6WyJBMSJdLCJxdHkiOlsiMiJdfV19"
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_003_XML_to_JSON",
+    "scenarioId": "XJ05",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XJ05",
+      "status": "PASS",
+      "objective": "Keep a one-item field as an array",
+      "variant": "specific",
+      "input": "<order><item>A1</item></order>",
+      "output": "{\"order\":{\"item\":[\"A1\"]}}",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 25,
+      "outputBase64": "eyJvcmRlciI6eyJpdGVtIjpbIkExIl19fQ=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_003_XML_to_JSON",
+    "scenarioId": "XJ06",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XJ06",
+      "status": "PASS",
+      "objective": "Streaming conversion with repeated items",
+      "variant": "stream",
+      "input": "<order><item>A1</item><item>B2</item></order>",
+      "output": "{\"order\":[{\"item\":[\"A1\",\"B2\"]}]}",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 32,
+      "outputBase64": "eyJvcmRlciI6W3siaXRlbSI6WyJBMSIsIkIyIl19XX0="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_003_XML_to_JSON",
+    "scenarioId": "XJ07",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XJ07",
+      "status": "PASS",
+      "objective": "Map XML namespaces to colon JSON keys",
+      "variant": "ns",
+      "input": "<p:order xmlns:p=\"urn:training:orders\"><p:id>SO1003</p:id></p:order>",
+      "output": "{\"p:order\":{\"p:id\":\"SO1003\"}}",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 29,
+      "outputBase64": "eyJwOm9yZGVyIjp7InA6aWQiOiJTTzEwMDMifX0="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_003_XML_to_JSON",
+    "scenarioId": "XJ08",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XJ08",
+      "status": "PASS",
+      "objective": "UTF-16LE output bytes",
+      "variant": "utf16",
+      "input": "<customer><name>José సాయి</name></customer>",
+      "output": "{\"customer\":{\"name\":\"José సాయి\"}}",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 66,
+      "outputBase64": "ewAiAGMAdQBzAHQAbwBtAGUAcgAiADoAewAiAG4AYQBtAGUAIgA6ACIASgBvAHMA6QAgADgMPgwvDD8MIgB9AH0A"
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_003_XML_to_JSON",
+    "scenarioId": "XJ09",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XJ09",
+      "status": "PASS",
+      "objective": "Empty elements and boolean-looking text",
+      "variant": "plain",
+      "input": "<order><note/><active>true</active></order>",
+      "output": "{\"order\":{\"note\":\"\",\"active\":\"true\"}}",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 37,
+      "outputBase64": "eyJvcmRlciI6eyJub3RlIjoiIiwiYWN0aXZlIjoidHJ1ZSJ9fQ=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_003_XML_to_JSON",
+    "scenarioId": "XJ10",
+    "status": "TEST_EXECUTION_FAILED",
+    "expectedRejection": true,
+    "assertionReport": null,
+    "error": "Unexpected close tag </order>; expected </id>.\n at [row,col {unknown-source}]: [1,19] on the exchange: Exchange[C2550689EC75F34-0000000000000001]"
+  },
+  {
+    "flowId": "IF_TRN_003_XML_to_JSON",
+    "scenarioId": "XJ11",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XJ11",
+      "status": "PASS",
+      "objective": "Dot JSON namespace separator",
+      "variant": "dot",
+      "input": "<p:order xmlns:p=\"urn:training:orders\"><p:id>SO1004</p:id></p:order>",
+      "output": "{\"p.order\":{\"p.id\":\"SO1004\"}}",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 29,
+      "outputBase64": "eyJwLm9yZGVyIjp7InAuaWQiOiJTTzEwMDQifX0="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_004_XPath_Filter",
+    "scenarioId": "XP01",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XP01",
+      "status": "PASS",
+      "objective": "Extract customer name",
+      "variant": "string",
+      "input": "<order><customer><name>Anu</name></customer></order>",
+      "output": "Anu",
+      "outputType": "java.lang.String",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 3,
+      "outputBase64": "QW51"
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_004_XPath_Filter",
+    "scenarioId": "XP02",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XP02",
+      "status": "PASS",
+      "objective": "XPath count with Integer setting: runtime numeric rendering 3.0",
+      "variant": "integer",
+      "input": "<order><items><item/><item/><item/></items></order>",
+      "output": "3.0",
+      "outputType": "java.lang.Double",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 3,
+      "outputBase64": "My4w"
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_004_XPath_Filter",
+    "scenarioId": "XP03",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XP03",
+      "status": "PASS",
+      "objective": "High-value order true",
+      "variant": "boolean",
+      "input": "<order><amount>1500</amount></order>",
+      "output": "true",
+      "outputType": "java.lang.Boolean",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 4,
+      "outputBase64": "dHJ1ZQ=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_004_XPath_Filter",
+    "scenarioId": "XP04",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XP04",
+      "status": "PASS",
+      "objective": "High-value order false",
+      "variant": "boolean",
+      "input": "<order><amount>500</amount></order>",
+      "output": "false",
+      "outputType": "java.lang.Boolean",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 5,
+      "outputBase64": "ZmFsc2U="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_004_XPath_Filter",
+    "scenarioId": "XP05",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XP05",
+      "status": "PASS",
+      "objective": "Select only the first item node",
+      "variant": "node",
+      "input": "<order><items><item><sku>A1</sku></item><item><sku>B2</sku></item></items></order>",
+      "output": "<item><sku>A1</sku></item>",
+      "outputType": "net.sf.saxon.dom.ElementOverNodeInfo",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 26,
+      "outputBase64": "PGl0ZW0+PHNrdT5BMTwvc2t1PjwvaXRlbT4="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_004_XPath_Filter",
+    "scenarioId": "XP06",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XP06",
+      "status": "PASS",
+      "objective": "Select all item nodes",
+      "variant": "nodes",
+      "input": "<order><items><item>A1</item><item>B2</item></items></order>",
+      "output": "<item>A1</item><item>B2</item>",
+      "outputType": "net.sf.saxon.dom.DOMNodeList",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 30,
+      "outputBase64": "PGl0ZW0+QTE8L2l0ZW0+PGl0ZW0+QjI8L2l0ZW0+"
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_004_XPath_Filter",
+    "scenarioId": "XP07",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XP07",
+      "status": "PASS",
+      "objective": "Missing optional value becomes empty text",
+      "variant": "missing",
+      "input": "<order><customer><name>Anu</name></customer></order>",
+      "output": "",
+      "outputType": "java.lang.String",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 0,
+      "outputBase64": ""
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_004_XPath_Filter",
+    "scenarioId": "XP08",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XP08",
+      "status": "PASS",
+      "objective": "Runtime Configuration namespace prefix",
+      "variant": "ns",
+      "input": "<o:order xmlns:o=\"urn:training:orders\"><o:id>SO1003</o:id></o:order>",
+      "output": "SO1003",
+      "outputType": "java.lang.String",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 6,
+      "outputBase64": "U08xMDAz"
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_004_XPath_Filter",
+    "scenarioId": "XP09",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "XP09",
+      "status": "PASS",
+      "objective": "Predicate selects quantity over one",
+      "variant": "predicate",
+      "input": "<order><items><item><sku>A1</sku><qty>2</qty></item><item><sku>B2</sku><qty>1</qty></item></items></order>",
+      "output": "<item><sku>A1</sku><qty>2</qty></item>",
+      "outputType": "net.sf.saxon.dom.DOMNodeList",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 38,
+      "outputBase64": "PGl0ZW0+PHNrdT5BMTwvc2t1PjxxdHk+MjwvcXR5PjwvaXRlbT4="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_004_XPath_Filter",
+    "scenarioId": "XP10",
+    "status": "TEST_EXECUTION_FAILED",
+    "expectedRejection": true,
+    "assertionReport": null,
+    "error": "javax.xml.xpath.XPathExpressionException: Failure converting a node of class javax.xml.transform.sax.SAXSource: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 8; XML document structures must start and end within the same entity. on the exchange: Exchange[88DAB3D80302896-0000000000000001]"
+  },
+  {
+    "flowId": "IF_TRN_005_Base64_Encode",
+    "scenarioId": "BE01",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BE01",
+      "status": "PASS",
+      "objective": "Plain text",
+      "variant": "standard",
+      "input": "Hello",
+      "output": "SGVsbG8=\r\n",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 10,
+      "outputBase64": "U0dWc2JHOD0NCg=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_005_Base64_Encode",
+    "scenarioId": "BE02",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BE02",
+      "status": "PASS",
+      "objective": "Encode a business JSON payload",
+      "variant": "standard",
+      "input": "{\"orderId\":\"SO1001\",\"amount\":250}",
+      "output": "eyJvcmRlcklkIjoiU08xMDAxIiwiYW1vdW50IjoyNTB9\r\n",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 46,
+      "outputBase64": "ZXlKdmNtUmxja2xrSWpvaVUwOHhNREF4SWl3aVlXMXZkVzUwSWpveU5UQjkNCg=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_005_Base64_Encode",
+    "scenarioId": "BE03",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BE03",
+      "status": "PASS",
+      "objective": "Encode XML exactly, without XML parsing",
+      "variant": "standard",
+      "input": "<order id=\"SO1001\">A &amp; B</order>",
+      "output": "PG9yZGVyIGlkPSJTTzEwMDEiPkEgJmFtcDsgQjwvb3JkZXI+\r\n",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 50,
+      "outputBase64": "UEc5eVpHVnlJR2xrUFNKVFR6RXdNREVpUGtFZ0ptRnRjRHNnUWp3dmIzSmtaWEkrDQo="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_005_Base64_Encode",
+    "scenarioId": "BE04",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BE04",
+      "status": "PASS",
+      "objective": "UTF-8 Unicode bytes",
+      "variant": "standard",
+      "input": "José సాయి 😀",
+      "output": "Sm9zw6kg4LC44LC+4LCv4LC/IPCfmIA=\r\n",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 34,
+      "outputBase64": "U205enc2a2c0TEM0NExDKzRMQ3Y0TEMvSVBDZm1JQT0NCg=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_005_Base64_Encode",
+    "scenarioId": "BE05",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BE05",
+      "status": "PASS",
+      "objective": "Preserve line-ending bytes",
+      "variant": "standard",
+      "input": "line1\nline2\r\nline3",
+      "output": "bGluZTEKbGluZTINCmxpbmUz\r\n",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 26,
+      "outputBase64": "YkdsdVpURUtiR2x1WlRJTkNteHBibVV6DQo="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_005_Base64_Encode",
+    "scenarioId": "BE06",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BE06",
+      "status": "PASS",
+      "objective": "Empty payload",
+      "variant": "standard",
+      "input": "",
+      "output": "",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 0,
+      "outputBase64": ""
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_005_Base64_Encode",
+    "scenarioId": "BE07",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BE07",
+      "status": "PASS",
+      "objective": "Binary file bytes including NUL",
+      "variant": "standard",
+      "input": "",
+      "output": "AAEC/w0K\r\n",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 10,
+      "outputBase64": "QUFFQy93MEsNCg=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_005_Base64_Encode",
+    "scenarioId": "BE08",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BE08",
+      "status": "PASS",
+      "objective": "MIME line wrapping and large-enough payload",
+      "variant": "standard",
+      "input": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "output": "eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4\r\neHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4\r\neHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4\r\n",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 206,
+      "outputBase64": "ZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNA0KZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNA0KZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0DQo="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_006_Base64_Decode",
+    "scenarioId": "BD01",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BD01",
+      "status": "PASS",
+      "objective": "Decode text",
+      "variant": "standard",
+      "input": "SGVsbG8=",
+      "output": "Hello",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 5,
+      "outputBase64": "SGVsbG8="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_006_Base64_Decode",
+    "scenarioId": "BD02",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BD02",
+      "status": "PASS",
+      "objective": "Decode UTF-8 Unicode",
+      "variant": "standard",
+      "input": "Sm9zw6kg4LC44LC+4LCv4LC/IPCfmIA=",
+      "output": "José సాయి 😀",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 23,
+      "outputBase64": "Sm9zw6kg4LC44LC+4LCv4LC/IPCfmIA="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_006_Base64_Decode",
+    "scenarioId": "BD03",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BD03",
+      "status": "PASS",
+      "objective": "Restore line-ending bytes",
+      "variant": "standard",
+      "input": "bGluZTEKbGluZTINCmxpbmUz",
+      "output": "line1\nline2\r\nline3",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 18,
+      "outputBase64": "bGluZTEKbGluZTINCmxpbmUz"
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_006_Base64_Decode",
+    "scenarioId": "BD04",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BD04",
+      "status": "PASS",
+      "objective": "Empty payload",
+      "variant": "standard",
+      "input": "",
+      "output": "",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 0,
+      "outputBase64": ""
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_006_Base64_Decode",
+    "scenarioId": "BD05",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BD05",
+      "status": "PASS",
+      "objective": "MIME-wrapped input",
+      "variant": "standard",
+      "input": "SGVs\r\nbG8=",
+      "output": "Hello",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 5,
+      "outputBase64": "SGVsbG8="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_006_Base64_Decode",
+    "scenarioId": "BD06",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BD06",
+      "status": "PASS",
+      "objective": "Binary file bytes including NUL",
+      "variant": "standard",
+      "input": "AAEC/w0K",
+      "output": "\u0000\u0001\u0002�\r\n",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 6,
+      "outputBase64": "AAEC/w0K"
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_006_Base64_Decode",
+    "scenarioId": "BD07",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BD07",
+      "status": "PASS",
+      "objective": "Missing padding behaviour",
+      "variant": "standard",
+      "input": "SGVsbG8",
+      "output": "Hello",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 5,
+      "outputBase64": "SGVsbG8="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_006_Base64_Decode",
+    "scenarioId": "BD08",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BD08",
+      "status": "OBSERVED",
+      "objective": "Invalid alphabet: measure actual decoder behaviour",
+      "variant": "standard",
+      "input": "%%%not-base64%%%",
+      "output": "��~m�\u001e�",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 7,
+      "outputBase64": "not+base6w=="
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_006_Base64_Decode",
+    "scenarioId": "BD09",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BD09",
+      "status": "OBSERVED",
+      "objective": "Invalid single-character input: decoder permissiveness",
+      "variant": "standard",
+      "input": "A",
+      "output": "",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 0,
+      "outputBase64": ""
+    },
+    "error": null
+  },
+  {
+    "flowId": "IF_TRN_006_Base64_Decode",
+    "scenarioId": "BD10",
+    "status": "TEST_EXECUTION_FAILED",
+    "expectedRejection": true,
+    "assertionReport": null,
+    "error": "java.lang.Exception: java.lang.IllegalArgumentException: Illegal base64 character 25@ line 8 in LoadScenario.groovy on the exchange: Exchange[C6406D43C754A20-0000000000000001]"
+  },
+  {
+    "flowId": "IF_TRN_006_Base64_Decode",
+    "scenarioId": "BD11",
+    "status": "TEST_EXECUTION_SUCCESS",
+    "expectedRejection": false,
+    "assertionReport": {
+      "scenarioId": "BD11",
+      "status": "PASS",
+      "objective": "Strict input guard accepts valid Base64",
+      "variant": "standard",
+      "input": "SGVsbG8=",
+      "output": "Hello",
+      "outputType": "org.apache.camel.converter.stream.InputStreamCache",
+      "courseHeader": "CPI",
+      "labVersionProperty": "2.0",
+      "outputBytes": 5,
+      "outputBase64": "SGVsbG8="
+    },
+    "error": null
+  }
+]

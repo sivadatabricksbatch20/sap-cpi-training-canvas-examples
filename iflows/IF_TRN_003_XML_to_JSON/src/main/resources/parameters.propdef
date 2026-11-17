@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><parameters><parameter>
+    <key/>
+    <name>ScenarioId</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description>Choose a documented scenario ID for this lesson.</description>
+    <additionalMetadata/>
+  </parameter><param_references/></parameters>

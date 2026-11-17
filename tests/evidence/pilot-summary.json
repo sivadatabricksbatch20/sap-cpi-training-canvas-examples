@@ -1,0 +1,19 @@
+{
+  "version": "2.0.1",
+  "flows": [
+    "IF_TRN_002_JSON_to_XML",
+    "IF_TRN_003_XML_to_JSON",
+    "IF_TRN_004_XPath_Filter",
+    "IF_TRN_005_Base64_Encode",
+    "IF_TRN_006_Base64_Decode"
+  ],
+  "scenarios": 49,
+  "assertionPasses": 42,
+  "expectedRejections": 5,
+  "documentedDecoderObservations": 2,
+  "liveDefaultPasses": 5,
+  "externalizedScenarioId": true,
+  "configuredOverrideLiveTest": "JX02 PASS; reset JX01",
+  "document": "Five iFlow Review Pack - All Tabs",
+  "scope": "Only five iFlows updated; awaiting user review."
+}

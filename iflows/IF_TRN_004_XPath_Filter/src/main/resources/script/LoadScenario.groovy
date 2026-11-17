@@ -1,0 +1,12 @@
+import com.sap.gateway.ip.core.customdev.util.Message
+import groovy.json.JsonSlurper
+Message processData(Message message) {
+ def catalog=new JsonSlurper().parseText('''[{"id": "XP01", "variant": "string", "input": "<order><customer><name>Anu</name></customer></order>", "objective": "Extract customer name", "exact": "Anu"}, {"id": "XP02", "variant": "integer", "input": "<order><items><item/><item/><item/></items></order>", "objective": "XPath count with Integer setting: runtime numeric rendering 3.0", "exact": "3.0"}, {"id": "XP03", "variant": "boolean", "input": "<order><amount>1500</amount></order>", "objective": "High-value order true", "exact": "true"}, {"id": "XP04", "variant": "boolean", "input": "<order><amount>500</amount></order>", "objective": "High-value order false", "exact": "false"}, {"id": "XP05", "variant": "node", "input": "<order><items><item><sku>A1</sku></item><item><sku>B2</sku></item></items></order>", "objective": "Select only the first item node", "contains": ["A1"], "excludes": ["B2"]}, {"id": "XP06", "variant": "nodes", "input": "<order><items><item>A1</item><item>B2</item></items></order>", "objective": "Select all item nodes", "contains": ["A1", "B2"]}, {"id": "XP07", "variant": "missing", "input": "<order><customer><name>Anu</name></customer></order>", "objective": "Missing optional value becomes empty text", "exact": ""}, {"id": "XP08", "variant": "ns", "input": "<o:order xmlns:o=\\"urn:training:orders\\"><o:id>SO1003</o:id></o:order>", "objective": "Runtime Configuration namespace prefix", "exact": "SO1003"}, {"id": "XP09", "variant": "predicate", "input": "<order><items><item><sku>A1</sku><qty>2</qty></item><item><sku>B2</sku><qty>1</qty></item></items></order>", "objective": "Predicate selects quantity over one", "contains": ["A1"], "excludes": ["B2"]}, {"id": "XP10", "variant": "string", "input": "<order>", "objective": "Malformed input XML is rejected", "negative": true}]''')
+ def id=message.getBody(String).trim()
+ def c=catalog.find {it.id==id}
+ if(c==null) throw new IllegalArgumentException("Unknown ScenarioId "+id+". Choices: "+catalog.collect {it.id}.join(","))
+ message.setProperty("TRN_Case",c);message.setProperty("Variant",c.variant)
+ message.setHeader("TRN_ScenarioId",id)
+ message.setBody(c.inputBinary ? c.inputBinary.decodeBase64() : c.input)
+ return message
+}

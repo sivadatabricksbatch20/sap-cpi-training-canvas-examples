@@ -1,0 +1,451 @@
+[
+  {
+    "id": "IF_TRN_002_JSON_to_XML",
+    "version": "2.0.1",
+    "cases": [
+      {
+        "id": "JX01",
+        "variant": "plain",
+        "input": "{\"order\":{\"id\":\"SO1001\",\"customer\":{\"name\":\"Anu\"},\"amount\":250}}",
+        "objective": "Nested sales order",
+        "xmlRoot": "order",
+        "contains": [
+          "SO1001",
+          "Anu",
+          "250"
+        ]
+      },
+      {
+        "id": "JX02",
+        "variant": "plain",
+        "input": "{\"order\":{\"items\":[{\"sku\":\"A1\",\"qty\":2},{\"sku\":\"B2\",\"qty\":1}]}}",
+        "objective": "Repeated order items",
+        "xmlRoot": "order",
+        "contains": [
+          "A1",
+          "B2"
+        ]
+      },
+      {
+        "id": "JX03",
+        "variant": "plain",
+        "input": "{\"customer\":{\"name\":\"సాయి José 😀\",\"note\":\"A & B < C\"}}",
+        "objective": "Unicode and XML escaping",
+        "xmlRoot": "customer",
+        "contains": [
+          "సాయి José 😀",
+          "A & B < C"
+        ]
+      },
+      {
+        "id": "JX04",
+        "variant": "plain",
+        "input": "{\"order\":{\"active\":true,\"note\":\"\",\"optional\":null}}",
+        "objective": "Boolean, empty string and JSON null",
+        "xmlRoot": "order",
+        "contains": [
+          "true"
+        ]
+      },
+      {
+        "id": "JX05",
+        "variant": "wrap",
+        "input": "{\"id\":\"SO1002\",\"amount\":10}",
+        "objective": "Add a root to sibling JSON fields",
+        "xmlRoot": "orders",
+        "contains": [
+          "SO1002",
+          "10"
+        ]
+      },
+      {
+        "id": "JX06",
+        "variant": "ns",
+        "input": "{\"p:order\":{\"p:id\":\"SO1003\"}}",
+        "objective": "Colon-prefixed namespace mapping",
+        "xmlRoot": "order",
+        "xmlNamespace": "urn:training:orders",
+        "contains": [
+          "SO1003"
+        ]
+      },
+      {
+        "id": "JX07",
+        "variant": "dot",
+        "input": "{\"p.order\":{\"p.id\":\"SO1004\"}}",
+        "objective": "Dot as JSON prefix separator",
+        "xmlRoot": "order",
+        "xmlNamespace": "urn:training:orders",
+        "contains": [
+          "SO1004"
+        ]
+      },
+      {
+        "id": "JX08",
+        "variant": "plain",
+        "input": "{\"order\":",
+        "objective": "Malformed JSON is rejected",
+        "negative": true
+      },
+      {
+        "id": "JX09",
+        "variant": "plain",
+        "input": "{\"1invalid\":\"x\"}",
+        "objective": "JSON key invalid as an XML name",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_003_XML_to_JSON",
+    "version": "2.0.1",
+    "cases": [
+      {
+        "id": "XJ01",
+        "variant": "plain",
+        "input": "<order><id>SO1001</id><amount>250</amount></order>",
+        "objective": "Sales order and JSON value types",
+        "jsonRoot": "order",
+        "contains": [
+          "SO1001",
+          "250"
+        ]
+      },
+      {
+        "id": "XJ02",
+        "variant": "plain",
+        "input": "<order><item>A1</item><item>B2</item></order>",
+        "objective": "Repeated elements become an array",
+        "jsonRoot": "order",
+        "arrayPath": [
+          "order",
+          "item"
+        ]
+      },
+      {
+        "id": "XJ03",
+        "variant": "suppress",
+        "input": "<order><id>SO1001</id></order>",
+        "objective": "Suppress the enclosing root key",
+        "jsonRoot": "id",
+        "absentRoot": "order"
+      },
+      {
+        "id": "XJ04",
+        "variant": "arrays",
+        "input": "<order><item>A1</item><qty>2</qty></order>",
+        "objective": "Force all leaf elements into arrays",
+        "contains": [
+          "A1",
+          "2"
+        ]
+      },
+      {
+        "id": "XJ05",
+        "variant": "specific",
+        "input": "<order><item>A1</item></order>",
+        "objective": "Keep a one-item field as an array",
+        "arrayPath": [
+          "order",
+          "item"
+        ]
+      },
+      {
+        "id": "XJ06",
+        "variant": "stream",
+        "input": "<order><item>A1</item><item>B2</item></order>",
+        "objective": "Streaming conversion with repeated items",
+        "contains": [
+          "A1",
+          "B2"
+        ]
+      },
+      {
+        "id": "XJ07",
+        "variant": "ns",
+        "input": "<p:order xmlns:p=\"urn:training:orders\"><p:id>SO1003</p:id></p:order>",
+        "objective": "Map XML namespaces to colon JSON keys",
+        "jsonRoot": "p:order"
+      },
+      {
+        "id": "XJ08",
+        "variant": "utf16",
+        "input": "<customer><name>José సాయి</name></customer>",
+        "objective": "UTF-16LE output bytes",
+        "encoding": "UTF-16LE",
+        "jsonRoot": "customer",
+        "contains": [
+          "José",
+          "సాయి"
+        ]
+      },
+      {
+        "id": "XJ09",
+        "variant": "plain",
+        "input": "<order><note/><active>true</active></order>",
+        "objective": "Empty elements and boolean-looking text",
+        "jsonRoot": "order"
+      },
+      {
+        "id": "XJ10",
+        "variant": "plain",
+        "input": "<order><id>1</order>",
+        "objective": "Malformed XML is rejected",
+        "negative": true
+      },
+      {
+        "id": "XJ11",
+        "variant": "dot",
+        "input": "<p:order xmlns:p=\"urn:training:orders\"><p:id>SO1004</p:id></p:order>",
+        "objective": "Dot JSON namespace separator",
+        "jsonRoot": "p.order"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_004_XPath_Filter",
+    "version": "2.0.1",
+    "cases": [
+      {
+        "id": "XP01",
+        "variant": "string",
+        "input": "<order><customer><name>Anu</name></customer></order>",
+        "objective": "Extract customer name",
+        "exact": "Anu"
+      },
+      {
+        "id": "XP02",
+        "variant": "integer",
+        "input": "<order><items><item/><item/><item/></items></order>",
+        "objective": "XPath count with Integer setting: runtime numeric rendering 3.0",
+        "exact": "3.0"
+      },
+      {
+        "id": "XP03",
+        "variant": "boolean",
+        "input": "<order><amount>1500</amount></order>",
+        "objective": "High-value order true",
+        "exact": "true"
+      },
+      {
+        "id": "XP04",
+        "variant": "boolean",
+        "input": "<order><amount>500</amount></order>",
+        "objective": "High-value order false",
+        "exact": "false"
+      },
+      {
+        "id": "XP05",
+        "variant": "node",
+        "input": "<order><items><item><sku>A1</sku></item><item><sku>B2</sku></item></items></order>",
+        "objective": "Select only the first item node",
+        "contains": [
+          "A1"
+        ],
+        "excludes": [
+          "B2"
+        ]
+      },
+      {
+        "id": "XP06",
+        "variant": "nodes",
+        "input": "<order><items><item>A1</item><item>B2</item></items></order>",
+        "objective": "Select all item nodes",
+        "contains": [
+          "A1",
+          "B2"
+        ]
+      },
+      {
+        "id": "XP07",
+        "variant": "missing",
+        "input": "<order><customer><name>Anu</name></customer></order>",
+        "objective": "Missing optional value becomes empty text",
+        "exact": ""
+      },
+      {
+        "id": "XP08",
+        "variant": "ns",
+        "input": "<o:order xmlns:o=\"urn:training:orders\"><o:id>SO1003</o:id></o:order>",
+        "objective": "Runtime Configuration namespace prefix",
+        "exact": "SO1003"
+      },
+      {
+        "id": "XP09",
+        "variant": "predicate",
+        "input": "<order><items><item><sku>A1</sku><qty>2</qty></item><item><sku>B2</sku><qty>1</qty></item></items></order>",
+        "objective": "Predicate selects quantity over one",
+        "contains": [
+          "A1"
+        ],
+        "excludes": [
+          "B2"
+        ]
+      },
+      {
+        "id": "XP10",
+        "variant": "string",
+        "input": "<order>",
+        "objective": "Malformed input XML is rejected",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_005_Base64_Encode",
+    "version": "2.0.1",
+    "cases": [
+      {
+        "id": "BE01",
+        "variant": "standard",
+        "input": "Hello",
+        "objective": "Plain text",
+        "base64Of": "Hello",
+        "expectedBase64": "SGVsbG8="
+      },
+      {
+        "id": "BE02",
+        "variant": "standard",
+        "input": "{\"orderId\":\"SO1001\",\"amount\":250}",
+        "objective": "Encode a business JSON payload",
+        "base64Of": "{\"orderId\":\"SO1001\",\"amount\":250}",
+        "expectedBase64": "eyJvcmRlcklkIjoiU08xMDAxIiwiYW1vdW50IjoyNTB9"
+      },
+      {
+        "id": "BE03",
+        "variant": "standard",
+        "input": "<order id=\"SO1001\">A &amp; B</order>",
+        "objective": "Encode XML exactly, without XML parsing",
+        "base64Of": "<order id=\"SO1001\">A &amp; B</order>",
+        "expectedBase64": "PG9yZGVyIGlkPSJTTzEwMDEiPkEgJmFtcDsgQjwvb3JkZXI+"
+      },
+      {
+        "id": "BE04",
+        "variant": "standard",
+        "input": "José సాయి 😀",
+        "objective": "UTF-8 Unicode bytes",
+        "base64Of": "José సాయి 😀",
+        "expectedBase64": "Sm9zw6kg4LC44LC+4LCv4LC/IPCfmIA="
+      },
+      {
+        "id": "BE05",
+        "variant": "standard",
+        "input": "line1\nline2\r\nline3",
+        "objective": "Preserve line-ending bytes",
+        "base64Of": "line1\nline2\r\nline3",
+        "expectedBase64": "bGluZTEKbGluZTINCmxpbmUz"
+      },
+      {
+        "id": "BE06",
+        "variant": "standard",
+        "input": "",
+        "objective": "Empty payload",
+        "base64Of": "",
+        "expectedBase64": ""
+      },
+      {
+        "id": "BE07",
+        "variant": "standard",
+        "input": "",
+        "objective": "Binary file bytes including NUL",
+        "inputBinary": "AAEC/w0K",
+        "expectedBase64": "AAEC/w0K"
+      },
+      {
+        "id": "BE08",
+        "variant": "standard",
+        "input": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "objective": "MIME line wrapping and large-enough payload",
+        "base64Of": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "expectedBase64": "eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_006_Base64_Decode",
+    "version": "2.0.1",
+    "cases": [
+      {
+        "id": "BD01",
+        "variant": "standard",
+        "input": "SGVsbG8=",
+        "objective": "Decode text",
+        "exact": "Hello"
+      },
+      {
+        "id": "BD02",
+        "variant": "standard",
+        "input": "Sm9zw6kg4LC44LC+4LCv4LC/IPCfmIA=",
+        "objective": "Decode UTF-8 Unicode",
+        "exact": "José సాయి 😀"
+      },
+      {
+        "id": "BD03",
+        "variant": "standard",
+        "input": "bGluZTEKbGluZTINCmxpbmUz",
+        "objective": "Restore line-ending bytes",
+        "exact": "line1\nline2\r\nline3"
+      },
+      {
+        "id": "BD04",
+        "variant": "standard",
+        "input": "",
+        "objective": "Empty payload",
+        "exact": ""
+      },
+      {
+        "id": "BD05",
+        "variant": "standard",
+        "input": "SGVs\r\nbG8=",
+        "objective": "MIME-wrapped input",
+        "exact": "Hello"
+      },
+      {
+        "id": "BD06",
+        "variant": "standard",
+        "input": "AAEC/w0K",
+        "objective": "Binary file bytes including NUL",
+        "expectedBinary": "AAEC/w0K"
+      },
+      {
+        "id": "BD07",
+        "variant": "standard",
+        "input": "SGVsbG8",
+        "objective": "Missing padding behaviour",
+        "exact": "Hello"
+      },
+      {
+        "id": "BD08",
+        "variant": "standard",
+        "input": "%%%not-base64%%%",
+        "objective": "Invalid alphabet: measure actual decoder behaviour",
+        "observe": true
+      },
+      {
+        "id": "BD09",
+        "variant": "standard",
+        "input": "A",
+        "objective": "Invalid single-character input: decoder permissiveness",
+        "observe": true,
+        "exact": ""
+      },
+      {
+        "id": "BD10",
+        "variant": "standard",
+        "input": "%%%not-base64%%%",
+        "objective": "Reject invalid Base64 with a strict input guard",
+        "strict": true,
+        "negative": true,
+        "failureStage": "Load Scenario Fixture input guard"
+      },
+      {
+        "id": "BD11",
+        "variant": "standard",
+        "input": "SGVsbG8=",
+        "objective": "Strict input guard accepts valid Base64",
+        "strict": true,
+        "exact": "Hello"
+      }
+    ]
+  }
+]
