@@ -1,0 +1,26 @@
+[
+  {
+    "id": "IF_TRN_002_JSON_to_XML",
+    "version": "2.0.2",
+    "processingEquivalentToVerifiedPilot": true,
+    "nonDesignResourceBytesMatchPreviousExport": false,
+    "changedNonDesignResources": [
+      "iflows/IF_TRN_002_JSON_to_XML/src/main/resources/parameters.prop"
+    ],
+    "scriptsAndMappingsByteIdenticalToPreviousExport": true,
+    "parameterValuesMatchPreviousExport": true,
+    "differenceNote": "Only parameters.prop generated timestamp comments differ; script bytes and effective parameter values are unchanged."
+  },
+  {
+    "id": "IF_TRN_003_XML_to_JSON",
+    "version": "2.0.2",
+    "processingEquivalentToVerifiedPilot": true,
+    "nonDesignResourceBytesMatchPreviousExport": false,
+    "changedNonDesignResources": [
+      "iflows/IF_TRN_003_XML_to_JSON/src/main/resources/parameters.prop"
+    ],
+    "scriptsAndMappingsByteIdenticalToPreviousExport": true,
+    "parameterValuesMatchPreviousExport": true,
+    "differenceNote": "Only parameters.prop generated timestamp comments differ; script bytes and effective parameter values are unchanged."
+  }
+]

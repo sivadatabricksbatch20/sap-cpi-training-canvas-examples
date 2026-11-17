@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: TRN 028 - XML Validator Valid
 Bundle-SymbolicName: IF_TRN_028_XML_Validator_Valid; singleton:=true
-Bundle-Version: 1.0.2
+Bundle-Version: 3.0.0
 SAP-BundleType: IntegrationFlow
 SAP-NodeType: IFLMAP
 SAP-RuntimeProfile: iflmap

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: TRN 063 - XML Sign Verify
 Bundle-SymbolicName: IF_TRN_063_XML_Sign_Verify; singleton:=true
-Bundle-Version: 1.0.2
+Bundle-Version: 3.0.0
 SAP-BundleType: IntegrationFlow
 SAP-NodeType: IFLMAP
 SAP-RuntimeProfile: iflmap

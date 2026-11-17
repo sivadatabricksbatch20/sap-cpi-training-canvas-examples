@@ -1,582 +1,585 @@
 {
   "packageId": "CPITrainingCanvasExamples",
   "snapshotDate": "2026-11-17",
+  "scenarioCount": 315,
+  "verifiedScenarioCount": 312,
+  "blockedScenarioCount": 3,
   "artifacts": [
     {
       "id": "IF_TRN_001_Hello_World",
       "name": "TRN 001 - Hello World",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_001_Hello_World",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "751b506e93c2a8eacc3165b552c29b2eeca11c5292d7ec69f9e0bbb7195169f4",
-      "expected": "Hello, student!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "6cb75fb61d12ac2b4a878cac173298c3fe27f4da70657629fac328dbcdc09a06"
     },
     {
       "id": "IF_TRN_002_JSON_to_XML",
       "name": "TRN 002 - JSON to XML",
-      "version": "2.0.1",
+      "version": "2.0.2",
       "directory": "iflows/IF_TRN_002_JSON_to_XML",
-      "readiness": "REVIEW_PILOT_VERIFIED",
-      "exportSha256": "e697db24c7d1b960b618a24e43aadd6dfb862550385dc89797e3189101e26d2f",
-      "expected": "JSON assertion report: PASS, with native component output and byte/type details"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 9,
+      "exportSha256": "f9dd59b60f40c7bfbcb3fd52302aacbc97000776c16494a87f28e52e7c3ed712"
     },
     {
       "id": "IF_TRN_003_XML_to_JSON",
       "name": "TRN 003 - XML to JSON",
-      "version": "2.0.1",
+      "version": "2.0.2",
       "directory": "iflows/IF_TRN_003_XML_to_JSON",
-      "readiness": "REVIEW_PILOT_VERIFIED",
-      "exportSha256": "eb2dabc8abdbd44630e3d8dca1f473696d2e5aef342d368b1feea6d990536765",
-      "expected": "JSON assertion report: PASS, with native component output and byte/type details"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 11,
+      "exportSha256": "fdb425b690d541bb57dcdf22dd1159e71f6c7aaa8a34b067b2b02ee908a3ea2a"
     },
     {
       "id": "IF_TRN_004_XPath_Filter",
       "name": "TRN 004 - XPath Filter",
       "version": "2.0.1",
       "directory": "iflows/IF_TRN_004_XPath_Filter",
-      "readiness": "REVIEW_PILOT_VERIFIED",
-      "exportSha256": "d2f74cd4b885fb4add1211b8091ca6cc6cbd8bf688928c0c7e3a7177dbcf0cc6",
-      "expected": "JSON assertion report: PASS, with native component output and byte/type details"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 10,
+      "exportSha256": "d2f74cd4b885fb4add1211b8091ca6cc6cbd8bf688928c0c7e3a7177dbcf0cc6"
     },
     {
       "id": "IF_TRN_005_Base64_Encode",
       "name": "TRN 005 - Base64 Encode",
       "version": "2.0.1",
       "directory": "iflows/IF_TRN_005_Base64_Encode",
-      "readiness": "REVIEW_PILOT_VERIFIED",
-      "exportSha256": "828be0e69b5f82d090dd9310a40165a5a431f6e8c08f32ca61e80903e440b7ad",
-      "expected": "JSON assertion report: PASS, with native component output and byte/type details"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 8,
+      "exportSha256": "828be0e69b5f82d090dd9310a40165a5a431f6e8c08f32ca61e80903e440b7ad"
     },
     {
       "id": "IF_TRN_006_Base64_Decode",
       "name": "TRN 006 - Base64 Decode",
       "version": "2.0.1",
       "directory": "iflows/IF_TRN_006_Base64_Decode",
-      "readiness": "REVIEW_PILOT_VERIFIED",
-      "exportSha256": "11849c374bec018eda1c23da7127723c3f76a3cf202f390a01c502745153c7ff",
-      "expected": "JSON assertion report: PASS, with native component output and byte/type details"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 11,
+      "exportSha256": "11849c374bec018eda1c23da7127723c3f76a3cf202f390a01c502745153c7ff"
     },
     {
       "id": "IF_TRN_007_GZIP_Roundtrip",
       "name": "TRN 007 - GZIP Roundtrip",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_007_GZIP_Roundtrip",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "cc604ae79209023cd5ec5c42e1d9fbba14f79ca226aeef9035e7e1d6a7ae973f",
-      "expected": "Hello, compression!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 6,
+      "exportSha256": "5c837c5ce0ada56cbe1eac117a21c1feecf91c8e8b6c5044649f9c6698a23423"
     },
     {
       "id": "IF_TRN_008_ZIP_Roundtrip",
       "name": "TRN 008 - ZIP Roundtrip",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_008_ZIP_Roundtrip",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "99c965d961f49082611adfdbe35e3bbaeccb0069f425739edeab0e48b9102df4",
-      "expected": "Hello, archive!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 6,
+      "exportSha256": "c00ed3ae04e2d6a6b4266559fa98c49143144e8aa51d41675a326b3d0dd94e22"
     },
     {
       "id": "IF_TRN_009_XML_Declaration",
       "name": "TRN 009 - XML Declaration",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_009_XML_Declaration",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "e1008e40f19bf40b6387e36339d96ccf052505e7c666945a502ee5e8db3d653c",
-      "expected": "<student><name>Anu</name></student>"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 6,
+      "exportSha256": "057ee1988a253561daee30881b0e81089e81126ad0ffbc8dad28e2516f3ae044"
     },
     {
       "id": "IF_TRN_010_XML_to_CSV",
       "name": "TRN 010 - XML to CSV",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_010_XML_to_CSV",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "27a851f412f0aed1d8d3411507007830655cce494768d92b96456ea6d3834dc1",
-      "expected": "1,Anu\n2,Ravi"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 7,
+      "exportSha256": "0b7baf85cc441bf4b120801b5100f38c1bfc73fe56c7af08b5f9760c6065d4ce"
     },
     {
       "id": "IF_TRN_011_XML_JSON_Roundtrip",
       "name": "TRN 011 - XML JSON Roundtrip",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_011_XML_JSON_Roundtrip",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "e63811afd26bb0afda24581f608373b27f053c27a609e3e98248725e5f664f93",
-      "expected": "<customer><name>Anu</name></customer>"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "f4ae39a137c0bb8bc1f199a38d2c42fd809d5d8739bdb37170181c84d8bac5a1"
     },
     {
       "id": "IF_TRN_012_Base64_Roundtrip",
       "name": "TRN 012 - Base64 Roundtrip",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_012_Base64_Roundtrip",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "d5dcf7329c78ea8646e835c55a871b52832cd80563c1596540614a9977ec2aab",
-      "expected": "Welcome, student!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "19061cfbfc7f9ae61728cfdd3b1ef028e46cff60f427c844260c716494424e8e"
     },
     {
       "id": "IF_TRN_013_SHA256_Digest",
       "name": "TRN 013 - SHA256 Digest",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_013_SHA256_Digest",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "85dab9e5126aec7c2232941cfefae53ef78fb5a03e414ea3e22c20dda4189229",
-      "expected": "Body remains Hello; header SAPMessageDigest holds SHA-256 digest; compare with independently calculated digest"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 8,
+      "exportSha256": "8b02a094d921ada9d5a9d1cc9f339b7f2ffb0e6f0ca2d2b8a41940890e2c0021"
     },
     {
       "id": "IF_TRN_014_General_Splitter_Gather",
       "name": "TRN 014 - General Splitter Gather",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_014_General_Splitter_Gather",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "996f54c15bcc25e8ecea3bc02993b26d3af994dbce6fb93d46f833f5590943a9",
-      "expected": "Combined XML contains two processed order messages in the SAP multimap wrapper; general splitter retains enclosing orders element"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 6,
+      "exportSha256": "a991827e70eaa21b2611024035bb69ae7e5634face5c8494af39b8fe904d47c4"
     },
     {
       "id": "IF_TRN_015_Iterating_Splitter_Gather",
       "name": "TRN 015 - Iterating Splitter Gather",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_015_Iterating_Splitter_Gather",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "8595bc8cd4fd4ad823826e7f82a6a7c63e128bd944a46ce79e0f10ce9a5a2160",
-      "expected": "Combined XML contains two processed order messages; each iterated message is an order element without its original orders envelope"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 6,
+      "exportSha256": "95d3608f2b3e3e6cc23e1eda462c1043f50aa089a4a4d697b73af7d4938d1e30"
     },
     {
       "id": "IF_TRN_016_Line_Splitter_Gather",
       "name": "TRN 016 - Line Splitter Gather",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_016_Line_Splitter_Gather",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "d36a0484a460cab18ca19f8fab6552edbb405a058ad627f7a00d41706b44055d",
-      "expected": "Both names appear once in the gathered text, in source order"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "89dfddaa4888442f57de58f1916acc4ff63538d8b9dcf8b65150323ae6de0d5e"
     },
     {
       "id": "IF_TRN_017_Data_Store_Roundtrip",
       "name": "TRN 017 - Data Store Roundtrip",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_017_Data_Store_Roundtrip",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "a90b43a0397f50304afdb5371f30559ea3f41c7bd5f9ff48a0adaf5bdab9aa44",
-      "expected": "<student><id>1001</id><name>Anu</name></student>; own local training entry is deleted at end"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "7e2cf225891f8d66ab8a62f89ab512f9fb82818c26632680c85945eb1fed58e4"
     },
     {
       "id": "IF_TRN_018_Data_Store_Missing_Entry",
       "name": "TRN 018 - Data Store Missing Entry",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_018_Data_Store_Missing_Entry",
-      "readiness": "BASELINE_EXPECTED_REJECTION",
-      "exportSha256": "a1e57399a9005c6ea098e2cd8861fa96a75531437334bea9d8adcbed4fe557eb",
-      "expected": "Intentional negative case: missing-entry exception; explain Failed status in Monitor"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 3,
+      "exportSha256": "4e4594e012a317773009bcacf1904121a9105986d02a44beb67369bd6193668e"
     },
     {
       "id": "IF_TRN_019_Persist_Message",
       "name": "TRN 019 - Persist Message",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_019_Persist_Message",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "91403e148d6cebd93eb7920ce01d3c7077fd0061bd1dc0c383891e9bf1dc0585",
-      "expected": "<student><name>Anu</name></student>; inspect stored payload for TRN019PERSISTSTUDENT"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "b610a23b093452e38c49c5fd077607eebfcc1abe7f90ab4585f0faa441b27090"
     },
     {
       "id": "IF_TRN_020_MIME_Roundtrip",
       "name": "TRN 020 - MIME Roundtrip",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_020_MIME_Roundtrip",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "526213e2c81efcee615c456a4560755ac530de3da99e472b4d0cabff93e97cd2",
-      "expected": "Hello, MIME!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "593be09d11be3a085f464ab7b76187b433f6e1a6b0b78ff8bdd13349f0c9529e"
     },
     {
       "id": "IF_TRN_021_Timer_Hello",
       "name": "TRN 021 - Timer Hello",
-      "version": "1.0.2",
+      "version": "3.0.1",
       "directory": "iflows/IF_TRN_021_Timer_Hello",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "3c8cb37a70c5812073368a36525bdddd96a3a9ee90df5c3fb7b2f90dba9d746f",
-      "expected": "Hello, timer!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 3,
+      "exportSha256": "85c5b5d8aaec9e82867a607132d4ac7b984c61b6b85089b21c90326736302299"
     },
     {
       "id": "IF_TRN_022_Local_Process_Call",
       "name": "TRN 022 - Local Process Call",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_022_Local_Process_Call",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "b1295c94b404ff2df92a5996c4a56bdb36bfaacc25995ce8413bd82ba41c3abc",
-      "expected": "Hello from local process"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "0bcc5ab7efe3454119a7ac0186aa8431addb664ece2d3867412acabf09bce66b"
     },
     {
       "id": "IF_TRN_023_Router",
       "name": "TRN 023 - Router",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_023_Router",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "71df28b5f889143e675c5d139685bf7b3035997b6d5618e385e8e1ebd7b5685d",
-      "expected": "PRIORITY; amount 500 => STANDARD"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 6,
+      "exportSha256": "bd1e08986d45d4c2e6a29d586fc6fddfd715a41994d19792240629477ec2143a"
     },
     {
       "id": "IF_TRN_024_Parallel_Multicast",
       "name": "TRN 024 - Parallel Multicast",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_024_Parallel_Multicast",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "1d44d63afc4ff151a4fd6d85e7d8dbcb37f73d5e34ec79690097eb3a4d486361",
-      "expected": "XML containing result A and result B once each"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "66fb91e50d73534ba9d7087b5ba83b1935d73122242fac76991b75212fa57b63"
     },
     {
       "id": "IF_TRN_025_Groovy_Uppercase",
       "name": "TRN 025 - Groovy Uppercase",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_025_Groovy_Uppercase",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "10aade662d5fb8529514cea6e7c204c43a052c251436914408aebb1246ccbe52",
-      "expected": "HELLO, STUDENT!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "7993a579e3b6116022c6195b7844d3a294bbaaa9e075d4c2653d6db0a599597b"
     },
     {
       "id": "IF_TRN_026_JavaScript_Uppercase",
       "name": "TRN 026 - JavaScript Uppercase",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_026_JavaScript_Uppercase",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "6b2c669d4e505fc7ff636da3a608e5b51602b7b34d016d60efeb506d5d41b03b",
-      "expected": "HELLO, STUDENT!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "977c4c8a16561a6220b2648f325e752faaf9ef40f58ddb70ceb298d85e52dd65"
     },
     {
       "id": "IF_TRN_027_XSLT_Mapping",
       "name": "TRN 027 - XSLT Mapping",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_027_XSLT_Mapping",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "d58ef042639902078b61dea7a88d8bd80bea71e6db88707cbedb38badddfe72d",
-      "expected": "<greeting>Hello, Anu!</greeting>"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "240ed20232f2a945b4716c39343d2c10fd70595898e4c233aa386e2ea1631596"
     },
     {
       "id": "IF_TRN_028_XML_Validator_Valid",
       "name": "TRN 028 - XML Validator Valid",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_028_XML_Validator_Valid",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "7a90005c69bd29d3c884d98e3e54086e060b22d98aef11fd56b73e9d1e8dc646",
-      "expected": "Same valid student XML"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 6,
+      "exportSha256": "2eda89597e932b90d53f7c29354c950e3876a62cb78dc6ccf5f491194df64a2c"
     },
     {
       "id": "IF_TRN_029_XML_Validator_Invalid",
       "name": "TRN 029 - XML Validator Invalid",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_029_XML_Validator_Invalid",
-      "readiness": "BASELINE_EXPECTED_REJECTION",
-      "exportSha256": "a470dfdb478bfebfef00b785ecc68ec2976bf929c43b5cd666a70c56850c8470",
-      "expected": "Intentional failure: id ABC is not a positive integer"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 6,
+      "exportSha256": "d96aa4aa12baea681a309fb4c1c50f9e553453fedc4856c3868ea1865b8342b1"
     },
     {
       "id": "IF_TRN_030_CSV_to_XML",
       "name": "TRN 030 - CSV to XML",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_030_CSV_to_XML",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "84211a4064783a99d6238c93d955db56709d533bec7bd9d7aba3df0a0a74b0d0",
-      "expected": "students XML containing ids 1,2 and names Anu,Ravi"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 6,
+      "exportSha256": "17258b12fa1ac5e60beea6f41654861039f68c4597fbcd053225a2eb8418cbea"
     },
     {
       "id": "IF_TRN_031_Sequential_Multicast",
       "name": "TRN 031 - Sequential Multicast",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_031_Sequential_Multicast",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "1e00317615980e0aab79ec9ebccdd36d0eaca8ecb6fd41c1cd8e06900f319576",
-      "expected": "Combined XML results A then B"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "944235edb4c2b4251a731608dd58743f9a8525ab23613fbd9737179caf9348ef"
     },
     {
       "id": "IF_TRN_032_Looping_Process_Call",
       "name": "TRN 032 - Looping Process Call",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_032_Looping_Process_Call",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "9c3556782e826747875dd05694996e826325029a3f7095cbfa2c42e9ab8f1551",
-      "expected": "<counter>1</counter>"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "e5c0a3340016a5c09931d86d4217ff37539a58a1316628297037c5a7a6fa1b14"
     },
     {
       "id": "IF_TRN_033_Loop_Maximum_Guard",
       "name": "TRN 033 - Loop Maximum Guard",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_033_Loop_Maximum_Guard",
-      "readiness": "BASELINE_EXPECTED_REJECTION",
-      "exportSha256": "900ef3115ab6fd312568339f7ec64473aee3611129f1a73fea74825f1b8a37ef",
-      "expected": "Intentional failure after 3 iterations: condition stays true"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "24a57be24282623abf580537099d329d707dc5d631e8ccf7502aa2ce9cbf2ab6"
     },
     {
       "id": "IF_TRN_034_Idempotent_Process_Call",
       "name": "TRN 034 - Idempotent Process Call",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_034_Idempotent_Process_Call",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "e6dfce79aa3b192f860d1957dd82489d80aee1231af4665b8ba6c4f6c4538968",
-      "expected": "First: Hello from local process. Duplicate: Hello from main."
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 3,
+      "exportSha256": "bbe31eca7d8e488b70b7fa1f419339f92e174e961a80b75ceaf28c4740b5c9b8"
     },
     {
       "id": "IF_TRN_035_Exception_Handled",
       "name": "TRN 035 - Exception Handled",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_035_Exception_Handled",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "4f6d34a1804c6b6326aed9fc43c6382267179e1b564106d59b3eff5fb5d8acc7",
-      "expected": "Handled validation error"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "1c882cc6fb73e12d0172976d67fd741383d2b93004926e85f3088dc657c9ef88"
     },
     {
       "id": "IF_TRN_036_Exception_Rethrown",
       "name": "TRN 036 - Exception Rethrown",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_036_Exception_Rethrown",
-      "readiness": "BASELINE_EXPECTED_REJECTION",
-      "exportSha256": "aa58735a6afd40bba548bcb0423fd0acf973abf23e4f3e8e49a6148c598f742d",
-      "expected": "Failed after error handler executes; TRN_Result=Handled validation error"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "9fd7c7999bd3fa05d7f927ee484c74180bc1c3b6a8193186c0f398b0bee4fea0"
     },
     {
       "id": "IF_TRN_037_Error_End_Event",
       "name": "TRN 037 - Error End Event",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_037_Error_End_Event",
-      "readiness": "BASELINE_EXPECTED_REJECTION",
-      "exportSha256": "56eb3f887077f73ee8e45931a76149863d288fef2b525219cf5692af00dc7674",
-      "expected": "Intentional Failed message at Error End Event"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 3,
+      "exportSha256": "b16c7f0e2215e41230dc591248d84f7c42592c3d4597c0c61a46119fedf7db11"
     },
     {
       "id": "IF_TRN_038_Escalation_End_Event",
       "name": "TRN 038 - Escalation End Event",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_038_Escalation_End_Event",
-      "readiness": "BASELINE_EXPECTED_ESCALATION",
-      "exportSha256": "faeb5a2afc2d18bba89ecb582c1a8d58fd3b4d5e990a503a81db80456b093a36",
-      "expected": "Intentional Escalated message; category ReceiverNotFound"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 3,
+      "exportSha256": "599c9ccf199d459a6019d41bf935fdcc010ec6129d55fcdb837205fb3fd65f73"
     },
     {
       "id": "IF_TRN_039_Terminate_Message",
       "name": "TRN 039 - Terminate Message",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_039_Terminate_Message",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "a837bf9a97834127d9562964ea5ffbdddbb050a4c0b771ac44337f8f0d59201c",
-      "expected": "Terminate processing of the message"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 3,
+      "exportSha256": "8eedb1ad96504541879b59edbb0cf53b615301a574fe7481ee4b9c8172d236bc"
     },
     {
       "id": "IF_TRN_040_Plain_End_Event",
       "name": "TRN 040 - Plain End Event",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_040_Plain_End_Event",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "be2ec83ab00d0c67e26ecb28458596fa3a6959fe3a3a6fb04399c102c39a8d72",
-      "expected": "Completed with body Hello, end event!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 3,
+      "exportSha256": "59f9a8784cbd34fceca59cbe1aa9a14a98ae21b163a598756b4081d9940805a5"
     },
     {
       "id": "IF_TRN_041_ID_Mapping",
       "name": "TRN 041 - ID Mapping",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_041_ID_Mapping",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "38243cdc3f17a8b9a4c2c15d8fc81a3038ac8827e0c5572c0bfc3b50afa2402f",
-      "expected": "Stable target ID for repeated source and context"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 3,
+      "exportSha256": "120adebcbb29354960aa1eea79cba4150a55a684480355d5c2029f81d4196a15"
     },
     {
       "id": "IF_TRN_042_Write_Variables",
       "name": "TRN 042 - Write Variables",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_042_Write_Variables",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "8dd004a72a5c5f0720bfcf51919a615a7a5e8cf3c918cf2d9e4e95d1b1083270",
-      "expected": "Hello from a persisted variable"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "9b86ab2bb8101ade83b8ad90f5cc68aa2245459e69fc47f7cf59d9a097225e5f"
     },
     {
       "id": "IF_TRN_043_Data_Store_Select",
       "name": "TRN 043 - Data Store Select",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_043_Data_Store_Select",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "5f4d0460be2acc3586f0c9f365cb0b1a65e490b9185b8adf8b8f255fe90319a1",
-      "expected": "Both records One and Two selected; own entries removed after completion"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 3,
+      "exportSha256": "bce76061f5a5b2abf1db4abd2f343cbb796b33fb51970ce3628af8ae12ae64fc"
     },
     {
       "id": "IF_TRN_044_ZIP_Splitter",
       "name": "TRN 044 - ZIP Splitter",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_044_ZIP_Splitter",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "f67bb32c5299f3bdf02f670789aab3652233c0480c26ce1e2ed1c2851c0bc69f",
-      "expected": "AB"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "76ebbe489864b882a04a50adeb052d0030450321ef5eeade1bd2f2fa30f45dee"
     },
     {
       "id": "IF_TRN_045_Tar_Splitter",
       "name": "TRN 045 - Tar Splitter",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_045_Tar_Splitter",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "4fafb44abe19ba953c72d17a311d576b22ed033d35846d16d51bf694f8c5fa6d",
-      "expected": "AB"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "696a2ef58dbf1154b225bf0992e8cddb2550af44bd787ac4db12f8fb3cd472c2"
     },
     {
       "id": "IF_TRN_046_Headers_Properties",
       "name": "TRN 046 - Headers Properties",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_046_Headers_Properties",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "e7422490710443d987951631b5204322da43c7cb67b778ac84754149165d9f55",
-      "expected": "Hello Anu, welcome to CPI!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "de64ffd438f7662e46cf6a79dcf829f130ede4fba6666f4f80411889819f509b"
     },
     {
       "id": "IF_TRN_047_XPath_Property",
       "name": "TRN 047 - XPath Property",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_047_XPath_Property",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "f055673737cba19e0c120fb5839a7a152408a18e84afdcf9349275eb73b8afb2",
-      "expected": "Hello Anu!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "b5a68eb354665908a125c6ca847f3ca5276b10b031205b823518533cb56c2326"
     },
     {
       "id": "IF_TRN_048_Request_Reply",
       "name": "TRN 048 - Request Reply",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_048_Request_Reply",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "51c81096a48a33c1655cf532c9b727e78208342dbfd065b51bff8aec2a1c984f",
-      "expected": "Sales department reply"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 6,
+      "exportSha256": "f22d8c68479a1f3fb4e10e82e9b7f1f3e7ae59dcdb1c7755f349974ec24386c7"
     },
     {
       "id": "IF_TRN_049_Local_Mock_Receiver",
       "name": "TRN 049 - Local Mock Receiver",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_049_Local_Mock_Receiver",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "8fa490b320a1315adf88eccc5cbfb6d16aaa37a85ff48016b694ad1c947df82c",
-      "expected": "<lookup><department><id>1</id><name>Sales</name></department></lookup>"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 3,
+      "exportSha256": "da8ee9ee9e29f17098b03823cc39c453f4158a6113785f462ed5d3d712db13d3"
     },
     {
       "id": "IF_TRN_050_Send_Local_Message",
       "name": "TRN 050 - Send Local Message",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_050_Send_Local_Message",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "f491734346c1a1b588cbae138d75d5b9d036677fbc0351817bab64dcf5a6781b",
-      "expected": "Original student XML; receiver is invoked without using its reply"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "f4069af81472c9dd24ab99bd95902d72ed08e8a176ffa3d8e826bb95eb1e4653"
     },
     {
       "id": "IF_TRN_051_Content_Enricher",
       "name": "TRN 051 - Content Enricher",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_051_Content_Enricher",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "4783f0714d0a7ff2236687bdbfc0d2de5964837f1ff24e37c3392aacdbb1cf71",
-      "expected": "Original student Anu with added department Sales"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "f6a45e748abd4fb08654650ef89ff09e756fb6ea52c760ed7a263a177a7ab8ae"
     },
     {
       "id": "IF_TRN_053_Aggregator",
       "name": "TRN 053 - Aggregator",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_053_Aggregator",
-      "readiness": "NOT_READY_RUNTIME_ERROR",
-      "exportSha256": "c4dfb72b3f7118810155090095da264e5d3b01cb98fd068c793b5703ebfb6e4b",
-      "expected": "One combined XML document with sequence 1 then 2"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 2,
+      "exportSha256": "5a64a825f9c766a7aa60af8f3d80365170854c5805116b4f5394bc2289070dd0"
     },
     {
       "id": "IF_TRN_054_EDI_Extractor",
       "name": "TRN 054 - EDI Extractor",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_054_EDI_Extractor",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "973cbb879cbee81b4f112141723d62e5b1e182e40602a3439b6b09a8f857c2f2",
-      "expected": "EDIFACT remains readable and extracted envelope/message metadata is available in headers"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "4d9a7ef04517c5a49e5c70cc4d27e06ad1f86969e1f462912ecaee6b874ccfd5"
     },
     {
       "id": "IF_TRN_055_EDI_Splitter",
       "name": "TRN 055 - EDI Splitter",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_055_EDI_Splitter",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "5825d694a6afa0dadaa8e7c25a55a869eb959ac65fb7edd6951ed7ff4fc35695",
-      "expected": "Two ORDERS messages containing PO123 and PO124"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "2cc2f737f3c94ff6f449cb780669adfacf7c1bee7f72bb08b910a197e7ac15e0"
     },
     {
       "id": "IF_TRN_056_EDI_XML_Roundtrip",
       "name": "TRN 056 - EDI XML Roundtrip",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_056_EDI_XML_Roundtrip",
-      "readiness": "PREREQUISITE_REQUIRED",
-      "exportSha256": "d0eab63ef9c3370c7a0487bbf9288cf5b6c692da45e80e21aba7006edba9b618",
-      "expected": "EDIFACT ORDERS PO123 is preserved through XML conversion; a matching EDI schema may be required by the tenant"
+      "readiness": "BLOCKED_LICENSED_EDI_SCHEMA_DIAGNOSTIC_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "317a6abab3a6d7479787746b51c68824c4da3116bd033ddcf26689caef70b0ba"
     },
     {
       "id": "IF_TRN_057_Aggregator_Trigger",
       "name": "TRN 057 - Aggregator Trigger",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_057_Aggregator_Trigger",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "b51ae4f5f9122ac1510382a34bcf416ad3109271b6c95d5e4156348be32fbc31",
-      "expected": "Aggregator 053 completes with TRN_Sequences=1,2"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 6,
+      "exportSha256": "15848557b053907c68b11dbe0c3dbc1cac1befd389ca9c00cd25f2024e01790d"
     },
     {
       "id": "IF_TRN_058_Message_Mapping",
       "name": "TRN 058 - Message Mapping",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_058_Message_Mapping",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "974893983dfcb2c5f2ad98fe725253dff8083416bed86209582b9458dbcd30f9",
-      "expected": "customer/fullName=Anu"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "0b75b1039b9186366000a0afea00ea70a928010554e695191f00a9f16926822f"
     },
     {
       "id": "IF_TRN_059_Externalized_Parameter",
       "name": "TRN 059 - Externalized Parameter",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_059_Externalized_Parameter",
-      "readiness": "PREREQUISITE_REQUIRED",
-      "exportSha256": "2f87d2659512670786bbfc55b731576ae148146207ecec23930ced3dd380ad38",
-      "expected": "Hello, external parameter!"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "e82d0f7017bccadbf1f1427defa531ffcfb0607ed0646317632777048e30f7e7"
     },
     {
       "id": "IF_TRN_060_CMS_Encrypt_Decrypt",
       "name": "TRN 060 - CMS Encrypt Decrypt",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_060_CMS_Encrypt_Decrypt",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "a37a9807f7a1a33b9a2a8d7ce0ed8e607d9af4bf2cce3deb16ce52c93f0fd73a",
-      "expected": "Original body after encryption and decryption"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "0e488665b247ebe7fffd9ba8a72aa9e7146db38cb7044491c9cec1bfa36266b8"
     },
     {
       "id": "IF_TRN_061_CMS_Sign_Verify",
       "name": "TRN 061 - CMS Sign Verify",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_061_CMS_Sign_Verify",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "2cfedfbed912b7da221f73f6ead29204468c25a4799e550bb497a9de2001ee26",
-      "expected": "Original body; verification succeeds. Tampering must fail."
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "a1512e6840184ed7369c7c687ab928b0272c380a0b1dbd0c5b3013a50316423a"
     },
     {
       "id": "IF_TRN_062_Simple_Signer",
       "name": "TRN 062 - Simple Signer",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_062_Simple_Signer",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "dbc96de7ce174781b01cc7efc917189cb441c59a419ffee49d063b7564735fec",
-      "expected": "Body unchanged; signature appears in SAPSimpleSignatureValue header"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "0b203a65391412c0cd5dc29f28893af381bf99a530c621a5d18a9bff304876f8"
     },
     {
       "id": "IF_TRN_063_XML_Sign_Verify",
       "name": "TRN 063 - XML Sign Verify",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_063_XML_Sign_Verify",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "82931af9b592a90c8f0c7eb6caa70c9410115f6857443e8dc2c2fcbf9ef3e6f4",
-      "expected": "XML signature verifies and original student XML is extracted"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "3f1d79423581f0a387fd037b661a2f1b485283a655a2df8ac233cf393a666ac9"
     },
     {
       "id": "IF_TRN_064_PGP_Encrypt_Decrypt",
       "name": "TRN 064 - PGP Encrypt Decrypt",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_064_PGP_Encrypt_Decrypt",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "e4f09065fd94cd25673ddfb61e4f04ee79b249c628dbfb9098478beca20400d5",
-      "expected": "Original body after PGP encryption and decryption"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 5,
+      "exportSha256": "90dd2c8fcf8bfd23374fc418f8ba0e4dcddd326222a88afa15559e352fb7a14b"
     },
     {
       "id": "IF_TRN_065_CMS_Signature_Splitter",
       "name": "TRN 065 - CMS Signature Splitter",
-      "version": "1.0.2",
+      "version": "3.0.0",
       "directory": "iflows/IF_TRN_065_CMS_Signature_Splitter",
-      "readiness": "BASELINE_RUNTIME_COMPLETED",
-      "exportSha256": "1eec1d68cc10b3bd6ebf41b577f1de83cfcf977b87e472d893187a01abf17898",
-      "expected": "Content and signature data are separated; inspect the splitter XML wrapper"
+      "readiness": "PRACTICAL_LAB_VERIFIED",
+      "scenarioCount": 4,
+      "exportSha256": "fc36068b83fbfa1ef6388ed76ab27d2248d689ba48d26e3a2573fa9380019c45"
     }
   ]
 }

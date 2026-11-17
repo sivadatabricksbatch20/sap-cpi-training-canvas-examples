@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ifl="http:///com.sap.ifl.model/Ifl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1">
     <bpmn2:collaboration id="Collaboration_1" name="Default Collaboration">
+        <bpmn2:documentation id="Documentation_1794900662119" textFormat="text/plain">Scenario lab 3.0: 4 practical cases. Configure ScenarioId, Save, Deploy. Inspect native steps, runtime settings, header/property/body tabs and assertion reports. Negative cases intentionally fail. See the complete canvas lab handbook.</bpmn2:documentation>
         <bpmn2:extensionElements>
             <ifl:property>
                 <key>namespaceMapping</key>
-                <value/>
+                <value>xmlns:o=urn:training:orders</value>
             </ifl:property>
             <ifl:property>
                 <key>httpSessionHandling</key>
@@ -35,7 +36,7 @@
             </ifl:property>
             <ifl:property>
                 <key>allowedHeaderList</key>
-                <value/>
+                <value>TRN_ScenarioId|TRN_Course|Content-Type</value>
             </ifl:property>
             <ifl:property>
                 <key>ServerTrace</key>
@@ -85,7 +86,7 @@
                 <value>Not Required</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:callActivity id="CallActivity_12" name="XMLtoEDIConverter">
+        <bpmn2:callActivity id="CallActivity_102" name="base - XML to EDI Converter">
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>edifactUseCustomSeparator</key>
@@ -94,6 +95,10 @@
                 <ifl:property>
                     <key>edifactSourceEncoding</key>
                     <value>ISO-8859-1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>tradacomsHeaderName</key>
+                    <value/>
                 </ifl:property>
                 <ifl:property>
                     <key>tradacomsConversionPreference</key>
@@ -118,6 +123,10 @@
                 <ifl:property>
                     <key>x12EdiSchemaSource</key>
                     <value>IntegrationProject</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>vdaHeaderName</key>
+                    <value/>
                 </ifl:property>
                 <ifl:property>
                     <key>tradacomsSchemaTable</key>
@@ -160,16 +169,16 @@
                     <value>no</value>
                 </ifl:property>
                 <ifl:property>
-                    <key>x12SegmentTerminator</key>
-                    <value>#x7e</value>
+                    <key>edifactCompositeSeparator</key>
+                    <value>#x3a</value>
                 </ifl:property>
                 <ifl:property>
                     <key>edifactDataElementSeparator</key>
                     <value>#x2b</value>
                 </ifl:property>
                 <ifl:property>
-                    <key>edifactCompositeSeparator</key>
-                    <value>#x3a</value>
+                    <key>x12SegmentTerminator</key>
+                    <value>#x7e</value>
                 </ifl:property>
                 <ifl:property>
                     <key>x12UseCustomSeparator</key>
@@ -192,12 +201,20 @@
                     <value>2.10</value>
                 </ifl:property>
                 <ifl:property>
+                    <key>edifactHeaderName</key>
+                    <value>TRN_EdiSchema</value>
+                </ifl:property>
+                <ifl:property>
                     <key>edifactDecimalCharacter</key>
                     <value>#x2e</value>
                 </ifl:property>
                 <ifl:property>
+                    <key>x12HeaderName</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
                     <key>edifactEdiSchemaSource</key>
-                    <value>IntegrationProject</value>
+                    <value>Header</value>
                 </ifl:property>
                 <ifl:property>
                     <key>activityType</key>
@@ -224,8 +241,76 @@
                     <value>#x5e</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_102</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_103</bpmn2:outgoing>
+            <bpmn2:incoming>SequenceFlow_1000</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_300</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:callActivity id="CallActivity_900" name="Assert and Explain">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>scriptFunction</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>scriptBundleId</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Script</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>GroovyScript</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>script</key>
+                    <value>VerifyLabScenario.groovy</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_300</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_900</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:callActivity id="CallActivity_11" name="Load Scenario Fixture">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>scriptFunction</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>scriptBundleId</key>
+                    <value/>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Script</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>GroovyScript</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>script</key>
+                    <value>LoadLabScenario.groovy</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_101</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_102</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:endEvent id="EndEvent_2" name="End">
             <bpmn2:extensionElements>
@@ -238,30 +323,26 @@
                     <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_103</bpmn2:incoming>
+            <bpmn2:incoming>SequenceFlow_900</bpmn2:incoming>
             <bpmn2:messageEventDefinition/>
         </bpmn2:endEvent>
         <bpmn2:callActivity id="CallActivity_10" name="Set Sample Input">
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>bodyType</key>
-                    <value>constant</value>
+                    <value>expression</value>
                 </ifl:property>
                 <ifl:property>
                     <key>propertyTable</key>
-                    <value/>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;3.0&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;TRN_LabVersion&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;{{ScenarioId}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;ScenarioId&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
                 </ifl:property>
                 <ifl:property>
                     <key>headerTable</key>
-                    <value/>
-                </ifl:property>
-                <ifl:property>
-                    <key>Action</key>
-                    <value>Create</value>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;CPI&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;TRN_Course&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;/xsd/UN-EDIFACT_ORDERS_D96A.xsd&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;TRN_EdiSchema&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
                 </ifl:property>
                 <ifl:property>
                     <key>wrapContent</key>
-                    <value>UNA:+.? 'UNB+UNOC:3+SENDER:14+RECEIVER:14+261117:1200+1'UNH+1+ORDERS:D:96A:UN'BGM+220+PO123+9'DTM+137:20261117:102'UNT+4+1'UNZ+1+1'</value>
+                    <value>${property.ScenarioId}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
@@ -279,11 +360,15 @@
             <bpmn2:incoming>SequenceFlow_100</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_101</bpmn2:outgoing>
         </bpmn2:callActivity>
-        <bpmn2:callActivity id="CallActivity_11" name="EDItoXMLConverter">
+        <bpmn2:callActivity id="CallActivity_100" name="base - EDI to XML Converter">
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>edifactSourceEncoding</key>
                     <value>ISO-8859-1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>tradacomsHeaderName</key>
+                    <value/>
                 </ifl:property>
                 <ifl:property>
                     <key>tradacomsConversionPreference</key>
@@ -306,12 +391,16 @@
                     <value>interchange</value>
                 </ifl:property>
                 <ifl:property>
-                    <key>edifactTargetRootElement</key>
-                    <value>interchange</value>
+                    <key>vdaHeaderName</key>
+                    <value/>
                 </ifl:property>
                 <ifl:property>
                     <key>x12EdiSchemaSource</key>
                     <value>IntegrationProject</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>edifactTargetRootElement</key>
+                    <value>interchange</value>
                 </ifl:property>
                 <ifl:property>
                     <key>x12EnvelopeTruncator</key>
@@ -370,32 +459,40 @@
                     <value>2.10</value>
                 </ifl:property>
                 <ifl:property>
+                    <key>edifactHeaderName</key>
+                    <value>TRN_EdiSchema</value>
+                </ifl:property>
+                <ifl:property>
                     <key>edifactDecimalCharacter</key>
                     <value>fromIncomingPayload</value>
                 </ifl:property>
                 <ifl:property>
-                    <key>edifactEdiSchemaSource</key>
-                    <value>IntegrationProject</value>
+                    <key>x12HeaderName</key>
+                    <value/>
                 </ifl:property>
                 <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::EDItoXMLConverter/version::2.10.0</value>
+                    <key>edifactEdiSchemaSource</key>
+                    <value>Header</value>
                 </ifl:property>
                 <ifl:property>
                     <key>activityType</key>
                     <value>EDItoXMLConverter</value>
                 </ifl:property>
                 <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::EDItoXMLConverter/version::2.10.0</value>
+                </ifl:property>
+                <ifl:property>
                     <key>vdaSchemaTable</key>
                     <value/>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_101</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_102</bpmn2:outgoing>
+            <bpmn2:incoming>SequenceFlow_102</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_1000</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:startEvent id="StartEvent_2" name="Start Timer">
             <bpmn2:outgoing>SequenceFlow_100</bpmn2:outgoing>
-            <bpmn2:timerEventDefinition id="TimerEventDefinition_371408">
+            <bpmn2:timerEventDefinition id="TimerEventDefinition_166078">
                 <bpmn2:extensionElements>
                     <ifl:property>
                         <key>scheduleKey</key>
@@ -416,46 +513,62 @@
                 </bpmn2:extensionElements>
             </bpmn2:timerEventDefinition>
         </bpmn2:startEvent>
-        <bpmn2:sequenceFlow id="SequenceFlow_103" sourceRef="CallActivity_12" targetRef="EndEvent_2"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_300" sourceRef="CallActivity_102" targetRef="CallActivity_900"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_900" sourceRef="CallActivity_900" targetRef="EndEvent_2"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_102" sourceRef="CallActivity_11" targetRef="CallActivity_100"/>
         <bpmn2:sequenceFlow id="SequenceFlow_101" sourceRef="CallActivity_10" targetRef="CallActivity_11"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_102" sourceRef="CallActivity_11" targetRef="CallActivity_12"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_1000" sourceRef="CallActivity_100" targetRef="CallActivity_102"/>
         <bpmn2:sequenceFlow id="SequenceFlow_100" sourceRef="StartEvent_2" targetRef="CallActivity_10"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
-            <bpmndi:BPMNShape bpmnElement="EndEvent_2" id="BPMNShape_EndEvent_2">
-                <dc:Bounds height="0.0" width="0.0" x="930.0" y="142.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="StartEvent_2" id="BPMNShape_StartEvent_2">
-                <dc:Bounds height="0.0" width="0.0" x="292.0" y="142.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
-                <dc:Bounds height="220.0" width="750.0" x="250.0" y="60.0"/>
-            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_10" id="BPMNShape_CallActivity_10">
                 <dc:Bounds height="60.0" width="100.0" x="390.0" y="128.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="EndEvent_2" id="BPMNShape_EndEvent_2">
+                <dc:Bounds height="0.0" width="0.0" x="1880.0" y="162.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_900" id="BPMNShape_CallActivity_900">
+                <dc:Bounds height="60.0" width="100.0" x="1600.0" y="150.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_11" id="BPMNShape_CallActivity_11">
                 <dc:Bounds height="60.0" width="100.0" x="570.0" y="128.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="CallActivity_12" id="BPMNShape_CallActivity_12">
-                <dc:Bounds height="60.0" width="100.0" x="750.0" y="128.0"/>
+            <bpmndi:BPMNShape bpmnElement="StartEvent_2" id="BPMNShape_StartEvent_2">
+                <dc:Bounds height="0.0" width="0.0" x="292.0" y="142.0"/>
             </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_100" id="BPMNShape_CallActivity_100">
+                <dc:Bounds height="60.0" width="100.0" x="900.0" y="100.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
+                <dc:Bounds height="400.0" width="1680.0" x="250.0" y="60.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_102" id="BPMNShape_CallActivity_102">
+                <dc:Bounds height="60.0" width="100.0" x="1090.0" y="100.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_900" id="BPMNEdge_SequenceFlow_900" sourceElement="BPMNShape_CallActivity_900" targetElement="BPMNShape_EndEvent_2">
+                <di:waypoint x="1700.0" xsi:type="dc:Point" y="180.0"/>
+                <di:waypoint x="750.0" xsi:type="dc:Point" y="142.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1000" id="BPMNEdge_SequenceFlow_1000" sourceElement="BPMNShape_CallActivity_100" targetElement="BPMNShape_CallActivity_102">
+                <di:waypoint x="1000.0" xsi:type="dc:Point" y="130.0"/>
+                <di:waypoint x="1090.0" xsi:type="dc:Point" y="130.0"/>
+            </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_100" id="BPMNEdge_SequenceFlow_100" sourceElement="BPMNShape_StartEvent_2" targetElement="BPMNShape_CallActivity_10">
-                <di:waypoint x="324.0" xsi:type="dc:Point" y="158.0"/>
+                <di:waypoint x="292.0" xsi:type="dc:Point" y="142.0"/>
                 <di:waypoint x="390.0" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_101" id="BPMNEdge_SequenceFlow_101" sourceElement="BPMNShape_CallActivity_10" targetElement="BPMNShape_CallActivity_11">
                 <di:waypoint x="490.0" xsi:type="dc:Point" y="158.0"/>
                 <di:waypoint x="570.0" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_102" id="BPMNEdge_SequenceFlow_102" sourceElement="BPMNShape_CallActivity_11" targetElement="BPMNShape_CallActivity_12">
-                <di:waypoint x="670.0" xsi:type="dc:Point" y="158.0"/>
-                <di:waypoint x="750.0" xsi:type="dc:Point" y="158.0"/>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_300" id="BPMNEdge_SequenceFlow_300" sourceElement="BPMNShape_CallActivity_102" targetElement="BPMNShape_CallActivity_900">
+                <di:waypoint x="1190.0" xsi:type="dc:Point" y="130.0"/>
+                <di:waypoint x="1600.0" xsi:type="dc:Point" y="180.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_103" id="BPMNEdge_SequenceFlow_103" sourceElement="BPMNShape_CallActivity_12" targetElement="BPMNShape_EndEvent_2">
-                <di:waypoint x="850.0" xsi:type="dc:Point" y="158.0"/>
-                <di:waypoint x="930.0" xsi:type="dc:Point" y="158.0"/>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_102" id="BPMNEdge_SequenceFlow_102" sourceElement="BPMNShape_CallActivity_11" targetElement="BPMNShape_CallActivity_100">
+                <di:waypoint x="670.0" xsi:type="dc:Point" y="158.0"/>
+                <di:waypoint x="900.0" xsi:type="dc:Point" y="130.0"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>

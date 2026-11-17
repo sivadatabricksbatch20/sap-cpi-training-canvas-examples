@@ -1,1 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><parameters><param_references/></parameters>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><parameters><parameter>
+    <key/>
+    <name>ScenarioId</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description>LIVE uses the caller payload; a MOCK49_* ID selects a demonstration request fixture.</description>
+    <additionalMetadata/>
+  </parameter><param_references/></parameters>

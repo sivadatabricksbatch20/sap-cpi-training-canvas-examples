@@ -1,7 +1,69 @@
 [
   {
+    "id": "IF_TRN_001_Hello_World",
+    "number": 1,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "H01",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "H01",
+        "input": "",
+        "objective": "Build a greeting from properties",
+        "variant": "base",
+        "props": {
+          "StudentName": "student",
+          "GreetingPrefix": "Hello"
+        },
+        "exact": "Hello, student!"
+      },
+      {
+        "id": "H02",
+        "input": "",
+        "objective": "Header/property substitution",
+        "variant": "base",
+        "props": {
+          "StudentName": "Ravi",
+          "GreetingPrefix": "Welcome"
+        },
+        "exact": "Welcome, Ravi!"
+      },
+      {
+        "id": "H03",
+        "input": "",
+        "objective": "Unicode greeting",
+        "variant": "base",
+        "props": {
+          "StudentName": "సాయి",
+          "GreetingPrefix": "Hello"
+        },
+        "exact": "Hello, సాయి!"
+      },
+      {
+        "id": "H04",
+        "input": "",
+        "objective": "Empty optional name",
+        "variant": "base",
+        "props": {
+          "StudentName": "",
+          "GreetingPrefix": "Hello"
+        },
+        "exact": "Hello, !"
+      }
+    ]
+  },
+  {
     "id": "IF_TRN_002_JSON_to_XML",
-    "version": "2.0.1",
+    "number": 2,
+    "version": "2.0.2",
+    "mode": "pilot",
+    "defaultScenario": "JX01",
+    "readiness": "VERIFIED",
+    "variants": {},
     "cases": [
       {
         "id": "JX01",
@@ -98,7 +160,12 @@
   },
   {
     "id": "IF_TRN_003_XML_to_JSON",
-    "version": "2.0.1",
+    "number": 3,
+    "version": "2.0.2",
+    "mode": "pilot",
+    "defaultScenario": "XJ01",
+    "readiness": "VERIFIED",
+    "variants": {},
     "cases": [
       {
         "id": "XJ01",
@@ -204,7 +271,12 @@
   },
   {
     "id": "IF_TRN_004_XPath_Filter",
+    "number": 4,
     "version": "2.0.1",
+    "mode": "pilot",
+    "defaultScenario": "XP01",
+    "readiness": "VERIFIED",
+    "variants": {},
     "cases": [
       {
         "id": "XP01",
@@ -293,7 +365,12 @@
   },
   {
     "id": "IF_TRN_005_Base64_Encode",
+    "number": 5,
     "version": "2.0.1",
+    "mode": "pilot",
+    "defaultScenario": "BE01",
+    "readiness": "VERIFIED",
+    "variants": {},
     "cases": [
       {
         "id": "BE01",
@@ -363,7 +440,12 @@
   },
   {
     "id": "IF_TRN_006_Base64_Decode",
+    "number": 6,
     "version": "2.0.1",
+    "mode": "pilot",
+    "defaultScenario": "BD01",
+    "readiness": "VERIFIED",
+    "variants": {},
     "cases": [
       {
         "id": "BD01",
@@ -445,6 +527,3234 @@
         "objective": "Strict input guard accepts valid Base64",
         "strict": true,
         "exact": "Hello"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_007_GZIP_Roundtrip",
+    "number": 7,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "L007_1",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "L007_1",
+        "input": "Order SO1001, amount 250",
+        "objective": "Compression/decompression round trip — business text",
+        "variant": "base",
+        "exact": "Order SO1001, amount 250"
+      },
+      {
+        "id": "L007_2",
+        "input": "José సాయి 😀",
+        "objective": "Compression/decompression round trip — UTF-8 Unicode",
+        "variant": "base",
+        "exact": "José సాయి 😀"
+      },
+      {
+        "id": "L007_3",
+        "input": "line1\nline2\r\nline3",
+        "objective": "Compression/decompression round trip — line endings",
+        "variant": "base",
+        "exact": "line1\nline2\r\nline3"
+      },
+      {
+        "id": "L007_4",
+        "input": "",
+        "objective": "Compression/decompression round trip — empty body",
+        "variant": "base",
+        "exact": ""
+      },
+      {
+        "id": "L007_5",
+        "input": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "objective": "Compression/decompression round trip — repetitive larger payload",
+        "variant": "base",
+        "exact": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      {
+        "id": "L007_BAD",
+        "input": "A valid source payload",
+        "objective": "Corrupted archive rejected before decompression",
+        "variant": "base",
+        "corrupt": true,
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_008_ZIP_Roundtrip",
+    "number": 8,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "L008_1",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "L008_1",
+        "input": "Order SO1001, amount 250",
+        "objective": "Compression/decompression round trip — business text",
+        "variant": "base",
+        "exact": "Order SO1001, amount 250"
+      },
+      {
+        "id": "L008_2",
+        "input": "José సాయి 😀",
+        "objective": "Compression/decompression round trip — UTF-8 Unicode",
+        "variant": "base",
+        "exact": "José సాయి 😀"
+      },
+      {
+        "id": "L008_3",
+        "input": "line1\nline2\r\nline3",
+        "objective": "Compression/decompression round trip — line endings",
+        "variant": "base",
+        "exact": "line1\nline2\r\nline3"
+      },
+      {
+        "id": "L008_4",
+        "input": "",
+        "objective": "Compression/decompression round trip — empty body",
+        "variant": "base",
+        "exact": ""
+      },
+      {
+        "id": "L008_5",
+        "input": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "objective": "Compression/decompression round trip — repetitive larger payload",
+        "variant": "base",
+        "exact": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      {
+        "id": "L008_BAD",
+        "input": "A valid source payload",
+        "objective": "Corrupted archive rejected before decompression",
+        "variant": "base",
+        "corrupt": true,
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_009_XML_Declaration",
+    "number": 9,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "XML09_REMOVE",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {},
+      "keep": {
+        "overrides": {
+          "0": {
+            "removeXmlDeclaration": "0"
+          }
+        }
+      },
+      "clean": {
+        "overrides": {
+          "0": {
+            "xmlCharacterHandling": "remove"
+          }
+        }
+      },
+      "substitute": {
+        "overrides": {
+          "0": {
+            "xmlCharacterHandling": "substitute"
+          }
+        }
+      },
+      "dtd": {
+        "overrides": {
+          "0": {
+            "removeExternalDTDs": "1"
+          }
+        }
+      }
+    },
+    "cases": [
+      {
+        "id": "XML09_REMOVE",
+        "input": "<?xml version=\"1.0\"?><student><name>Anu</name></student>",
+        "objective": "Remove declaration",
+        "variant": "base",
+        "exact": "<student><name>Anu</name></student>"
+      },
+      {
+        "id": "XML09_KEEP",
+        "input": "<?xml version=\"1.0\"?><student><name>Anu</name></student>",
+        "objective": "Keep declaration",
+        "variant": "keep",
+        "contains": [
+          "<?xml",
+          "Anu"
+        ]
+      },
+      {
+        "id": "XML09_UNICODE",
+        "input": "<student><name>José సాయి</name></student>",
+        "objective": "Preserve Unicode and valid XML",
+        "variant": "base",
+        "xmlRoot": "student",
+        "contains": [
+          "José సాయి"
+        ]
+      },
+      {
+        "id": "XML09_CONTROL",
+        "input": "<student>A\u0001B</student>",
+        "objective": "Remove invalid XML control character",
+        "variant": "clean",
+        "exact": "<student>AB</student>"
+      },
+      {
+        "id": "XML09_SUB",
+        "input": "<student>A\u0001B</student>",
+        "objective": "Substitute invalid XML control character",
+        "variant": "substitute",
+        "contains": [
+          "A",
+          "B"
+        ],
+        "excludes": [
+          "\u0001"
+        ]
+      },
+      {
+        "id": "XML09_DTD",
+        "input": "<!DOCTYPE student SYSTEM \"urn:training:never-fetch\"><student>Anu</student>",
+        "objective": "Remove external DTD without fetching it",
+        "variant": "dtd",
+        "contains": [
+          "Anu"
+        ],
+        "excludes": [
+          "DOCTYPE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_010_XML_to_CSV",
+    "number": 10,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "CSV10_ROWS",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {},
+      "semi": {
+        "overrides": {
+          "0": {
+            "Field_Separator_in_CSV": ";"
+          }
+        }
+      },
+      "pipe": {
+        "overrides": {
+          "0": {
+            "Field_Separator_in_CSV": "|"
+          }
+        }
+      },
+      "header": {
+        "overrides": {
+          "0": {
+            "CSV_Header": "xml"
+          }
+        }
+      }
+    },
+    "cases": [
+      {
+        "id": "CSV10_ROWS",
+        "input": "<students><student><id>1</id><name>Anu</name></student><student><id>2</id><name>Ravi</name></student></students>",
+        "objective": "Two records to comma CSV",
+        "variant": "base",
+        "normalizedLines": "1,Anu\n2,Ravi"
+      },
+      {
+        "id": "CSV10_UNICODE",
+        "input": "<students><student><id>3</id><name>José సాయి</name></student></students>",
+        "objective": "Unicode data",
+        "variant": "base",
+        "normalizedLines": "3,José సాయి"
+      },
+      {
+        "id": "CSV10_SEMI",
+        "input": "<students><student><id>1</id><name>Anu</name></student><student><id>2</id><name>Ravi</name></student></students>",
+        "objective": "Semicolon separator",
+        "variant": "semi",
+        "normalizedLines": "1;Anu\n2;Ravi"
+      },
+      {
+        "id": "CSV10_PIPE",
+        "input": "<students><student><id>1</id><name>Anu</name></student><student><id>2</id><name>Ravi</name></student></students>",
+        "objective": "Pipe separator",
+        "variant": "pipe",
+        "normalizedLines": "1|Anu\n2|Ravi"
+      },
+      {
+        "id": "CSV10_HEADER",
+        "input": "<students><student><id>1</id><name>Anu</name></student><student><id>2</id><name>Ravi</name></student></students>",
+        "objective": "XML element names as header",
+        "variant": "header",
+        "contains": [
+          "id,name",
+          "1,Anu",
+          "2,Ravi"
+        ]
+      },
+      {
+        "id": "CSV10_QUOTE",
+        "input": "<students><student><id>4</id><name>Anu, Ravi</name></student></students>",
+        "objective": "Field containing separator is quoted",
+        "variant": "base",
+        "contains": [
+          "Anu, Ravi"
+        ]
+      },
+      {
+        "id": "CSV10_BAD",
+        "input": "<students><student>",
+        "objective": "Malformed XML rejected",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_011_XML_JSON_Roundtrip",
+    "number": 11,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "RT11_ORDER",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "RT11_ORDER",
+        "input": "<customer><name>Anu</name><amount>250</amount></customer>",
+        "objective": "XML→JSON→XML preserves values",
+        "variant": "base",
+        "xmlEquivalent": "<customer><name>Anu</name><amount>250</amount></customer>"
+      },
+      {
+        "id": "RT11_REPEAT",
+        "input": "<customer><name>Anu</name><item>A1</item><item>B2</item></customer>",
+        "objective": "Repeated elements survive round trip",
+        "variant": "base",
+        "xmlLeafValues": [
+          "Anu",
+          "A1",
+          "B2"
+        ]
+      },
+      {
+        "id": "RT11_UNICODE",
+        "input": "<customer><name>José సాయి</name></customer>",
+        "objective": "Unicode survives round trip",
+        "variant": "base",
+        "xmlLeafValues": [
+          "José సాయి"
+        ]
+      },
+      {
+        "id": "RT11_EMPTY",
+        "input": "<customer><name/></customer>",
+        "objective": "Empty element representation",
+        "variant": "base",
+        "xmlRoot": "customer"
+      },
+      {
+        "id": "RT11_BAD",
+        "input": "<customer>",
+        "objective": "Malformed XML rejected",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_012_Base64_Roundtrip",
+    "number": 12,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "L012_1",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "L012_1",
+        "input": "Order SO1001, amount 250",
+        "objective": "Base64 encode/decode round trip — business text",
+        "variant": "base",
+        "exact": "Order SO1001, amount 250"
+      },
+      {
+        "id": "L012_2",
+        "input": "José సాయి 😀",
+        "objective": "Base64 encode/decode round trip — UTF-8 Unicode",
+        "variant": "base",
+        "exact": "José సాయి 😀"
+      },
+      {
+        "id": "L012_3",
+        "input": "line1\nline2\r\nline3",
+        "objective": "Base64 encode/decode round trip — line endings",
+        "variant": "base",
+        "exact": "line1\nline2\r\nline3"
+      },
+      {
+        "id": "L012_4",
+        "input": "",
+        "objective": "Base64 encode/decode round trip — empty body",
+        "variant": "base",
+        "exact": ""
+      },
+      {
+        "id": "L012_5",
+        "input": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "objective": "Base64 encode/decode round trip — repetitive larger payload",
+        "variant": "base",
+        "exact": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_013_SHA256_Digest",
+    "number": 13,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "HASH13_SHA256",
+    "readiness": "VERIFIED",
+    "variants": {
+      "SHA-256": {
+        "overrides": {
+          "0": {
+            "digestAlgorithm": "SHA-256"
+          }
+        }
+      },
+      "SHA-384": {
+        "overrides": {
+          "0": {
+            "digestAlgorithm": "SHA-384"
+          }
+        }
+      },
+      "SHA-512": {
+        "overrides": {
+          "0": {
+            "digestAlgorithm": "SHA-512"
+          }
+        }
+      },
+      "SHA-1": {
+        "overrides": {
+          "0": {
+            "digestAlgorithm": "SHA-1"
+          }
+        }
+      },
+      "MD5": {
+        "overrides": {
+          "0": {
+            "digestAlgorithm": "MD5"
+          }
+        }
+      }
+    },
+    "cases": [
+      {
+        "id": "HASH13_SHA256",
+        "input": "Order SO1001",
+        "objective": "Digest SHA-256",
+        "variant": "SHA-256",
+        "headers": {
+          "SAPMessageDigest": "pblmxSeVEKDDCJ6XBgVppoxSakIJFhScbIAcYhtShK4="
+        },
+        "exact": "Order SO1001"
+      },
+      {
+        "id": "HASH13_SHA384",
+        "input": "Order SO1001",
+        "objective": "Digest SHA-384",
+        "variant": "SHA-384",
+        "headers": {
+          "SAPMessageDigest": "gwAj9eB/9teFnx5PdQPBPHcnCjFED1FGP4/QOmjg34JlKGg5p8JYrg0sMJ0tC3uk"
+        },
+        "exact": "Order SO1001"
+      },
+      {
+        "id": "HASH13_SHA512",
+        "input": "Order SO1001",
+        "objective": "Digest SHA-512",
+        "variant": "SHA-512",
+        "headers": {
+          "SAPMessageDigest": "IQ0KBb7h6nsm9Qg8Q9MXmUprhN/w/3Gn/09cJRnidQhn0wXWG1KRuyq76S+O7KfPd7sTWRkSlTzzIZpHjvpcNA=="
+        },
+        "exact": "Order SO1001"
+      },
+      {
+        "id": "HASH13_SHA1",
+        "input": "Order SO1001",
+        "objective": "Digest SHA-1 (legacy demonstration only)",
+        "variant": "SHA-1",
+        "headers": {
+          "SAPMessageDigest": "XO7LYqMDMrSlgNH5qYiC9NaHcCE="
+        },
+        "exact": "Order SO1001"
+      },
+      {
+        "id": "HASH13_MD5",
+        "input": "Order SO1001",
+        "objective": "Digest MD5 (legacy demonstration only)",
+        "variant": "MD5",
+        "headers": {
+          "SAPMessageDigest": "luDV5IRQeZkG2PdCtrWB+Q=="
+        },
+        "exact": "Order SO1001"
+      },
+      {
+        "id": "HASH13_EDGE0",
+        "input": "",
+        "objective": "SHA-256 exact UTF-8 bytes",
+        "variant": "SHA-256",
+        "headers": {
+          "SAPMessageDigest": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+        },
+        "exact": ""
+      },
+      {
+        "id": "HASH13_EDGE1",
+        "input": "José సాయి",
+        "objective": "SHA-256 exact UTF-8 bytes",
+        "variant": "SHA-256",
+        "headers": {
+          "SAPMessageDigest": "DswVv4bLLgYM3YxwTYGuKsu3q9FMc6kNydYNVAJu2NE="
+        },
+        "exact": "José సాయి"
+      },
+      {
+        "id": "HASH13_EDGE2",
+        "input": "line1\nline2",
+        "objective": "SHA-256 exact UTF-8 bytes",
+        "variant": "SHA-256",
+        "headers": {
+          "SAPMessageDigest": "aDN24pCCm0gsJlV0XK/6eh3M+hCvqmLawrQt1saND4M="
+        },
+        "exact": "line1\nline2"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_014_General_Splitter_Gather",
+    "number": 14,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "SP14_TWO",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {},
+      "stream": {
+        "overrides": {
+          "0": {
+            "Streaming": "true"
+          }
+        }
+      },
+      "parallel": {
+        "overrides": {
+          "0": {
+            "ParallelProcessing": "true"
+          }
+        }
+      }
+    },
+    "cases": [
+      {
+        "id": "SP14_TWO",
+        "input": "<orders><order><id>1</id></order><order><id>2</id></order></orders>",
+        "objective": "Two order records",
+        "variant": "base",
+        "xmlValues": {
+          "id": [
+            "1",
+            "2"
+          ]
+        }
+      },
+      {
+        "id": "SP14_ONE",
+        "input": "<orders><order><id>1</id></order></orders>",
+        "objective": "Single order record",
+        "variant": "base",
+        "xmlValues": {
+          "id": [
+            "1"
+          ]
+        }
+      },
+      {
+        "id": "SP14_STREAM",
+        "input": "<orders><order><id>1</id></order><order><id>2</id></order><order><id>3</id></order><order><id>4</id></order><order><id>5</id></order><order><id>6</id></order><order><id>7</id></order><order><id>8</id></order><order><id>9</id></order><order><id>10</id></order><order><id>11</id></order><order><id>12</id></order><order><id>13</id></order><order><id>14</id></order><order><id>15</id></order><order><id>16</id></order><order><id>17</id></order><order><id>18</id></order><order><id>19</id></order><order><id>20</id></order></orders>",
+        "objective": "Streaming larger order batch",
+        "variant": "stream",
+        "xmlValues": {
+          "id": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"
+          ]
+        }
+      },
+      {
+        "id": "SP14_PARALLEL",
+        "input": "<orders><order><id>1</id></order><order><id>2</id></order></orders>",
+        "objective": "Parallel split; order-independent verification",
+        "variant": "parallel",
+        "xmlValuesUnordered": {
+          "id": [
+            "1",
+            "2"
+          ]
+        }
+      },
+      {
+        "id": "SP14_EMPTY",
+        "input": "<orders/>",
+        "objective": "Zero matching records: measure splitter behaviour",
+        "variant": "base",
+        "observe": true
+      },
+      {
+        "id": "SP14_BAD",
+        "input": "<orders><order>",
+        "objective": "Malformed XML rejected",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_015_Iterating_Splitter_Gather",
+    "number": 15,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "SP15_TWO",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {},
+      "stream": {
+        "overrides": {
+          "0": {
+            "Streaming": "true"
+          }
+        }
+      },
+      "parallel": {
+        "overrides": {
+          "0": {
+            "ParallelProcessing": "true"
+          }
+        }
+      }
+    },
+    "cases": [
+      {
+        "id": "SP15_TWO",
+        "input": "<orders><order><id>1</id></order><order><id>2</id></order></orders>",
+        "objective": "Two order records",
+        "variant": "base",
+        "xmlValues": {
+          "id": [
+            "1",
+            "2"
+          ]
+        }
+      },
+      {
+        "id": "SP15_ONE",
+        "input": "<orders><order><id>1</id></order></orders>",
+        "objective": "Single order record",
+        "variant": "base",
+        "xmlValues": {
+          "id": [
+            "1"
+          ]
+        }
+      },
+      {
+        "id": "SP15_STREAM",
+        "input": "<orders><order><id>1</id></order><order><id>2</id></order><order><id>3</id></order><order><id>4</id></order><order><id>5</id></order><order><id>6</id></order><order><id>7</id></order><order><id>8</id></order><order><id>9</id></order><order><id>10</id></order><order><id>11</id></order><order><id>12</id></order><order><id>13</id></order><order><id>14</id></order><order><id>15</id></order><order><id>16</id></order><order><id>17</id></order><order><id>18</id></order><order><id>19</id></order><order><id>20</id></order></orders>",
+        "objective": "Streaming larger order batch",
+        "variant": "stream",
+        "xmlValues": {
+          "id": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"
+          ]
+        }
+      },
+      {
+        "id": "SP15_PARALLEL",
+        "input": "<orders><order><id>1</id></order><order><id>2</id></order></orders>",
+        "objective": "Parallel split; order-independent verification",
+        "variant": "parallel",
+        "xmlValuesUnordered": {
+          "id": [
+            "1",
+            "2"
+          ]
+        }
+      },
+      {
+        "id": "SP15_EMPTY",
+        "input": "<orders/>",
+        "objective": "Zero matching records: measure splitter behaviour",
+        "variant": "base",
+        "observe": true
+      },
+      {
+        "id": "SP15_BAD",
+        "input": "<orders><order>",
+        "objective": "Malformed XML rejected",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_016_Line_Splitter_Gather",
+    "number": 16,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "LINE16_LF",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "LINE16_LF",
+        "input": "Anu\nRavi",
+        "objective": "LF records",
+        "variant": "base",
+        "exact": "AnuRavi"
+      },
+      {
+        "id": "LINE16_CRLF",
+        "input": "Anu\r\nRavi",
+        "objective": "CRLF records",
+        "variant": "base",
+        "exact": "AnuRavi"
+      },
+      {
+        "id": "LINE16_ONE",
+        "input": "Anu",
+        "objective": "One record",
+        "variant": "base",
+        "exact": "Anu"
+      },
+      {
+        "id": "LINE16_UNICODE",
+        "input": "José\nసాయి",
+        "objective": "Unicode lines",
+        "variant": "base",
+        "exact": "Joséసాయి"
+      },
+      {
+        "id": "LINE16_EMPTY",
+        "input": "Anu\n\nRavi",
+        "objective": "Empty line handling",
+        "variant": "base",
+        "observe": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_017_Data_Store_Roundtrip",
+    "number": 17,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "DS17_XML",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {},
+      "deleteget": {
+        "overrides": {
+          "1": {
+            "delete": "true"
+          }
+        }
+      }
+    },
+    "cases": [
+      {
+        "id": "DS17_XML",
+        "input": "<student><id>1</id><name>Anu</name></student>",
+        "objective": "Write, get and delete own entry",
+        "variant": "base",
+        "exact": "<student><id>1</id><name>Anu</name></student>"
+      },
+      {
+        "id": "DS17_UNICODE",
+        "input": "José సాయి",
+        "objective": "UTF-8 stored value",
+        "variant": "base",
+        "exact": "José సాయి"
+      },
+      {
+        "id": "DS17_JSON",
+        "input": "{\"orderId\":\"SO1001\",\"amount\":250}",
+        "objective": "Store and retrieve JSON bytes",
+        "variant": "base",
+        "exact": "{\"orderId\":\"SO1001\",\"amount\":250}"
+      },
+      {
+        "id": "DS17_DELETEGET",
+        "input": "<student>Anu</student>",
+        "objective": "Get with delete-on-read",
+        "variant": "deleteget",
+        "exact": "<student>Anu</student>"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_018_Data_Store_Missing_Entry",
+    "number": 18,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "DS18_REQUIRED",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {},
+      "optional": {
+        "overrides": {
+          "0": {
+            "stopOnMissingEntry": "false"
+          }
+        }
+      }
+    },
+    "cases": [
+      {
+        "id": "DS18_REQUIRED",
+        "input": "test",
+        "objective": "Missing required entry fails",
+        "variant": "base",
+        "negative": true
+      },
+      {
+        "id": "DS18_OTHER",
+        "input": "other input",
+        "objective": "Another missing entry also fails",
+        "variant": "base",
+        "negative": true
+      },
+      {
+        "id": "DS18_OPTIONAL",
+        "input": "keep this body",
+        "objective": "Optional missing entry behaviour",
+        "variant": "optional",
+        "observe": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_019_Persist_Message",
+    "number": 19,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "PERSIST19_XML",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "PERSIST19_XML",
+        "input": "<order><id>SO1001</id></order>",
+        "objective": "Persist an XML snapshot",
+        "variant": "base",
+        "exact": "<order><id>SO1001</id></order>"
+      },
+      {
+        "id": "PERSIST19_JSON",
+        "input": "{\"orderId\":\"SO1002\"}",
+        "objective": "Persist JSON snapshot",
+        "variant": "base",
+        "exact": "{\"orderId\":\"SO1002\"}"
+      },
+      {
+        "id": "PERSIST19_UNICODE",
+        "input": "José సాయి",
+        "objective": "Persist Unicode snapshot",
+        "variant": "base",
+        "exact": "José సాయి"
+      },
+      {
+        "id": "PERSIST19_MULTI",
+        "input": "line1\nline2",
+        "objective": "Persist line endings",
+        "variant": "base",
+        "exact": "line1\nline2"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_020_MIME_Roundtrip",
+    "number": 20,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "L020_1",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "L020_1",
+        "input": "Order SO1001, amount 250",
+        "objective": "MIME encode/decode round trip — business text",
+        "variant": "base",
+        "exact": "Order SO1001, amount 250"
+      },
+      {
+        "id": "L020_2",
+        "input": "José సాయి 😀",
+        "objective": "MIME encode/decode round trip — UTF-8 Unicode",
+        "variant": "base",
+        "exact": "José సాయి 😀"
+      },
+      {
+        "id": "L020_3",
+        "input": "line1\nline2\r\nline3",
+        "objective": "MIME encode/decode round trip — line endings",
+        "variant": "base",
+        "exact": "line1\nline2\r\nline3"
+      },
+      {
+        "id": "L020_4",
+        "input": "",
+        "objective": "MIME encode/decode round trip — empty body",
+        "variant": "base",
+        "exact": ""
+      },
+      {
+        "id": "L020_5",
+        "input": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "objective": "MIME encode/decode round trip — repetitive larger payload",
+        "variant": "base",
+        "exact": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_021_Timer_Hello",
+    "number": 21,
+    "version": "3.0.1",
+    "mode": "simple",
+    "defaultScenario": "TIMER21_START",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "TIMER21_START",
+        "input": "",
+        "objective": "Once on deployment",
+        "variant": "base",
+        "props": {
+          "StudentName": "Anu",
+          "EventTime": "2026-11-17T09:00:00Z"
+        },
+        "exact": "Timer event for Anu at 2026-11-17T09:00:00Z"
+      },
+      {
+        "id": "TIMER21_REDEPLOY",
+        "input": "",
+        "objective": "Redeploy to produce a second one-time run",
+        "variant": "base",
+        "props": {
+          "StudentName": "Ravi",
+          "EventTime": "2026-11-17T09:01:00Z"
+        },
+        "exact": "Timer event for Ravi at 2026-11-17T09:01:00Z"
+      },
+      {
+        "id": "TIMER21_UTC",
+        "input": "",
+        "objective": "Use an explicit UTC event timestamp",
+        "variant": "base",
+        "props": {
+          "StudentName": "సాయి",
+          "EventTime": "2026-11-17T00:00:00Z"
+        },
+        "exact": "Timer event for సాయి at 2026-11-17T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_022_Local_Process_Call",
+    "number": 22,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "PC22_DEFAULT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "PC22_DEFAULT",
+        "input": "Caller body",
+        "objective": "Local process replaces caller body",
+        "variant": "base",
+        "props": {
+          "LocalGreeting": "Hello from local process"
+        },
+        "exact": "Hello from local process"
+      },
+      {
+        "id": "PC22_UNICODE",
+        "input": "Caller body",
+        "objective": "Properties remain visible in local process",
+        "variant": "base",
+        "props": {
+          "LocalGreeting": "Hello సాయి"
+        },
+        "exact": "Hello సాయి"
+      },
+      {
+        "id": "PC22_EMPTY",
+        "input": "Original body",
+        "objective": "Local process can return empty text",
+        "variant": "base",
+        "props": {
+          "LocalGreeting": ""
+        },
+        "exact": ""
+      },
+      {
+        "id": "PC22_XML",
+        "input": "Original body",
+        "objective": "Return structured local response",
+        "variant": "base",
+        "props": {
+          "LocalGreeting": "<result>Accepted</result>"
+        },
+        "xmlRoot": "result",
+        "contains": [
+          "Accepted"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_023_Router",
+    "number": 23,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "ROUTE23_HIGH",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "ROUTE23_HIGH",
+        "input": "<order><amount>1500</amount></order>",
+        "objective": "Above threshold → priority",
+        "variant": "base",
+        "exact": "PRIORITY"
+      },
+      {
+        "id": "ROUTE23_BOUNDARY",
+        "input": "<order><amount>1000</amount></order>",
+        "objective": "Boundary is standard",
+        "variant": "base",
+        "exact": "STANDARD"
+      },
+      {
+        "id": "ROUTE23_LOW",
+        "input": "<order><amount>0</amount></order>",
+        "objective": "Zero amount → standard",
+        "variant": "base",
+        "exact": "STANDARD"
+      },
+      {
+        "id": "ROUTE23_MISSING",
+        "input": "<order/>",
+        "objective": "Missing optional amount → default route",
+        "variant": "base",
+        "exact": "STANDARD"
+      },
+      {
+        "id": "ROUTE23_DECIMAL",
+        "input": "<order><amount>1000.01</amount></order>",
+        "objective": "Decimal over threshold",
+        "variant": "base",
+        "exact": "PRIORITY"
+      },
+      {
+        "id": "ROUTE23_BAD",
+        "input": "<order>",
+        "objective": "Malformed XML rejected",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_024_Parallel_Multicast",
+    "number": 24,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "MC24_BASE",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "MC24_BASE",
+        "input": "<request/>",
+        "objective": "Two service responses",
+        "variant": "base",
+        "props": {
+          "BranchA": "Sales",
+          "BranchB": "Finance"
+        },
+        "xmlValuesUnordered": {
+          "result": [
+            "Sales",
+            "Finance"
+          ]
+        }
+      },
+      {
+        "id": "MC24_UNICODE",
+        "input": "<request/>",
+        "objective": "Unicode branch responses",
+        "variant": "base",
+        "props": {
+          "BranchA": "José",
+          "BranchB": "సాయి"
+        },
+        "contains": [
+          "José",
+          "సాయి"
+        ]
+      },
+      {
+        "id": "MC24_EMPTY",
+        "input": "<request/>",
+        "objective": "Empty branch result",
+        "variant": "base",
+        "props": {
+          "BranchA": "",
+          "BranchB": "Finance"
+        },
+        "contains": [
+          "Finance"
+        ]
+      },
+      {
+        "id": "MC24_INVALID",
+        "input": "<request/>",
+        "objective": "Parallel Gather observes malformed branch XML without a validation guarantee",
+        "variant": "base",
+        "props": {
+          "BranchA": "A & B",
+          "BranchB": "Finance"
+        },
+        "observe": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_025_Groovy_Uppercase",
+    "number": 25,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "SCRIPT25_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "SCRIPT25_TEXT",
+        "input": "Hello, student!",
+        "objective": "Uppercase body",
+        "variant": "base",
+        "exact": "HELLO, STUDENT!"
+      },
+      {
+        "id": "SCRIPT25_UNICODE",
+        "input": "José సాయి ß",
+        "objective": "Unicode casing",
+        "variant": "base",
+        "exact": "JOSÉ సాయి SS"
+      },
+      {
+        "id": "SCRIPT25_EMPTY",
+        "input": "",
+        "objective": "Empty body",
+        "variant": "base",
+        "exact": ""
+      },
+      {
+        "id": "SCRIPT25_MULTI",
+        "input": "Line one\nline two",
+        "objective": "Preserve line separators",
+        "variant": "base",
+        "exact": "LINE ONE\nLINE TWO"
+      },
+      {
+        "id": "SCRIPT25_JSON",
+        "input": "{\"status\":\"new\"}",
+        "objective": "Whole-body casing also changes JSON keys/values",
+        "variant": "base",
+        "exact": "{\"STATUS\":\"NEW\"}"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_026_JavaScript_Uppercase",
+    "number": 26,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "SCRIPT26_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "SCRIPT26_TEXT",
+        "input": "Hello, student!",
+        "objective": "Uppercase body",
+        "variant": "base",
+        "exact": "HELLO, STUDENT!"
+      },
+      {
+        "id": "SCRIPT26_UNICODE",
+        "input": "José సాయి ß",
+        "objective": "Unicode casing",
+        "variant": "base",
+        "exact": "JOSÉ సాయి SS"
+      },
+      {
+        "id": "SCRIPT26_EMPTY",
+        "input": "",
+        "objective": "Empty body",
+        "variant": "base",
+        "exact": ""
+      },
+      {
+        "id": "SCRIPT26_MULTI",
+        "input": "Line one\nline two",
+        "objective": "Preserve line separators",
+        "variant": "base",
+        "exact": "LINE ONE\nLINE TWO"
+      },
+      {
+        "id": "SCRIPT26_JSON",
+        "input": "{\"status\":\"new\"}",
+        "objective": "Whole-body casing also changes JSON keys/values",
+        "variant": "base",
+        "exact": "{\"STATUS\":\"NEW\"}"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_027_XSLT_Mapping",
+    "number": 27,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "XSLT27_NAME",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "XSLT27_NAME",
+        "input": "<student><name>Anu</name></student>",
+        "objective": "Template and value-of",
+        "variant": "base",
+        "xmlRoot": "greeting",
+        "contains": [
+          "Hello, Anu!"
+        ]
+      },
+      {
+        "id": "XSLT27_UNICODE",
+        "input": "<student><name>José సాయి</name></student>",
+        "objective": "Unicode text",
+        "variant": "base",
+        "xmlRoot": "greeting",
+        "contains": [
+          "Hello, José సాయి!"
+        ]
+      },
+      {
+        "id": "XSLT27_ESCAPE",
+        "input": "<student><name>A &amp; B</name></student>",
+        "objective": "XML escaping",
+        "variant": "base",
+        "xmlRoot": "greeting",
+        "contains": [
+          "Hello, A & B!"
+        ]
+      },
+      {
+        "id": "XSLT27_MISSING",
+        "input": "<student/>",
+        "objective": "Missing name produces empty substitution",
+        "variant": "base",
+        "xmlRoot": "greeting",
+        "contains": [
+          "Hello, !"
+        ]
+      },
+      {
+        "id": "XSLT27_BAD",
+        "input": "<student>",
+        "objective": "Malformed XML rejected",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_028_XML_Validator_Valid",
+    "number": 28,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "VAL28_VALID",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "VAL28_VALID",
+        "input": "<student><id>1</id><name>Anu</name></student>",
+        "objective": "Positive integer accepted",
+        "variant": "base",
+        "exact": "<student><id>1</id><name>Anu</name></student>"
+      },
+      {
+        "id": "VAL28_UNICODE",
+        "input": "<student><id>2</id><name>సాయి</name></student>",
+        "objective": "Unicode name accepted",
+        "variant": "base",
+        "xmlRoot": "student",
+        "contains": [
+          "సాయి"
+        ]
+      },
+      {
+        "id": "VAL28_TEXT",
+        "input": "<student><id>ABC</id><name>Anu</name></student>",
+        "objective": "Text identifier rejected",
+        "variant": "base",
+        "negative": true
+      },
+      {
+        "id": "VAL28_ZERO",
+        "input": "<student><id>0</id><name>Anu</name></student>",
+        "objective": "Zero is not a positive integer",
+        "variant": "base",
+        "negative": true
+      },
+      {
+        "id": "VAL28_MISSING",
+        "input": "<student><id>1</id></student>",
+        "objective": "Required name missing",
+        "variant": "base",
+        "negative": true
+      },
+      {
+        "id": "VAL28_ORDER",
+        "input": "<student><name>Anu</name><id>1</id></student>",
+        "objective": "XSD sequence order enforced",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_029_XML_Validator_Invalid",
+    "number": 29,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "VAL29_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "VAL29_TEXT",
+        "input": "<student><id>ABC</id><name>Anu</name></student>",
+        "objective": "Text identifier rejected",
+        "variant": "base",
+        "negative": true
+      },
+      {
+        "id": "VAL29_VALID",
+        "input": "<student><id>1</id><name>Anu</name></student>",
+        "objective": "Positive integer accepted",
+        "variant": "base",
+        "exact": "<student><id>1</id><name>Anu</name></student>"
+      },
+      {
+        "id": "VAL29_UNICODE",
+        "input": "<student><id>2</id><name>సాయి</name></student>",
+        "objective": "Unicode name accepted",
+        "variant": "base",
+        "xmlRoot": "student",
+        "contains": [
+          "సాయి"
+        ]
+      },
+      {
+        "id": "VAL29_ZERO",
+        "input": "<student><id>0</id><name>Anu</name></student>",
+        "objective": "Zero is not a positive integer",
+        "variant": "base",
+        "negative": true
+      },
+      {
+        "id": "VAL29_MISSING",
+        "input": "<student><id>1</id></student>",
+        "objective": "Required name missing",
+        "variant": "base",
+        "negative": true
+      },
+      {
+        "id": "VAL29_ORDER",
+        "input": "<student><name>Anu</name><id>1</id></student>",
+        "objective": "XSD sequence order enforced",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_030_CSV_to_XML",
+    "number": 30,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "CSV30_ROWS",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {},
+      "header": {
+        "overrides": {
+          "0": {
+            "ignoreFirstLineAsHeader": "true"
+          }
+        }
+      },
+      "semi": {
+        "overrides": {
+          "0": {
+            "Field_Separator_in_CSV": ";"
+          }
+        }
+      }
+    },
+    "cases": [
+      {
+        "id": "CSV30_ROWS",
+        "input": "1,Anu\n2,Ravi",
+        "objective": "Two rows to XML",
+        "variant": "base",
+        "xmlRoot": "students",
+        "xmlValues": {
+          "id": [
+            "1",
+            "2"
+          ],
+          "name": [
+            "Anu",
+            "Ravi"
+          ]
+        }
+      },
+      {
+        "id": "CSV30_UNICODE",
+        "input": "3,José సాయి",
+        "objective": "Unicode row",
+        "variant": "base",
+        "xmlValues": {
+          "name": [
+            "José సాయి"
+          ]
+        }
+      },
+      {
+        "id": "CSV30_HEADER",
+        "input": "id,name\n1,Anu",
+        "objective": "Skip incoming header",
+        "variant": "header",
+        "xmlValues": {
+          "id": [
+            "1"
+          ],
+          "name": [
+            "Anu"
+          ]
+        }
+      },
+      {
+        "id": "CSV30_SEMI",
+        "input": "1;Anu\n2;Ravi",
+        "objective": "Semicolon input",
+        "variant": "semi",
+        "xmlValues": {
+          "id": [
+            "1",
+            "2"
+          ]
+        }
+      },
+      {
+        "id": "CSV30_QUOTE",
+        "input": "4,\"Anu, Ravi\"",
+        "objective": "Quoted field contains delimiter",
+        "variant": "base",
+        "xmlValues": {
+          "name": [
+            "Anu, Ravi"
+          ]
+        }
+      },
+      {
+        "id": "CSV30_EMPTY",
+        "input": "5,",
+        "objective": "Empty field",
+        "variant": "base",
+        "xmlRoot": "students"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_031_Sequential_Multicast",
+    "number": 31,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "MC31_BASE",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "MC31_BASE",
+        "input": "<request/>",
+        "objective": "Two service responses",
+        "variant": "base",
+        "props": {
+          "BranchA": "Sales",
+          "BranchB": "Finance"
+        },
+        "xmlValues": {
+          "result": [
+            "Sales",
+            "Finance"
+          ]
+        }
+      },
+      {
+        "id": "MC31_UNICODE",
+        "input": "<request/>",
+        "objective": "Unicode branch responses",
+        "variant": "base",
+        "props": {
+          "BranchA": "José",
+          "BranchB": "సాయి"
+        },
+        "contains": [
+          "José",
+          "సాయి"
+        ]
+      },
+      {
+        "id": "MC31_EMPTY",
+        "input": "<request/>",
+        "objective": "Empty branch result",
+        "variant": "base",
+        "props": {
+          "BranchA": "",
+          "BranchB": "Finance"
+        },
+        "contains": [
+          "Finance"
+        ]
+      },
+      {
+        "id": "MC31_INVALID",
+        "input": "<request/>",
+        "objective": "Sequential Gather rejects malformed branch XML",
+        "variant": "base",
+        "props": {
+          "BranchA": "A & B",
+          "BranchB": "Finance"
+        },
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_032_Looping_Process_Call",
+    "number": 32,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "LOOP32_ZERO",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "LOOP32_ZERO",
+        "input": "<counter>0</counter>",
+        "objective": "Repeat while below one",
+        "variant": "base",
+        "xmlLeafValues": [
+          "1"
+        ]
+      },
+      {
+        "id": "LOOP32_ONE",
+        "input": "<counter>1</counter>",
+        "objective": "Do-while executes once even when the initial counter is already one",
+        "variant": "base",
+        "xmlLeafValues": [
+          "2"
+        ]
+      },
+      {
+        "id": "LOOP32_NEG",
+        "input": "<counter>-1</counter>",
+        "objective": "Local process sets counter to one",
+        "variant": "base",
+        "xmlLeafValues": [
+          "1"
+        ]
+      },
+      {
+        "id": "LOOP32_BAD",
+        "input": "<counter>",
+        "objective": "Invalid XML condition rejected",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_033_Loop_Maximum_Guard",
+    "number": 33,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "LOOP33_GUARD",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "LOOP33_GUARD",
+        "input": "<counter>0</counter>",
+        "objective": "Loop condition never becomes false: maximum guard fails",
+        "variant": "base",
+        "negative": true,
+        "props": {
+          "CounterLimit": 5
+        }
+      },
+      {
+        "id": "LOOP33_SKIP",
+        "input": "<counter>2</counter>",
+        "objective": "Do-while executes once, then condition becomes false",
+        "variant": "base",
+        "xmlLeafValues": [
+          "3"
+        ],
+        "props": {
+          "CounterLimit": 2
+        }
+      },
+      {
+        "id": "LOOP33_HIGH",
+        "input": "<counter>10</counter>",
+        "objective": "Do-while still executes once above threshold",
+        "variant": "base",
+        "xmlLeafValues": [
+          "11"
+        ],
+        "props": {
+          "CounterLimit": 2
+        }
+      },
+      {
+        "id": "LOOP33_ONE",
+        "input": "<counter>1</counter>",
+        "objective": "Persistent condition still fails at maximum",
+        "variant": "base",
+        "negative": true,
+        "props": {
+          "CounterLimit": 5
+        }
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_034_Idempotent_Process_Call",
+    "number": 34,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "IDEMP34_FIRST",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "IDEMP34_FIRST",
+        "input": "Hello from main",
+        "objective": "First occurrence executes local process",
+        "variant": "base",
+        "props": {
+          "SourceId": "TRN034_REVIEW_A"
+        },
+        "oneOf": [
+          "Hello from main",
+          "Hello from local process"
+        ]
+      },
+      {
+        "id": "IDEMP34_REPEAT",
+        "input": "Hello from main",
+        "objective": "Repeat same key skips local call",
+        "variant": "base",
+        "props": {
+          "SourceId": "TRN034_REVIEW_A"
+        },
+        "oneOf": [
+          "Hello from main",
+          "Hello from local process"
+        ]
+      },
+      {
+        "id": "IDEMP34_NEW",
+        "input": "Hello from main",
+        "objective": "Different key has its own first run",
+        "variant": "base",
+        "props": {
+          "SourceId": "TRN034_REVIEW_B"
+        },
+        "oneOf": [
+          "Hello from main",
+          "Hello from local process"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_035_Exception_Handled",
+    "number": 35,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "EX35_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "EX35_TEXT",
+        "input": "<student><id>ABC</id><name>Anu</name></student>",
+        "objective": "Catch XML validation failure",
+        "variant": "base",
+        "exact": "Handled validation error",
+        "expectedRuntime": "COMPLETED",
+        "handled": true
+      },
+      {
+        "id": "EX35_ZERO",
+        "input": "<student><id>0</id><name>Anu</name></student>",
+        "objective": "Catch another schema error",
+        "variant": "base",
+        "exact": "Handled validation error",
+        "expectedRuntime": "COMPLETED",
+        "handled": true
+      },
+      {
+        "id": "EX35_VALID",
+        "input": "<student><id>1</id><name>Anu</name></student>",
+        "objective": "Valid input bypasses error handler",
+        "variant": "base",
+        "exact": "<student><id>1</id><name>Anu</name></student>"
+      },
+      {
+        "id": "EX35_XML",
+        "input": "<student>",
+        "objective": "Catch malformed XML",
+        "variant": "base",
+        "exact": "Handled validation error",
+        "handled": true,
+        "expectedRuntime": "COMPLETED"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_036_Exception_Rethrown",
+    "number": 36,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "EX36_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "EX36_TEXT",
+        "input": "<student><id>ABC</id><name>Anu</name></student>",
+        "objective": "Catch XML validation failure",
+        "variant": "base",
+        "exact": "Handled validation error",
+        "expectedRuntime": "FAILED",
+        "handled": true
+      },
+      {
+        "id": "EX36_ZERO",
+        "input": "<student><id>0</id><name>Anu</name></student>",
+        "objective": "Catch another schema error",
+        "variant": "base",
+        "exact": "Handled validation error",
+        "expectedRuntime": "FAILED",
+        "handled": true
+      },
+      {
+        "id": "EX36_VALID",
+        "input": "<student><id>1</id><name>Anu</name></student>",
+        "objective": "Valid input bypasses error handler",
+        "variant": "base",
+        "exact": "<student><id>1</id><name>Anu</name></student>"
+      },
+      {
+        "id": "EX36_XML",
+        "input": "<student>",
+        "objective": "Catch malformed XML",
+        "variant": "base",
+        "exact": "Handled validation error",
+        "handled": true,
+        "expectedRuntime": "FAILED"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_037_Error_End_Event",
+    "number": 37,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "END37_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "END37_TEXT",
+        "input": "Order accepted",
+        "objective": "End-event status with text",
+        "variant": "base",
+        "exact": "Order accepted",
+        "expectedRuntime": "FAILED"
+      },
+      {
+        "id": "END37_XML",
+        "input": "<order>SO1001</order>",
+        "objective": "End-event status with XML",
+        "variant": "base",
+        "exact": "<order>SO1001</order>",
+        "expectedRuntime": "FAILED"
+      },
+      {
+        "id": "END37_EMPTY",
+        "input": "",
+        "objective": "End-event status with empty body",
+        "variant": "base",
+        "exact": "",
+        "expectedRuntime": "FAILED"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_038_Escalation_End_Event",
+    "number": 38,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "END38_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "END38_TEXT",
+        "input": "Order accepted",
+        "objective": "End-event status with text",
+        "variant": "base",
+        "exact": "Order accepted",
+        "expectedRuntime": "ESCALATED"
+      },
+      {
+        "id": "END38_XML",
+        "input": "<order>SO1001</order>",
+        "objective": "End-event status with XML",
+        "variant": "base",
+        "exact": "<order>SO1001</order>",
+        "expectedRuntime": "ESCALATED"
+      },
+      {
+        "id": "END38_EMPTY",
+        "input": "",
+        "objective": "End-event status with empty body",
+        "variant": "base",
+        "exact": "",
+        "expectedRuntime": "ESCALATED"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_039_Terminate_Message",
+    "number": 39,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "END39_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "END39_TEXT",
+        "input": "Order accepted",
+        "objective": "End-event status with text",
+        "variant": "base",
+        "exact": "Order accepted",
+        "expectedRuntime": "COMPLETED"
+      },
+      {
+        "id": "END39_XML",
+        "input": "<order>SO1001</order>",
+        "objective": "End-event status with XML",
+        "variant": "base",
+        "exact": "<order>SO1001</order>",
+        "expectedRuntime": "COMPLETED"
+      },
+      {
+        "id": "END39_EMPTY",
+        "input": "",
+        "objective": "End-event status with empty body",
+        "variant": "base",
+        "exact": "",
+        "expectedRuntime": "COMPLETED"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_040_Plain_End_Event",
+    "number": 40,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "END40_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "END40_TEXT",
+        "input": "Order accepted",
+        "objective": "End-event status with text",
+        "variant": "base",
+        "exact": "Order accepted",
+        "expectedRuntime": "COMPLETED"
+      },
+      {
+        "id": "END40_XML",
+        "input": "<order>SO1001</order>",
+        "objective": "End-event status with XML",
+        "variant": "base",
+        "exact": "<order>SO1001</order>",
+        "expectedRuntime": "COMPLETED"
+      },
+      {
+        "id": "END40_EMPTY",
+        "input": "",
+        "objective": "End-event status with empty body",
+        "variant": "base",
+        "exact": "",
+        "expectedRuntime": "COMPLETED"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_041_ID_Mapping",
+    "number": 41,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "MAP41_FIRST",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "MAP41_FIRST",
+        "input": "SourceA",
+        "objective": "Map source A",
+        "variant": "base",
+        "props": {
+          "SourceId": "TRN041_REVIEW_A"
+        },
+        "uuid": true
+      },
+      {
+        "id": "MAP41_REPEAT",
+        "input": "SourceA",
+        "objective": "Same source returns same target ID",
+        "variant": "base",
+        "props": {
+          "SourceId": "TRN041_REVIEW_A"
+        },
+        "uuid": true
+      },
+      {
+        "id": "MAP41_NEW",
+        "input": "SourceB",
+        "objective": "Different source gets different target",
+        "variant": "base",
+        "props": {
+          "SourceId": "TRN041_REVIEW_B"
+        },
+        "uuid": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_042_Write_Variables",
+    "number": 42,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "VAR42_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "VAR42_TEXT",
+        "input": "variable demo",
+        "objective": "Write/read local variable",
+        "variant": "base",
+        "props": {
+          "PersistedGreeting": "Hello from a persisted variable"
+        },
+        "exact": "Hello from a persisted variable"
+      },
+      {
+        "id": "VAR42_UNICODE",
+        "input": "variable demo",
+        "objective": "Persist Unicode",
+        "variant": "base",
+        "props": {
+          "PersistedGreeting": "Hello సాయి"
+        },
+        "exact": "Hello సాయి"
+      },
+      {
+        "id": "VAR42_JSON",
+        "input": "variable demo",
+        "objective": "Persist structured text",
+        "variant": "base",
+        "props": {
+          "PersistedGreeting": "{\"status\":\"accepted\"}"
+        },
+        "exact": "{\"status\":\"accepted\"}"
+      },
+      {
+        "id": "VAR42_REPLACE",
+        "input": "variable demo",
+        "objective": "Overwrite own variable",
+        "variant": "base",
+        "props": {
+          "PersistedGreeting": "Updated greeting"
+        },
+        "exact": "Updated greeting"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_043_Data_Store_Select",
+    "number": 43,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "SELECT43_TWO",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "SELECT43_TWO",
+        "input": "<record>One</record>",
+        "objective": "Select two dedicated records",
+        "variant": "base",
+        "props": {
+          "SecondRecord": "<record>Two</record>"
+        },
+        "storedValues": [
+          "One",
+          "Two"
+        ]
+      },
+      {
+        "id": "SELECT43_UNICODE",
+        "input": "<record>José</record>",
+        "objective": "Select Unicode records",
+        "variant": "base",
+        "props": {
+          "SecondRecord": "<record>సాయి</record>"
+        },
+        "storedValues": [
+          "José",
+          "సాయి"
+        ]
+      },
+      {
+        "id": "SELECT43_NUMERIC",
+        "input": "<record>1001</record>",
+        "objective": "Select numeric-looking text",
+        "variant": "base",
+        "props": {
+          "SecondRecord": "<record>1002</record>"
+        },
+        "storedValues": [
+          "1001",
+          "1002"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_044_ZIP_Splitter",
+    "number": 44,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "ARC44_TWO",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "ARC44_TWO",
+        "input": "UEsDBBQAAAAAAFk1cV2LntnTAQAAAAEAAAAFAAAAYS50eHRBUEsDBBQAAAAAAFk1cV0xz9BKAQAAAAEAAAAFAAAAYi50eHRCUEsBAhQDFAAAAAAAWTVxXYue2dMBAAAAAQAAAAUAAAAAAAAAAAAAAIABAAAAAGEudHh0UEsBAhQDFAAAAAAAWTVxXTHP0EoBAAAAAQAAAAUAAAAAAAAAAAAAAIABJAAAAGIudHh0UEsFBgAAAAACAAIAZgAAAEgAAAAAAA==",
+        "objective": "Two file archive",
+        "variant": "base",
+        "exact": "AB"
+      },
+      {
+        "id": "ARC44_ONE",
+        "input": "UEsDBBQAAAAAAFk1cV0RwCFCAwAAAAMAAAAHAAAAb25lLnR4dE9uZVBLAQIUAxQAAAAAAFk1cV0RwCFCAwAAAAMAAAAHAAAAAAAAAAAAAACAAQAAAABvbmUudHh0UEsFBgAAAAABAAEANQAAACgAAAAAAA==",
+        "objective": "One file archive",
+        "variant": "base",
+        "exact": "One"
+      },
+      {
+        "id": "ARC44_UTF8",
+        "input": "UEsDBBQAAAAAAFk1cV1oGU6uBQAAAAUAAAAFAAAAYS50eHRKb3PDqVBLAwQUAAAAAABZNXFduNkSaAwAAAAMAAAABQAAAGIudHh04LC44LC+4LCv4LC/UEsBAhQDFAAAAAAAWTVxXWgZTq4FAAAABQAAAAUAAAAAAAAAAAAAAIABAAAAAGEudHh0UEsBAhQDFAAAAAAAWTVxXbjZEmgMAAAADAAAAAUAAAAAAAAAAAAAAIABKAAAAGIudHh0UEsFBgAAAAACAAIAZgAAAFcAAAAAAA==",
+        "objective": "UTF-8 file contents",
+        "variant": "base",
+        "exact": "Joséసాయి"
+      },
+      {
+        "id": "ARC44_EMPTYFILE",
+        "input": "UEsDBBQAAAAAAFk1cV0AAAAAAAAAAAAAAAAFAAAAYS50eHRQSwMEFAAAAAAAWTVxXTHP0EoBAAAAAQAAAAUAAABiLnR4dEJQSwECFAMUAAAAAABZNXFdAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAgAEAAAAAYS50eHRQSwECFAMUAAAAAABZNXFdMc/QSgEAAAABAAAABQAAAAAAAAAAAAAAgAEjAAAAYi50eHRQSwUGAAAAAAIAAgBmAAAARwAAAAAA",
+        "objective": "An empty file plus a normal file",
+        "variant": "base",
+        "exact": "B"
+      },
+      {
+        "id": "ARC44_BAD",
+        "input": "bm90IGFuIGFyY2hpdmU=",
+        "objective": "Invalid archive rejected",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_045_Tar_Splitter",
+    "number": 45,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "ARC45_TWO",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "ARC45_TWO",
+        "input": "YS50eHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAwMDA2NDQAMDAwMDAwMAAwMDAwMDAwADAwMDAwMDAwMDAxADAwMDAwMDAwMDAwADAwNjcxNQAgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB1c3RhcgAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGIudHh0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwMDAwNjQ0ADAwMDAwMDAAMDAwMDAwMAAwMDAwMDAwMDAwMQAwMDAwMDAwMDAwMAAwMDY3MTYAIDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdXN0YXIAMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "objective": "Two file archive",
+        "variant": "base",
+        "exact": "AB"
+      },
+      {
+        "id": "ARC45_ONE",
+        "input": "b25lLnR4dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAwMDA2NDQAMDAwMDAwMAAwMDAwMDAwADAwMDAwMDAwMDAzADAwMDAwMDAwMDAwADAwNzI2MAAgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB1c3RhcgAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABPbmUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "objective": "One file archive",
+        "variant": "base",
+        "exact": "One"
+      },
+      {
+        "id": "ARC45_UTF8",
+        "input": "YS50eHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAwMDA2NDQAMDAwMDAwMAAwMDAwMDAwADAwMDAwMDAwMDA1ADAwMDAwMDAwMDAwADAwNjcyMQAgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB1c3RhcgAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABKb3PDqQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGIudHh0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwMDAwNjQ0ADAwMDAwMDAAMDAwMDAwMAAwMDAwMDAwMDAxNAAwMDAwMDAwMDAwMAAwMDY3MjIAIDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdXN0YXIAMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4LC44LC+4LCv4LC/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "objective": "UTF-8 file contents",
+        "variant": "base",
+        "exact": "Joséసాయి"
+      },
+      {
+        "id": "ARC45_EMPTYFILE",
+        "input": "YS50eHQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAwMDA2NDQAMDAwMDAwMAAwMDAwMDAwADAwMDAwMDAwMDAwADAwMDAwMDAwMDAwADAwNjcxNAAgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB1c3RhcgAwMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiLnR4dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDAwMDY0NAAwMDAwMDAwADAwMDAwMDAAMDAwMDAwMDAwMDEAMDAwMDAwMDAwMDAAMDA2NzE2ACAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHVzdGFyADAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "objective": "An empty file plus a normal file",
+        "variant": "base",
+        "exact": "B"
+      },
+      {
+        "id": "ARC45_BAD",
+        "input": "bm90IGFuIGFyY2hpdmU=",
+        "objective": "Invalid archive rejected",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_046_Headers_Properties",
+    "number": 46,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "HP46_DEFAULT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "HP46_DEFAULT",
+        "input": "original",
+        "objective": "Use header and exchange property",
+        "variant": "base",
+        "props": {
+          "StudentName": "Anu"
+        },
+        "inputHeaders": {
+          "Course": "CPI"
+        },
+        "exact": "Hello Anu, welcome to CPI!"
+      },
+      {
+        "id": "HP46_OTHER",
+        "input": "original",
+        "objective": "Change course header",
+        "variant": "base",
+        "props": {
+          "StudentName": "Ravi"
+        },
+        "inputHeaders": {
+          "Course": "Integration Suite"
+        },
+        "exact": "Hello Ravi, welcome to Integration Suite!"
+      },
+      {
+        "id": "HP46_UNICODE",
+        "input": "original",
+        "objective": "Unicode property",
+        "variant": "base",
+        "props": {
+          "StudentName": "సాయి"
+        },
+        "inputHeaders": {
+          "Course": "CPI"
+        },
+        "exact": "Hello సాయి, welcome to CPI!"
+      },
+      {
+        "id": "HP46_EMPTY",
+        "input": "original",
+        "objective": "Empty optional student name",
+        "variant": "base",
+        "props": {
+          "StudentName": ""
+        },
+        "inputHeaders": {
+          "Course": "CPI"
+        },
+        "exact": "Hello , welcome to CPI!"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_047_XPath_Property",
+    "number": 47,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "XP47_NAME",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "XP47_NAME",
+        "input": "<student><name>Anu</name></student>",
+        "objective": "XPath property used in expression",
+        "variant": "base",
+        "exact": "Hello Anu!"
+      },
+      {
+        "id": "XP47_UTF8",
+        "input": "<student><name>సాయి</name></student>",
+        "objective": "Unicode XPath value",
+        "variant": "base",
+        "exact": "Hello సాయి!"
+      },
+      {
+        "id": "XP47_MISSING",
+        "input": "<student/>",
+        "objective": "Missing optional XPath name",
+        "variant": "base",
+        "observe": true
+      },
+      {
+        "id": "XP47_BAD",
+        "input": "<student>",
+        "objective": "Malformed XML rejected",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_048_Request_Reply",
+    "number": 48,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "CALL48_MATCH",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "CALL48_MATCH",
+        "input": "<students><student><id>1</id><name>Anu</name></student></students>",
+        "objective": "Matching lookup id",
+        "variant": "base",
+        "contains": [
+          "Sales"
+        ],
+        "receiverCall": true
+      },
+      {
+        "id": "CALL48_UTF8",
+        "input": "<students><student><id>1</id><name>సాయి</name></student></students>",
+        "objective": "Unicode request preserved",
+        "variant": "base",
+        "contains": [
+          "Sales"
+        ],
+        "receiverCall": true
+      },
+      {
+        "id": "CALL48_NOMATCH",
+        "input": "<students><student><id>999</id><name>Anu</name></student></students>",
+        "objective": "No matching lookup key",
+        "variant": "base",
+        "receiverCall": true,
+        "observe": true
+      },
+      {
+        "id": "CALL48_MULTI",
+        "input": "<students><student><id>1</id><name>Anu</name></student><student><id>1</id><name>Ravi</name></student></students>",
+        "objective": "Multiple request records",
+        "variant": "base",
+        "contains": [
+          "Sales"
+        ],
+        "receiverCall": true
+      },
+      {
+        "id": "CALL48_EMPTY",
+        "input": "<students/>",
+        "objective": "Empty lookup request returns an empty lookup",
+        "variant": "base",
+        "observe": true,
+        "receiverCall": true
+      },
+      {
+        "id": "CALL48_BAD",
+        "input": "<students>",
+        "objective": "Receiver rejects malformed XML",
+        "variant": "base",
+        "negative": true,
+        "receiverCall": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_049_Local_Mock_Receiver",
+    "number": 49,
+    "version": "3.0.0",
+    "mode": "receiver",
+    "defaultScenario": "LIVE",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "MOCK49_SALES",
+        "input": "<students><student><id>1</id></student></students>",
+        "objective": "Sales lookup request",
+        "variant": "base",
+        "contains": [
+          "Sales"
+        ]
+      },
+      {
+        "id": "MOCK49_UNKNOWN",
+        "input": "<students><student><id>999</id></student></students>",
+        "objective": "Unknown key response",
+        "variant": "base",
+        "observe": true
+      },
+      {
+        "id": "MOCK49_EMPTY",
+        "input": "<students/>",
+        "objective": "Empty request response",
+        "variant": "base",
+        "observe": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_050_Send_Local_Message",
+    "number": 50,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "CALL50_MATCH",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "CALL50_MATCH",
+        "input": "<students><student><id>1</id><name>Anu</name></student></students>",
+        "objective": "Matching lookup id",
+        "variant": "base",
+        "contains": [
+          "Anu"
+        ],
+        "receiverCall": true
+      },
+      {
+        "id": "CALL50_UTF8",
+        "input": "<students><student><id>1</id><name>సాయి</name></student></students>",
+        "objective": "Unicode request preserved",
+        "variant": "base",
+        "contains": [
+          "సాయి"
+        ],
+        "receiverCall": true
+      },
+      {
+        "id": "CALL50_NOMATCH",
+        "input": "<students><student><id>999</id><name>Anu</name></student></students>",
+        "objective": "No matching lookup key",
+        "variant": "base",
+        "receiverCall": true,
+        "observe": true
+      },
+      {
+        "id": "CALL50_MULTI",
+        "input": "<students><student><id>1</id><name>Anu</name></student><student><id>1</id><name>Ravi</name></student></students>",
+        "objective": "Multiple request records",
+        "variant": "base",
+        "contains": [
+          "Anu",
+          "Ravi"
+        ],
+        "receiverCall": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_051_Content_Enricher",
+    "number": 51,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "CALL51_MATCH",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "CALL51_MATCH",
+        "input": "<students><student><id>1</id><name>Anu</name></student></students>",
+        "objective": "Matching lookup id",
+        "variant": "base",
+        "contains": [
+          "Anu",
+          "Sales"
+        ],
+        "receiverCall": true
+      },
+      {
+        "id": "CALL51_UTF8",
+        "input": "<students><student><id>1</id><name>సాయి</name></student></students>",
+        "objective": "Unicode request preserved",
+        "variant": "base",
+        "contains": [
+          "సాయి",
+          "Sales"
+        ],
+        "receiverCall": true
+      },
+      {
+        "id": "CALL51_NOMATCH",
+        "input": "<students><student><id>999</id><name>Anu</name></student></students>",
+        "objective": "No matching lookup key",
+        "variant": "base",
+        "receiverCall": true,
+        "observe": true
+      },
+      {
+        "id": "CALL51_MULTI",
+        "input": "<students><student><id>1</id><name>Anu</name></student><student><id>1</id><name>Ravi</name></student></students>",
+        "objective": "Multiple request records",
+        "variant": "base",
+        "contains": [
+          "Anu",
+          "Ravi",
+          "Sales"
+        ],
+        "receiverCall": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_053_Aggregator",
+    "number": 53,
+    "version": "3.0.0",
+    "mode": "aggregator",
+    "defaultScenario": "LIVE",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "AGG53_ORDERED",
+        "input": "<order><batch>TRN053</batch><sequence>1</sequence><last>false</last></order>",
+        "objective": "Correlate two independently delivered messages",
+        "variant": "base",
+        "contains": [
+          "1",
+          "2"
+        ]
+      },
+      {
+        "id": "AGG53_TIMEOUT",
+        "input": "<order><batch>TRN053_TIMEOUT</batch><sequence>1</sequence><last>false</last></order>",
+        "objective": "Timeout completes an incomplete group",
+        "variant": "base",
+        "observe": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_054_EDI_Extractor",
+    "number": 54,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "EDI54_ORDER",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "EDI54_ORDER",
+        "input": "UNA:+.? 'UNB+UNOC:3+SENDER:14+RECEIVER:14+261117:1200+1'UNH+1+ORDERS:D:96A:UN'BGM+220+PO123+9'DTM+137:20261117:102'UNT+4+1'UNZ+1+1'",
+        "objective": "Extract EDIFACT envelope and message headers",
+        "variant": "base",
+        "headers": {
+          "EDI_Document_Standard": "UN-EDIFACT",
+          "EDI_Message_Type": "ORDERS",
+          "EDI_Message_Release": "96A"
+        },
+        "exact": "UNA:+.? 'UNB+UNOC:3+SENDER:14+RECEIVER:14+261117:1200+1'UNH+1+ORDERS:D:96A:UN'BGM+220+PO123+9'DTM+137:20261117:102'UNT+4+1'UNZ+1+1'"
+      },
+      {
+        "id": "EDI54_PARTNER",
+        "input": "UNA:+.? 'UNB+UNOC:3+TRAININGA:14+TRAININGB:14+261117:1200+1'UNH+1+ORDERS:D:96A:UN'BGM+220+PO123+9'DTM+137:20261117:102'UNT+4+1'UNZ+1+1'",
+        "objective": "Different partner identifiers",
+        "variant": "base",
+        "headers": {
+          "EDI_Sender_ID": "TRAININGA",
+          "EDI_Receiver_ID": "TRAININGB"
+        }
+      },
+      {
+        "id": "EDI54_CONTROL",
+        "input": "UNA:+.? 'UNB+UNOC:3+SENDER:14+RECEIVER:14+261117:1200+123'UNH+1+ORDERS:D:96A:UN'BGM+220+PO123+9'DTM+137:20261117:102'UNT+4+1'UNZ+1+123'",
+        "objective": "Interchange control number",
+        "variant": "base",
+        "headers": {
+          "EDI_Interchange_control_number": "123"
+        }
+      },
+      {
+        "id": "EDI54_BAD",
+        "input": "NOT AN EDI MESSAGE",
+        "objective": "Malformed EDI input",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_055_EDI_Splitter",
+    "number": 55,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "EDI55_TWO",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "EDI55_TWO",
+        "input": "UNA:+.? 'UNB+UNOC:3+SENDER:14+RECEIVER:14+261117:1200+2'UNH+1+ORDERS:D:96A:UN'BGM+220+PO123+9'DTM+137:20261117:102'UNT+4+1'UNH+2+ORDERS:D:96A:UN'BGM+220+PO124+9'DTM+137:20261117:102'UNT+4+2'UNZ+2+2'",
+        "objective": "Two messages split and gathered",
+        "variant": "base",
+        "contains": [
+          "PO123",
+          "PO124"
+        ]
+      },
+      {
+        "id": "EDI55_ONE",
+        "input": "UNA:+.? 'UNB+UNOC:3+SENDER:14+RECEIVER:14+261117:1200+1'UNH+1+ORDERS:D:96A:UN'BGM+220+PO123+9'DTM+137:20261117:102'UNT+4+1'UNZ+1+1'",
+        "objective": "Single message",
+        "variant": "base",
+        "contains": [
+          "PO123"
+        ]
+      },
+      {
+        "id": "EDI55_PARTNER",
+        "input": "UNA:+.? 'UNB+UNOC:3+TRAININGA:14+RECEIVER:14+261117:1200+2'UNH+1+ORDERS:D:96A:UN'BGM+220+PO123+9'DTM+137:20261117:102'UNT+4+1'UNH+2+ORDERS:D:96A:UN'BGM+220+PO124+9'DTM+137:20261117:102'UNT+4+2'UNZ+2+2'",
+        "objective": "Partner-specific envelope preserved",
+        "variant": "base",
+        "contains": [
+          "TRAININGA",
+          "PO123",
+          "PO124"
+        ]
+      },
+      {
+        "id": "EDI55_BAD",
+        "input": "NOT AN EDI MESSAGE",
+        "objective": "Invalid EDI input",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_056_EDI_XML_Roundtrip",
+    "number": 56,
+    "version": "3.0.0",
+    "mode": "ediSchema",
+    "defaultScenario": "EDI56_NO_SCHEMA",
+    "readiness": "BLOCKED_LICENSED_EDI_SCHEMA",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "EDI56_NO_SCHEMA",
+        "input": "UNA:+.? 'UNB+UNOC:3+SENDER:14+RECEIVER:14+261117:1200+1'UNH+1+ORDERS:D:96A:UN'BGM+220+PO123+9'DTM+137:20261117:102'UNT+4+1'UNZ+1+1'",
+        "objective": "Prerequisite diagnostic: missing licensed runtime XSD is rejected; this does not test successful EDI conversion",
+        "variant": "base",
+        "negative": true,
+        "prerequisiteCheck": true
+      },
+      {
+        "id": "EDI56_ORDER",
+        "input": "UNA:+.? 'UNB+UNOC:3+SENDER:14+RECEIVER:14+261117:1200+1'UNH+1+ORDERS:D:96A:UN'BGM+220+PO123+9'DTM+137:20261117:102'UNT+4+1'UNZ+1+1'",
+        "objective": "EDIFACT order to XML and back",
+        "variant": "base",
+        "contains": [
+          "PO123"
+        ],
+        "blocked": "A licensed UN/EDIFACT ORDERS D96A Integration Advisor runtime XSD is required. SAP currently reports: You do not have valid license for the type system."
+      },
+      {
+        "id": "EDI56_OTHER",
+        "input": "UNA:+.? 'UNB+UNOC:3+SENDER:14+RECEIVER:14+261117:1200+1'UNH+1+ORDERS:D:96A:UN'BGM+220+PO999+9'DTM+137:20261117:102'UNT+4+1'UNZ+1+1'",
+        "objective": "Changed purchase-order reference",
+        "variant": "base",
+        "contains": [
+          "PO999"
+        ],
+        "blocked": "A licensed UN/EDIFACT ORDERS D96A Integration Advisor runtime XSD is required. SAP currently reports: You do not have valid license for the type system."
+      },
+      {
+        "id": "EDI56_BAD",
+        "input": "NOT AN EDI MESSAGE",
+        "objective": "Malformed input is rejected before any EDI conversion can complete",
+        "variant": "base",
+        "negative": true,
+        "blocked": "A licensed UN/EDIFACT ORDERS D96A Integration Advisor runtime XSD is required. SAP currently reports: You do not have valid license for the type system."
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_057_Aggregator_Trigger",
+    "number": 57,
+    "version": "3.0.0",
+    "mode": "graph",
+    "defaultScenario": "TRIGGER57_ORDERED",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "TRIGGER57_ORDERED",
+        "input": "<order><batch>TRN053</batch><sequence>1</sequence><last>false</last></order>",
+        "objective": "Send sequences one then two",
+        "variant": "base",
+        "props": {
+          "SecondOrder": "<order><batch>TRN053</batch><sequence>2</sequence><last>true</last></order>"
+        },
+        "observe": true
+      },
+      {
+        "id": "TRIGGER57_REVERSED",
+        "input": "<order><batch>TRN053_REV</batch><sequence>2</sequence><last>true</last></order>",
+        "objective": "Out-of-order delivery with sequence two correctly marked as last",
+        "variant": "base",
+        "props": {
+          "SecondOrder": "<order><batch>TRN053_REV</batch><sequence>1</sequence><last>false</last></order>"
+        },
+        "observe": true
+      },
+      {
+        "id": "TRIGGER57_VERIFY",
+        "input": "Verify latest aggregated message",
+        "objective": "Read/delete aggregated XML and assert ordered sequence values",
+        "variant": "verify",
+        "xmlValues": {
+          "sequence": [
+            "1",
+            "2"
+          ]
+        }
+      },
+      {
+        "id": "TRIGGER57_TIMEOUT",
+        "input": "<order><batch>TRN053_TIMEOUT</batch><sequence>1</sequence><last>false</last></order>",
+        "objective": "Send an incomplete group; wait for configured timeout",
+        "variant": "single",
+        "observe": true
+      },
+      {
+        "id": "TRIGGER57_VERIFY_TIMEOUT",
+        "input": "Verify incomplete group",
+        "objective": "After timeout, assert the one-message result",
+        "variant": "verify",
+        "xmlValues": {
+          "sequence": [
+            "1"
+          ]
+        }
+      },
+      {
+        "id": "TRIGGER57_BAD_LAST",
+        "input": "<order><batch>TRN053_REV</batch><sequence>2</sequence><last>false</last></order>",
+        "objective": "Reject a last-message marker below an already accepted sequence",
+        "variant": "base",
+        "props": {
+          "SecondOrder": "<order><batch>TRN053_REV</batch><sequence>1</sequence><last>true</last></order>"
+        },
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_058_Message_Mapping",
+    "number": 58,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "MM58_NAME",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "MM58_NAME",
+        "input": "<student><name>Anu</name></student>",
+        "objective": "Graphical field mapping",
+        "variant": "base",
+        "xmlRoot": "customer",
+        "contains": [
+          "Anu"
+        ]
+      },
+      {
+        "id": "MM58_UTF8",
+        "input": "<student><name>సాయి</name></student>",
+        "objective": "Unicode mapping",
+        "variant": "base",
+        "xmlRoot": "customer",
+        "contains": [
+          "సాయి"
+        ]
+      },
+      {
+        "id": "MM58_EMPTY",
+        "input": "<student><name/></student>",
+        "objective": "Empty source field",
+        "variant": "base",
+        "xmlRoot": "customer"
+      },
+      {
+        "id": "MM58_ESCAPE",
+        "input": "<student><name>A &amp; B</name></student>",
+        "objective": "Escaped XML data",
+        "variant": "base",
+        "xmlRoot": "customer",
+        "contains": [
+          "A & B"
+        ]
+      },
+      {
+        "id": "MM58_BAD",
+        "input": "<student>",
+        "objective": "Malformed XML rejected",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_059_Externalized_Parameter",
+    "number": 59,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "PARAM59_DEFAULT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "PARAM59_DEFAULT",
+        "input": "",
+        "objective": "Externalized greeting prefix and scenario",
+        "variant": "base",
+        "props": {
+          "StudentName": "Anu"
+        },
+        "greeting": true
+      },
+      {
+        "id": "PARAM59_UTF8",
+        "input": "",
+        "objective": "Unicode student",
+        "variant": "base",
+        "props": {
+          "StudentName": "సాయి"
+        },
+        "greeting": true
+      },
+      {
+        "id": "PARAM59_EMPTY",
+        "input": "",
+        "objective": "Empty optional student",
+        "variant": "base",
+        "props": {
+          "StudentName": ""
+        },
+        "greeting": true
+      },
+      {
+        "id": "PARAM59_OTHER",
+        "input": "",
+        "objective": "Another configured scenario",
+        "variant": "base",
+        "props": {
+          "StudentName": "Ravi"
+        },
+        "greeting": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_060_CMS_Encrypt_Decrypt",
+    "number": 60,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "SEC60_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "SEC60_TEXT",
+        "input": "Order SO1001, amount 250",
+        "objective": "Security processing of business text",
+        "variant": "base",
+        "exact": "Order SO1001, amount 250"
+      },
+      {
+        "id": "SEC60_UTF8",
+        "input": "José సాయి 😀",
+        "objective": "UTF-8 security payload",
+        "variant": "base",
+        "exact": "José సాయి 😀"
+      },
+      {
+        "id": "SEC60_JSON",
+        "input": "{\"orderId\":\"SO1001\"}",
+        "objective": "Structured JSON payload",
+        "variant": "base",
+        "exact": "{\"orderId\":\"SO1001\"}"
+      },
+      {
+        "id": "SEC60_MULTI",
+        "input": "line1\nline2",
+        "objective": "Preserve message bytes",
+        "variant": "base",
+        "exact": "line1\nline2"
+      },
+      {
+        "id": "SEC60_TAMPER",
+        "input": "Order SO1001",
+        "objective": "Corrupted encrypted/signed message rejected",
+        "variant": "base",
+        "tamper": true,
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_061_CMS_Sign_Verify",
+    "number": 61,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "SEC61_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "SEC61_TEXT",
+        "input": "Order SO1001, amount 250",
+        "objective": "Security processing of business text",
+        "variant": "base",
+        "exact": "Order SO1001, amount 250"
+      },
+      {
+        "id": "SEC61_UTF8",
+        "input": "José సాయి 😀",
+        "objective": "UTF-8 security payload",
+        "variant": "base",
+        "exact": "José సాయి 😀"
+      },
+      {
+        "id": "SEC61_JSON",
+        "input": "{\"orderId\":\"SO1001\"}",
+        "objective": "Structured JSON payload",
+        "variant": "base",
+        "exact": "{\"orderId\":\"SO1001\"}"
+      },
+      {
+        "id": "SEC61_MULTI",
+        "input": "line1\nline2",
+        "objective": "Preserve message bytes",
+        "variant": "base",
+        "exact": "line1\nline2"
+      },
+      {
+        "id": "SEC61_TAMPER",
+        "input": "Order SO1001",
+        "objective": "Corrupted encrypted/signed message rejected",
+        "variant": "base",
+        "tamper": true,
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_062_Simple_Signer",
+    "number": 62,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "SEC62_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "SEC62_TEXT",
+        "input": "Order SO1001, amount 250",
+        "objective": "Security processing of business text",
+        "variant": "base",
+        "exact": "Order SO1001, amount 250",
+        "signatureHeader": "SAPSimpleSignatureValue"
+      },
+      {
+        "id": "SEC62_UTF8",
+        "input": "José సాయి 😀",
+        "objective": "UTF-8 security payload",
+        "variant": "base",
+        "exact": "José సాయి 😀",
+        "signatureHeader": "SAPSimpleSignatureValue"
+      },
+      {
+        "id": "SEC62_JSON",
+        "input": "{\"orderId\":\"SO1001\"}",
+        "objective": "Structured JSON payload",
+        "variant": "base",
+        "exact": "{\"orderId\":\"SO1001\"}",
+        "signatureHeader": "SAPSimpleSignatureValue"
+      },
+      {
+        "id": "SEC62_MULTI",
+        "input": "line1\nline2",
+        "objective": "Preserve message bytes",
+        "variant": "base",
+        "exact": "line1\nline2",
+        "signatureHeader": "SAPSimpleSignatureValue"
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_063_XML_Sign_Verify",
+    "number": 63,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "SEC63_XML",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "SEC63_XML",
+        "input": "<student><name>Anu</name></student>",
+        "objective": "Sign/verify XML",
+        "variant": "base",
+        "xmlEquivalent": "<student><name>Anu</name></student>"
+      },
+      {
+        "id": "SEC63_UTF8",
+        "input": "<student><name>సాయి</name></student>",
+        "objective": "Unicode signed XML",
+        "variant": "base",
+        "xmlLeafValues": [
+          "సాయి"
+        ]
+      },
+      {
+        "id": "SEC63_TAMPER",
+        "input": "<student><name>Anu</name></student>",
+        "objective": "Tampered XML fails verification",
+        "variant": "base",
+        "tamper": true,
+        "negative": true
+      },
+      {
+        "id": "SEC63_BAD",
+        "input": "<student>",
+        "objective": "Malformed XML rejected before signing",
+        "variant": "base",
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_064_PGP_Encrypt_Decrypt",
+    "number": 64,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "SEC64_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "SEC64_TEXT",
+        "input": "Order SO1001, amount 250",
+        "objective": "Security processing of business text",
+        "variant": "base",
+        "exact": "Order SO1001, amount 250"
+      },
+      {
+        "id": "SEC64_UTF8",
+        "input": "José సాయి 😀",
+        "objective": "UTF-8 security payload",
+        "variant": "base",
+        "exact": "José సాయి 😀"
+      },
+      {
+        "id": "SEC64_JSON",
+        "input": "{\"orderId\":\"SO1001\"}",
+        "objective": "Structured JSON payload",
+        "variant": "base",
+        "exact": "{\"orderId\":\"SO1001\"}"
+      },
+      {
+        "id": "SEC64_MULTI",
+        "input": "line1\nline2",
+        "objective": "Preserve message bytes",
+        "variant": "base",
+        "exact": "line1\nline2"
+      },
+      {
+        "id": "SEC64_TAMPER",
+        "input": "Order SO1001",
+        "objective": "Corrupted encrypted/signed message rejected",
+        "variant": "base",
+        "tamper": true,
+        "negative": true
+      }
+    ]
+  },
+  {
+    "id": "IF_TRN_065_CMS_Signature_Splitter",
+    "number": 65,
+    "version": "3.0.0",
+    "mode": "simple",
+    "defaultScenario": "SEC65_TEXT",
+    "readiness": "VERIFIED",
+    "variants": {
+      "base": {}
+    },
+    "cases": [
+      {
+        "id": "SEC65_TEXT",
+        "input": "Order SO1001, amount 250",
+        "objective": "Security processing of business text",
+        "variant": "base",
+        "cmsParts": true
+      },
+      {
+        "id": "SEC65_UTF8",
+        "input": "José సాయి 😀",
+        "objective": "UTF-8 security payload",
+        "variant": "base",
+        "cmsParts": true
+      },
+      {
+        "id": "SEC65_JSON",
+        "input": "{\"orderId\":\"SO1001\"}",
+        "objective": "Structured JSON payload",
+        "variant": "base",
+        "cmsParts": true
+      },
+      {
+        "id": "SEC65_MULTI",
+        "input": "line1\nline2",
+        "objective": "Preserve message bytes",
+        "variant": "base",
+        "cmsParts": true
       }
     ]
   }

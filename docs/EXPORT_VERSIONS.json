@@ -1,515 +1,262 @@
-[
-  {
-    "id": "IF_TRN_007_GZIP_Roundtrip",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
+{
+  "snapshotDate": "2026-11-17",
+  "artifacts": [
+    {
+      "id": "IF_TRN_001_Hello_World",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_002_JSON_to_XML",
+      "version": "2.0.2"
+    },
+    {
+      "id": "IF_TRN_003_XML_to_JSON",
+      "version": "2.0.2"
+    },
+    {
+      "id": "IF_TRN_004_XPath_Filter",
+      "version": "2.0.1"
+    },
+    {
+      "id": "IF_TRN_005_Base64_Encode",
+      "version": "2.0.1"
+    },
+    {
+      "id": "IF_TRN_006_Base64_Decode",
+      "version": "2.0.1"
+    },
+    {
+      "id": "IF_TRN_007_GZIP_Roundtrip",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_008_ZIP_Roundtrip",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_009_XML_Declaration",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_010_XML_to_CSV",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_011_XML_JSON_Roundtrip",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_012_Base64_Roundtrip",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_013_SHA256_Digest",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_014_General_Splitter_Gather",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_015_Iterating_Splitter_Gather",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_016_Line_Splitter_Gather",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_017_Data_Store_Roundtrip",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_018_Data_Store_Missing_Entry",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_019_Persist_Message",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_020_MIME_Roundtrip",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_021_Timer_Hello",
+      "version": "3.0.1"
+    },
+    {
+      "id": "IF_TRN_022_Local_Process_Call",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_023_Router",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_024_Parallel_Multicast",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_025_Groovy_Uppercase",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_026_JavaScript_Uppercase",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_027_XSLT_Mapping",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_028_XML_Validator_Valid",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_029_XML_Validator_Invalid",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_030_CSV_to_XML",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_031_Sequential_Multicast",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_032_Looping_Process_Call",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_033_Loop_Maximum_Guard",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_034_Idempotent_Process_Call",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_035_Exception_Handled",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_036_Exception_Rethrown",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_037_Error_End_Event",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_038_Escalation_End_Event",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_039_Terminate_Message",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_040_Plain_End_Event",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_041_ID_Mapping",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_042_Write_Variables",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_043_Data_Store_Select",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_044_ZIP_Splitter",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_045_Tar_Splitter",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_046_Headers_Properties",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_047_XPath_Property",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_048_Request_Reply",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_049_Local_Mock_Receiver",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_050_Send_Local_Message",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_051_Content_Enricher",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_053_Aggregator",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_054_EDI_Extractor",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_055_EDI_Splitter",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_056_EDI_XML_Roundtrip",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_057_Aggregator_Trigger",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_058_Message_Mapping",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_059_Externalized_Parameter",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_060_CMS_Encrypt_Decrypt",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_061_CMS_Sign_Verify",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_062_Simple_Signer",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_063_XML_Sign_Verify",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_064_PGP_Encrypt_Decrypt",
+      "version": "3.0.0"
+    },
+    {
+      "id": "IF_TRN_065_CMS_Signature_Splitter",
+      "version": "3.0.0"
     }
-  },
-  {
-    "id": "IF_TRN_009_XML_Declaration",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_010_XML_to_CSV",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_013_SHA256_Digest",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_014_General_Splitter_Gather",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_018_Data_Store_Missing_Entry",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_020_MIME_Roundtrip",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_021_Timer_Hello",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_023_Router",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_008_ZIP_Roundtrip",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_011_XML_JSON_Roundtrip",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_012_Base64_Roundtrip",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_015_Iterating_Splitter_Gather",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_016_Line_Splitter_Gather",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_017_Data_Store_Roundtrip",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_019_Persist_Message",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_022_Local_Process_Call",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_024_Parallel_Multicast",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_028_XML_Validator_Valid",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_029_XML_Validator_Invalid",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_031_Sequential_Multicast",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_032_Looping_Process_Call",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_025_Groovy_Uppercase",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_027_XSLT_Mapping",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_026_JavaScript_Uppercase",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_030_CSV_to_XML",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_033_Loop_Maximum_Guard",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_034_Idempotent_Process_Call",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_035_Exception_Handled",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_037_Error_End_Event",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_038_Escalation_End_Event",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_040_Plain_End_Event",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_041_ID_Mapping",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_043_Data_Store_Select",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_044_ZIP_Splitter",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_046_Headers_Properties",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_047_XPath_Property",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_049_Local_Mock_Receiver",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_050_Send_Local_Message",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_053_Aggregator",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_061_CMS_Sign_Verify",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_062_Simple_Signer",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_063_XML_Sign_Verify",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_036_Exception_Rethrown",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_039_Terminate_Message",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_042_Write_Variables",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_045_Tar_Splitter",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_048_Request_Reply",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_054_EDI_Extractor",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_055_EDI_Splitter",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_056_EDI_XML_Roundtrip",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_057_Aggregator_Trigger",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_058_Message_Mapping",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_060_CMS_Encrypt_Decrypt",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_064_PGP_Encrypt_Decrypt",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_065_CMS_Signature_Splitter",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  },
-  {
-    "id": "IF_TRN_001_Hello_World",
-    "previousVersion": "1.0.1",
-    "exportVersion": "1.0.2",
-    "result": {
-      "isSuccess": true,
-      "message": ""
-    }
-  }
-]
+  ],
+  "pilotNote": "002/003 processing attributes, tables and routes match verified pilot; existing drafts saved for export."
+}

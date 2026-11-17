@@ -1,1 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><parameters><param_references/></parameters>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><parameters><parameter>
+    <key/>
+    <name>ScenarioId</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description>Receiver processes caller messages; run lesson 057 to drive ordered, reversed and timeout scenarios.</description>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>AggregationTimeoutMinutes</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description>Timeout in minutes for an incomplete aggregation group.</description>
+    <additionalMetadata/>
+  </parameter><param_references/></parameters>

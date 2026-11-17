@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ifl="http:///com.sap.ifl.model/Ifl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1">
     <bpmn2:collaboration id="Collaboration_1" name="Default Collaboration">
-        <bpmn2:documentation id="Documentation_1794881531532" textFormat="text/plain">Review pilot 2.0: 9 selectable scenarios. Use Configure -&gt; ScenarioId -&gt; Save -&gt; Deploy. The first Content Modifier sets course header, lab-version property and selector body. Native processing branches expose configuration variants. Assert and Explain returns a JSON report with the component output. Deliberate rejection scenarios remain FAILED. See Documents: Five iFlow Review Pack - All Tabs.</bpmn2:documentation>
+        <bpmn2:documentation id="Documentation_1794898093238" textFormat="text/plain">Review pilot 2.0: 9 selectable scenarios. Use Configure -&gt; ScenarioId -&gt; Save -&gt; Deploy. The first Content Modifier sets course header, lab-version property and selector body. Native processing branches expose configuration variants. Assert and Explain returns a JSON report with the component output. Deliberate rejection scenarios remain FAILED. See Documents: Five iFlow Review Pack - All Tabs.</bpmn2:documentation>
         <bpmn2:extensionElements>
             <ifl:property>
                 <key>namespaceMapping</key>
@@ -400,7 +400,7 @@
         </bpmn2:callActivity>
         <bpmn2:startEvent id="StartEvent_2" name="Start Timer">
             <bpmn2:outgoing>SequenceFlow_100</bpmn2:outgoing>
-            <bpmn2:timerEventDefinition id="TimerEventDefinition_312388">
+            <bpmn2:timerEventDefinition id="TimerEventDefinition_145308">
                 <bpmn2:extensionElements>
                     <ifl:property>
                         <key>scheduleKey</key>
@@ -439,7 +439,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_201_1794881531534" xsi:type="bpmn2:tFormalExpression">${property.Variant} = 'wrap'</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_201_1794898093241" xsi:type="bpmn2:tFormalExpression">${property.Variant} = 'wrap'</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_200" name="plain" sourceRef="ExclusiveGateway_20" targetRef="CallActivity_30">
             <bpmn2:extensionElements>
@@ -456,7 +456,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_200_1794881531534" xsi:type="bpmn2:tFormalExpression">${property.Variant} = 'plain'</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_200_1794898093241" xsi:type="bpmn2:tFormalExpression">${property.Variant} = 'plain'</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_203" name="dot" sourceRef="ExclusiveGateway_20" targetRef="CallActivity_33">
             <bpmn2:extensionElements>
@@ -489,7 +489,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_202_1794881531535" xsi:type="bpmn2:tFormalExpression">${property.Variant} = 'ns'</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_202_1794898093241" xsi:type="bpmn2:tFormalExpression">${property.Variant} = 'ns'</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_300" sourceRef="CallActivity_30" targetRef="CallActivity_90"/>
         <bpmn2:sequenceFlow id="SequenceFlow_303" sourceRef="CallActivity_33" targetRef="CallActivity_90"/>
@@ -500,7 +500,7 @@
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
             <bpmndi:BPMNShape bpmnElement="ExclusiveGateway_20" id="BPMNShape_ExclusiveGateway_20">
-                <dc:Bounds height="0.0" width="0.0" x="760.0" y="160.0"/>
+                <dc:Bounds height="40.0" width="40.0" x="760.0" y="160.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_10" id="BPMNShape_CallActivity_10">
                 <dc:Bounds height="60.0" width="100.0" x="390.0" y="128.0"/>
@@ -509,7 +509,7 @@
                 <dc:Bounds height="60.0" width="100.0" x="970.0" y="350.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="EndEvent_2" id="BPMNShape_EndEvent_2">
-                <dc:Bounds height="0.0" width="0.0" x="1400.0" y="162.0"/>
+                <dc:Bounds height="32.0" width="32.0" x="1400.0" y="162.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_11" id="BPMNShape_CallActivity_11">
                 <dc:Bounds height="60.0" width="100.0" x="570.0" y="128.0"/>
@@ -518,7 +518,7 @@
                 <dc:Bounds height="60.0" width="100.0" x="970.0" y="475.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="StartEvent_2" id="BPMNShape_StartEvent_2">
-                <dc:Bounds height="0.0" width="0.0" x="292.0" y="142.0"/>
+                <dc:Bounds height="32.0" width="32.0" x="292.0" y="142.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_30" id="BPMNShape_CallActivity_30">
                 <dc:Bounds height="60.0" width="100.0" x="970.0" y="100.0"/>

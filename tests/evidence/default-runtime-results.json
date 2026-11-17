@@ -1,0 +1,1557 @@
+[
+  {
+    "id": "IF_TRN_049_Local_Mock_Receiver",
+    "verdict": "RECEIVER_STARTED",
+    "log": null,
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:01 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_053_Aggregator",
+    "verdict": "RECEIVER_STARTED",
+    "log": null,
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:11 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_001_Hello_World",
+    "defaultCase": "H01",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8A_4Q8J1rbDeWusu-VeP_FNvF",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794900990286)/",
+      "LogEnd": "/Date(1794900990611)/",
+      "custom": {
+        "TRN_OutputPreview": "Hello, student!",
+        "TRN_Expected": "COMPLETED",
+        "TRN_ScenarioId": "H01",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputSha256": "Lrpk2pO4CKHUdjiiikmJrxzdamXICHRqWh8xrhxJ1AA="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:21 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_007_GZIP_Roundtrip",
+    "defaultCase": "L007_1",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8A_oeRkA6yDBJG67oeIY_vpVf",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794900986692)/",
+      "LogEnd": "/Date(1794900987028)/",
+      "custom": {
+        "TRN_OutputPreview": "Order SO1001, amount 250",
+        "TRN_OutputSha256": "8fQsDNUl4yuaYvF4BpuLP0EEXMNJb/yeRaklfJb7eSY=",
+        "TRN_Expected": "COMPLETED",
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "L007_1"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:20 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_008_ZIP_Roundtrip",
+    "defaultCase": "L008_1",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8A_e6exhj3kmrJ3yykuBWpVCA",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794900983048)/",
+      "LogEnd": "/Date(1794900983386)/",
+      "custom": {
+        "TRN_OutputSha256": "8fQsDNUl4yuaYvF4BpuLP0EEXMNJb/yeRaklfJb7eSY=",
+        "TRN_OutputPreview": "Order SO1001, amount 250",
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "L008_1",
+        "TRN_Expected": "COMPLETED"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:20 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_009_XML_Declaration",
+    "defaultCase": "XML09_REMOVE",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BAEUhZrxhyUo_U9iE3b2Mu-_",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794900993844)/",
+      "LogEnd": "/Date(1794900994161)/",
+      "custom": {
+        "TRN_OutputSha256": "DEyW6Oear1zIu8QT6JcOpvW3yKvOGEDjxjB700V2los=",
+        "TRN_Expected": "COMPLETED",
+        "TRN_ScenarioId": "XML09_REMOVE",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputPreview": "<student><name>Anu</name></student>"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:30 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_010_XML_to_CSV",
+    "defaultCase": "CSV10_ROWS",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BAXFFb0LEd2bpQN5WwuLA4x-",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794900997397)/",
+      "LogEnd": "/Date(1794900997718)/",
+      "custom": {
+        "TRN_ScenarioId": "CSV10_ROWS",
+        "TRN_OutputSha256": "wxdZfE+cyzLzNBr6QpZ+AlMGIlI1HYYGQsSbHNGW2oU=",
+        "TRN_Expected": "COMPLETED",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputPreview": "1,Anu  2,Ravi  "
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:33 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_011_XML_JSON_Roundtrip",
+    "defaultCase": "RT11_ORDER",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BAh_cae6X81vCrA5HVs0j1Kr",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901000954)/",
+      "LogEnd": "/Date(1794901001270)/",
+      "custom": {
+        "TRN_OutputSha256": "a+yfPYHOp/1ZzD67lf49AwfL4ravrpIZze4+confFw0=",
+        "TRN_Expected": "COMPLETED",
+        "TRN_ScenarioId": "RT11_ORDER",
+        "TRN_OutputPreview": "<?xml version='1.0' encoding='UTF-8'?><customer><name>Anu</name><amount>250</amount></customer>",
+        "TRN_TestResult": "PASS"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:36 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_012_Base64_Roundtrip",
+    "defaultCase": "L012_1",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BAzAgHQeuxVpFZatQyLSjvJq",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901004506)/",
+      "LogEnd": "/Date(1794901004821)/",
+      "custom": {
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "Order SO1001, amount 250",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputSha256": "8fQsDNUl4yuaYvF4BpuLP0EEXMNJb/yeRaklfJb7eSY=",
+        "TRN_ScenarioId": "L012_1"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:41 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_013_SHA256_Digest",
+    "defaultCase": "HASH13_SHA256",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BBA64HnNn_6pRMe4xMrabaDv",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901008051)/",
+      "LogEnd": "/Date(1794901008366)/",
+      "custom": {
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "Order SO1001",
+        "TRN_ScenarioId": "HASH13_SHA256",
+        "TRN_OutputSha256": "pblmxSeVEKDDCJ6XBgVppoxSakIJFhScbIAcYhtShK4="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:44 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_014_General_Splitter_Gather",
+    "defaultCase": "SP14_TWO",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BBOr9TIimyMbNoguC0x57fi3",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901011639)/",
+      "LogEnd": "/Date(1794901011974)/",
+      "custom": {
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "KzUDwWuhXx5KEvBRLPhEfpKZkEP0sX7yOYheKWVwiyI=",
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "SP14_TWO"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:48 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_015_Iterating_Splitter_Gather",
+    "defaultCase": "SP15_TWO",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BBd6v2QHXl2zqTgH6-hOboZC",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901015227)/",
+      "LogEnd": "/Date(1794901015544)/",
+      "custom": {
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "HTigeQf2qMZo4D9D5DAmtktvnzyGh6zWU/sBu82cyRw=",
+        "TRN_ScenarioId": "SP15_TWO"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:51 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_016_Line_Splitter_Gather",
+    "defaultCase": "LINE16_LF",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BBqrhanfciIen4QTRKKiJ2Hz",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901018792)/",
+      "LogEnd": "/Date(1794901019111)/",
+      "custom": {
+        "TRN_ScenarioId": "LINE16_LF",
+        "TRN_Expected": "COMPLETED",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputPreview": "AnuRavi",
+        "TRN_OutputSha256": "44kj1kncvc2JUNm6M2vfmcxipwXiCIwQvWoWWZN67ZA="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:55 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_017_Data_Store_Roundtrip",
+    "defaultCase": "DS17_XML",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BB7nnGw7LDw000Mr6ICwbOZ7",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901022374)/",
+      "LogEnd": "/Date(1794901022786)/",
+      "custom": {
+        "TRN_ScenarioId": "DS17_XML",
+        "TRN_Expected": "COMPLETED",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputPreview": "<student><id>1</id><name>Anu</name></student>",
+        "TRN_OutputSha256": "MIBhexjFOtM21nFXIFxm/fYgqhTreU2nDHW9YF2V2ec="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:36:59 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_018_Data_Store_Missing_Entry",
+    "defaultCase": "DS18_REQUIRED",
+    "expected": "FAILED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BCHnQitT66PgKbK6nzitOuQz",
+      "Status": "FAILED",
+      "LogStart": "/Date(1794901025918)/",
+      "LogEnd": "/Date(1794901026205)/",
+      "custom": {
+        "TRN_Expected": "FAILED",
+        "TRN_ScenarioId": "DS18_REQUIRED"
+      },
+      "error": "b'com.sap.esb.datastore.MessageNotFoundException: No message found for id TRN_LAB_c3bd391e-170d-48aa-a33c-3d907abadfe9 in store TRN018_MISSING for integration flow IF_TRN_018_Data_Store_Missing_Entry'"
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:03 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_019_Persist_Message",
+    "defaultCase": "PERSIST19_XML",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BCULAR7mpkHO5ZIkp_vY7KpI",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901029476)/",
+      "LogEnd": "/Date(1794901029851)/",
+      "custom": {
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "PERSIST19_XML",
+        "TRN_OutputPreview": "<order><id>SO1001</id></order>",
+        "TRN_OutputSha256": "5wIca79JhpWmIQdbIB7d5c84OHzhJlyeMQfvRb1i8EQ=",
+        "TRN_Expected": "COMPLETED"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:06 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_020_MIME_Roundtrip",
+    "defaultCase": "L020_1",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BCmdu-e6sSLBfhNN1NAGE6YI",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901033076)/",
+      "LogEnd": "/Date(1794901033407)/",
+      "custom": {
+        "TRN_ScenarioId": "L020_1",
+        "TRN_OutputPreview": "Order SO1001, amount 250",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "8fQsDNUl4yuaYvF4BpuLP0EEXMNJb/yeRaklfJb7eSY=",
+        "TRN_TestResult": "PASS"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:09 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_021_Timer_Hello",
+    "defaultCase": "TIMER21_START",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BXs-GlhOY1sLJ5ksfZnI1RC1",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901371134)/",
+      "LogEnd": "/Date(1794901371454)/",
+      "custom": {
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "JeEHvrklO/1//CblqXN7Wa8C+3SSMGg1n5M2y9nxqZE=",
+        "TRN_OutputPreview": "Timer event for Anu at 2026-11-17T09:00:00Z",
+        "TRN_ScenarioId": "TIMER21_START",
+        "TRN_TestResult": "PASS"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.1",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:42:48 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_022_Local_Process_Call",
+    "defaultCase": "PC22_DEFAULT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BDKiyM2NjZ-TskyI8mNBgfWS",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901042131)/",
+      "LogEnd": "/Date(1794901042445)/",
+      "custom": {
+        "TRN_ScenarioId": "PC22_DEFAULT",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputPreview": "Hello from local process",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "cSLRufb05CogJfYXmeWQeCiTyxR9SthI/anY4kFHdqA="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:17 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_023_Router",
+    "defaultCase": "ROUTE23_HIGH",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BDV7ZNRdk_EhUsh5_fFxGqr3",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901045729)/",
+      "LogEnd": "/Date(1794901046058)/",
+      "custom": {
+        "TRN_TestResult": "PASS",
+        "TRN_OutputPreview": "PRIORITY",
+        "TRN_ScenarioId": "ROUTE23_HIGH",
+        "TRN_OutputSha256": "aDbsXcCqDtHsnxXOxd2A3vdJSzMsFY1AQwMl8jZ/vSo=",
+        "TRN_Expected": "COMPLETED"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:20 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_024_Parallel_Multicast",
+    "defaultCase": "MC24_BASE",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BDtvKwRthk4b-u1KQtVsGgg7",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901051186)/",
+      "LogEnd": "/Date(1794901051509)/",
+      "custom": {
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "MC24_BASE",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "VW1231mOvq+1U2vH0bdk/nu+W4yEfE/rxjG0KwP6kMI="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:28 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_025_Groovy_Uppercase",
+    "defaultCase": "SCRIPT25_TEXT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BD-x2PdZPGI6nauaVA5oV01Z",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901055675)/",
+      "LogEnd": "/Date(1794901056001)/",
+      "custom": {
+        "TRN_Expected": "COMPLETED",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputPreview": "HELLO, STUDENT!",
+        "TRN_ScenarioId": "SCRIPT25_TEXT",
+        "TRN_OutputSha256": "raDv3cgfbAbr0jxptJVa6BrfhxhPmr8n0oLB34Cz1wo="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:33 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_026_JavaScript_Uppercase",
+    "defaultCase": "SCRIPT26_TEXT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BEWgYkY_nlh85vgVGeSRzG7B",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901061992)/",
+      "LogEnd": "/Date(1794901062329)/",
+      "custom": {
+        "TRN_OutputSha256": "raDv3cgfbAbr0jxptJVa6BrfhxhPmr8n0oLB34Cz1wo=",
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_ScenarioId": "SCRIPT26_TEXT",
+        "TRN_OutputPreview": "HELLO, STUDENT!"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:39 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_027_XSLT_Mapping",
+    "defaultCase": "XSLT27_NAME",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BEo1hjv9J5t8W-y2C-bgcYFY",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901066019)/",
+      "LogEnd": "/Date(1794901066343)/",
+      "custom": {
+        "TRN_ScenarioId": "XSLT27_NAME",
+        "TRN_OutputSha256": "6kF/ZqiOidMmnXsEdPvZMhvFO3TJMClZ4ENVR6U989Q=",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputPreview": "<greeting>Hello, Anu!</greeting>",
+        "TRN_Expected": "COMPLETED"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:43 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_028_XML_Validator_Valid",
+    "defaultCase": "VAL28_VALID",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BE-kH2cA8zEKykeTe6hHD28V",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901071754)/",
+      "LogEnd": "/Date(1794901072077)/",
+      "custom": {
+        "TRN_OutputPreview": "<student><id>1</id><name>Anu</name></student>",
+        "TRN_ScenarioId": "VAL28_VALID",
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "MIBhexjFOtM21nFXIFxm/fYgqhTreU2nDHW9YF2V2ec="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:49 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_029_XML_Validator_Invalid",
+    "defaultCase": "VAL29_TEXT",
+    "expected": "FAILED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BFRbWhcKPEExXvZq8CvdC9Rb",
+      "Status": "FAILED",
+      "LogStart": "/Date(1794901076737)/",
+      "LogEnd": "/Date(1794901077061)/",
+      "custom": {
+        "TRN_ScenarioId": "VAL29_TEXT",
+        "TRN_Expected": "FAILED"
+      },
+      "error": "b'XmlValidationException: Refer to MPL attachment(XML Validator Error Document) for details.'"
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:54 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_030_CSV_to_XML",
+    "defaultCase": "CSV30_ROWS",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BFpDNF6HSHANrx1YhBZCeH08",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901082238)/",
+      "LogEnd": "/Date(1794901082582)/",
+      "custom": {
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "<?xml version='1.0' encoding='UTF-8'?><students><student><id>1</id><name>Anu</name></student><student><id>2</id><name>Ravi</name></student></students>",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputSha256": "gKlbOjN0/bW41Pl7/MvtSTmtD1UqAZvaWU2LAMlX7Mo=",
+        "TRN_ScenarioId": "CSV30_ROWS"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:37:59 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_031_Sequential_Multicast",
+    "defaultCase": "MC31_BASE",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BF_Pixg0_FWJdTbYQ0gPc3gs",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901087723)/",
+      "LogEnd": "/Date(1794901088043)/",
+      "custom": {
+        "TRN_ScenarioId": "MC31_BASE",
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "VW1231mOvq+1U2vH0bdk/nu+W4yEfE/rxjG0KwP6kMI="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:05 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_032_Looping_Process_Call",
+    "defaultCase": "LOOP32_ZERO",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BGTXns4V1gzwfvSpIq7jq0tW",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901092251)/",
+      "LogEnd": "/Date(1794901092593)/",
+      "custom": {
+        "TRN_OutputSha256": "2PofBUgb7Ikbjqn5fCbYImy/pILgQNdT8jZjvuw+dZQ=",
+        "TRN_ScenarioId": "LOOP32_ZERO",
+        "TRN_OutputPreview": "<counter>1</counter>",
+        "TRN_Expected": "COMPLETED",
+        "TRN_TestResult": "PASS"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:09 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_033_Loop_Maximum_Guard",
+    "defaultCase": "LOOP33_GUARD",
+    "expected": "FAILED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BGlLLcIacUYZi3nL8GCBXvmg",
+      "Status": "FAILED",
+      "LogStart": "/Date(1794901097148)/",
+      "LogEnd": "/Date(1794901097446)/",
+      "custom": {
+        "TRN_ScenarioId": "LOOP33_GUARD",
+        "TRN_Expected": "FAILED"
+      },
+      "error": "b'java.lang.IllegalStateException: CallActivity_11 : Loop counter reached max. number of iterations'"
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:14 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_034_Idempotent_Process_Call",
+    "defaultCase": "IDEMP34_FIRST",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BG1HIEEhgfic-Fb6RoO6dOaT",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901101906)/",
+      "LogEnd": "/Date(1794901102237)/",
+      "custom": {
+        "TRN_OutputSha256": "Exms7H4LAMiFF7uR4OaC0bChEYdeZcg/78P1BOsa13k=",
+        "TRN_TestResult": "PASS",
+        "TRN_Result": "Hello from main",
+        "TRN_OutputPreview": "Hello from main",
+        "TRN_ScenarioId": "IDEMP34_FIRST",
+        "TRN_Expected": "COMPLETED"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:19 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_035_Exception_Handled",
+    "defaultCase": "EX35_TEXT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BHGJDEA6iQ-m8mBuvmQz2Amd",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901105466)/",
+      "LogEnd": "/Date(1794901105819)/",
+      "custom": {
+        "TRN_ScenarioId": "EX35_TEXT",
+        "TRN_OutputPreview": "Handled validation error",
+        "TRN_OutputSha256": "wZeGpuP9jsvtuswOuWRbiEVoR+TUc6n1W8cWwd9Yx6I=",
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:22 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_036_Exception_Rethrown",
+    "defaultCase": "EX36_TEXT",
+    "expected": "FAILED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BHUygSDWoW8mAQR9ASiEgSRd",
+      "Status": "FAILED",
+      "LogStart": "/Date(1794901109020)/",
+      "LogEnd": "/Date(1794901109375)/",
+      "custom": {
+        "TRN_OutputPreview": "Handled validation error",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputSha256": "wZeGpuP9jsvtuswOuWRbiEVoR+TUc6n1W8cWwd9Yx6I=",
+        "TRN_Expected": "FAILED",
+        "TRN_ScenarioId": "EX36_TEXT"
+      },
+      "error": "b'XmlValidationException: Refer to MPL attachment(XML Validator Error Document) for details.'"
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:25 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_037_Error_End_Event",
+    "defaultCase": "END37_TEXT",
+    "expected": "FAILED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BHqqE5VP-UOxN2Zn1gJe5I85",
+      "Status": "FAILED",
+      "LogStart": "/Date(1794901114046)/",
+      "LogEnd": "/Date(1794901114360)/",
+      "custom": {
+        "TRN_OutputSha256": "8mmkLRpGmhS/smV5rV5U2JfZZJ3SmxDpds7nivh66eY=",
+        "TRN_Expected": "FAILED",
+        "TRN_OutputPreview": "Order accepted",
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "END37_TEXT"
+      },
+      "error": "b'com.sap.esb.camel.error.handler.ErrorEventException: Error Event Exception'"
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:31 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_038_Escalation_End_Event",
+    "defaultCase": "END38_TEXT",
+    "expected": "ESCALATED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BH39qt6RKbvYbLIPRbykInWy",
+      "Status": "ESCALATED",
+      "LogStart": "/Date(1794901117592)/",
+      "LogEnd": "/Date(1794901117904)/",
+      "custom": {
+        "TRN_OutputSha256": "8mmkLRpGmhS/smV5rV5U2JfZZJ3SmxDpds7nivh66eY=",
+        "TRN_ScenarioId": "END38_TEXT",
+        "TRN_Expected": "ESCALATED",
+        "TRN_OutputPreview": "Order accepted",
+        "TRN_TestResult": "PASS"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:33 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_039_Terminate_Message",
+    "defaultCase": "END39_TEXT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BIE4mcv3dvf1ZiI9c37gRI8I",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901121229)/",
+      "LogEnd": "/Date(1794901121549)/",
+      "custom": {
+        "TRN_OutputSha256": "8mmkLRpGmhS/smV5rV5U2JfZZJ3SmxDpds7nivh66eY=",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputPreview": "Order accepted",
+        "TRN_ScenarioId": "END39_TEXT",
+        "TRN_Expected": "COMPLETED"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:37 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_040_Plain_End_Event",
+    "defaultCase": "END40_TEXT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BIXv4gOUHmJTzUx-Y0tdSVyw",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901125195)/",
+      "LogEnd": "/Date(1794901125522)/",
+      "custom": {
+        "TRN_OutputPreview": "Order accepted",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputSha256": "8mmkLRpGmhS/smV5rV5U2JfZZJ3SmxDpds7nivh66eY=",
+        "TRN_Expected": "COMPLETED",
+        "TRN_ScenarioId": "END40_TEXT"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:42 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_041_ID_Mapping",
+    "defaultCase": "MAP41_FIRST",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BIideK95JpbgARZVMLuAfLa4",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901128730)/",
+      "LogEnd": "/Date(1794901129060)/",
+      "custom": {
+        "TRN_OutputSha256": "KhbQdx1bxWL2Ju0rWCMtFU0yuh+sT5Xc93XsGsg+G3s=",
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "MAP41_FIRST",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "b8e02456-83ea-43c6-a14a-1d9966299743"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:46 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_042_Write_Variables",
+    "defaultCase": "VAR42_TEXT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BIyKWKsHc-i7HIsCklgQ7a3-",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901132273)/",
+      "LogEnd": "/Date(1794901132604)/",
+      "custom": {
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "VAR42_TEXT",
+        "TRN_OutputSha256": "ycq4Y8O4oxC+965AwheXSpxx6AKitc/r+aptRMnsVqE=",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "Hello from a persisted variable"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:49 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_043_Data_Store_Select",
+    "defaultCase": "SELECT43_TWO",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BJOwkGo_QWg18KsM8O7Emced",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901139075)/",
+      "LogEnd": "/Date(1794901139421)/",
+      "custom": {
+        "TRN_OutputPreview": "<?xml version='1.0' encoding='UTF-8'?><messages><message id=\"ONE\"><record>One</record></message><message id=\"TWO\"><record>Two</record></message></messages>",
+        "TRN_OutputSha256": "F35TXBJbPsOUbMaT1nKyW1QqdIlpi2PoeOhIr1PgYDc=",
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_ScenarioId": "SELECT43_TWO"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:54 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_044_ZIP_Splitter",
+    "defaultCase": "ARC44_TWO",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BJZNUw2648g06oz_qtUmm6bV",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901142667)/",
+      "LogEnd": "/Date(1794901142995)/",
+      "custom": {
+        "TRN_OutputSha256": "OBZPvRdgPXP2lri01yZk1zW7anyIV3aH/SrjP9aWQVM=",
+        "TRN_ScenarioId": "ARC44_TWO",
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "AB"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:38:56 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_045_Tar_Splitter",
+    "defaultCase": "ARC45_TWO",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BJqwkLDYP_XPyRbwrb77EMdZ",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901146284)/",
+      "LogEnd": "/Date(1794901146612)/",
+      "custom": {
+        "TRN_OutputSha256": "OBZPvRdgPXP2lri01yZk1zW7anyIV3aH/SrjP9aWQVM=",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "AB",
+        "TRN_ScenarioId": "ARC45_TWO",
+        "TRN_TestResult": "PASS"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:00 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_046_Headers_Properties",
+    "defaultCase": "HP46_DEFAULT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BKHJyj41UhRNO1u0Y0QUMqnA",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901153083)/",
+      "LogEnd": "/Date(1794901153396)/",
+      "custom": {
+        "TRN_Expected": "COMPLETED",
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "HP46_DEFAULT",
+        "TRN_OutputPreview": "Hello Anu, welcome to CPI!",
+        "TRN_OutputSha256": "Kyk8tPKzLmGvhIM8qmK/NgM9cvRmyKZq0UBir55ka68="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:06 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_047_XPath_Property",
+    "defaultCase": "XP47_NAME",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BKQF_S65VGeFfRdpgZk_ppSS",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901156638)/",
+      "LogEnd": "/Date(1794901156959)/",
+      "custom": {
+        "TRN_ScenarioId": "XP47_NAME",
+        "TRN_OutputSha256": "WeVxl7ZdHHPgsu9VmG+ZSaqrQ/daAPTsbjQ8Uy+weW8=",
+        "TRN_OutputPreview": "Hello Anu!",
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:09 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_048_Request_Reply",
+    "defaultCase": "CALL48_MATCH",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BKgffbZ17fkWU7fPvpva_I_P",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901160193)/",
+      "LogEnd": "/Date(1794901160531)/",
+      "custom": {
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "<lookup><department><id>1</id><name>Sales</name></department></lookup>",
+        "TRN_ScenarioId": "CALL48_MATCH",
+        "TRN_OutputSha256": "xkt/0F+b9OaptOQjCFRpa0hrWajY9+jj38hV3rtnoKM="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:14 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_050_Send_Local_Message",
+    "defaultCase": "CALL50_MATCH",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BK-CqQQdvmBppFuCcCwJn-0K",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901167066)/",
+      "LogEnd": "/Date(1794901167389)/",
+      "custom": {
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "CALL50_MATCH",
+        "TRN_OutputPreview": "<students><student><id>1</id><name>Anu</name></student></students>",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "QAPpA1n0DB/Lyex8Mh5zN8DEPvPObC8QEe+J7axMQ90="
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:21 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_051_Content_Enricher",
+    "defaultCase": "CALL51_MATCH",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BLITYqHbsPCK6VouLwawmTCI",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901170643)/",
+      "LogEnd": "/Date(1794901170971)/",
+      "custom": {
+        "TRN_OutputSha256": "a14T6EsA9ZGq8UoKDxmJ4V/9Iod0/g7VmfMGV/nCkUQ=",
+        "TRN_ScenarioId": "CALL51_MATCH",
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "<students><student><id>1</id><department><id>1</id><name>Sales</name></department><name>Anu</name></student></students>"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:24 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_054_EDI_Extractor",
+    "defaultCase": "EDI54_ORDER",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BLbDhNIMhyfqrDy3PrJONcgN",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901174204)/",
+      "LogEnd": "/Date(1794901174523)/",
+      "custom": {
+        "TRN_ScenarioId": "EDI54_ORDER",
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "8UcyvHS0sCjqwxLQMfqujiueJMacKGmxcUnyp+YrelY=",
+        "TRN_OutputPreview": "UNA:+.? 'UNB+UNOC:3+SENDER:14+RECEIVER:14+261117:1200+1'UNH+1+ORDERS:D:96A:UN'BGM+220+PO123+9'DTM+137:20261117:102'UNT+4+1'UNZ+1+1'"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:28 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_055_EDI_Splitter",
+    "defaultCase": "EDI55_TWO",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BMArSVokYKu7BzVwrJdx3ydU",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901184942)/",
+      "LogEnd": "/Date(1794901185273)/",
+      "custom": {
+        "TRN_ScenarioId": "EDI55_TWO",
+        "TRN_OutputSha256": "Li1Shuy1L1SCSvPD0IerxzV0Bb11tZBflpTGJsmjogQ=",
+        "TRN_Expected": "COMPLETED",
+        "TRN_TestResult": "PASS"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:34 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_056_EDI_XML_Roundtrip",
+    "defaultCase": "EDI56_NO_SCHEMA",
+    "expected": "FAILED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BMQ_CpXX8-tNktEDFJcNbO7o",
+      "Status": "FAILED",
+      "LogStart": "/Date(1794901188507)/",
+      "LogEnd": "/Date(1794901188794)/",
+      "custom": {
+        "TRN_ScenarioId": "EDI56_NO_SCHEMA",
+        "TRN_Expected": "FAILED"
+      },
+      "error": "b'com.sap.it.rt.edi.exception.EDIToXMLConverterException: Error while processing the edifact file: Resource during resource lookup: /xsd/UN-EDIFACT_ORDERS_D96A.xsd exception: , cause: java.io.FileNotFoundException: Cannot find resource: /xsd/UN-EDIFACT_ORDERS_D96A.xsd for URI: /xsd/UN-EDIFACT_ORDERS_D96A.xsd'"
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:38 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_057_Aggregator_Trigger",
+    "defaultCase": "TRIGGER57_ORDERED",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BMhM1I_8cWL4s_RuRKRQWB0D",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901192086)/",
+      "LogEnd": "/Date(1794901192469)/",
+      "custom": {
+        "TRN_ScenarioId": "TRIGGER57_ORDERED",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "UkOOrWhyXlG6e0DnXf3K5x/u6GCWRI722bmxEWjFPfg=",
+        "TRN_OutputPreview": "<order><batch>TRN053_5f659090-60a7-4d7a-9260-a68a6056f4cf</batch><sequence>2</sequence><last>true</last></order>",
+        "TRN_TestResult": "OBSERVED"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:42 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_058_Message_Mapping",
+    "defaultCase": "MM58_NAME",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BMsFf9mH27EUBNXDEyf8y2bR",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901195672)/",
+      "LogEnd": "/Date(1794901195996)/",
+      "custom": {
+        "TRN_OutputPreview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <customer><fullName>Anu</fullName></customer>",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "UomJVelL4hgv7EL4dBfbBewW6rN6E1FBH4ES9cxfGgg=",
+        "TRN_ScenarioId": "MM58_NAME",
+        "TRN_TestResult": "PASS"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:52 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_059_Externalized_Parameter",
+    "defaultCase": "PARAM59_DEFAULT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BM_7THDIisykxo5wwrFM0LF2",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901199006)/",
+      "LogEnd": "/Date(1794901199319)/",
+      "custom": {
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "PARAM59_DEFAULT",
+        "TRN_OutputSha256": "mmBfT3ET1B+Ee3VTsbP26MU4zMLsLo2/3Md3SIFYglg=",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "Hello, Anu!"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:55 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_060_CMS_Encrypt_Decrypt",
+    "defaultCase": "SEC60_TEXT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BNLkoaXNA-YwZJid96TXZa2g",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901202622)/",
+      "LogEnd": "/Date(1794901203053)/",
+      "custom": {
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputSha256": "8fQsDNUl4yuaYvF4BpuLP0EEXMNJb/yeRaklfJb7eSY=",
+        "TRN_ScenarioId": "SEC60_TEXT",
+        "TRN_OutputPreview": "Order SO1001, amount 250"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:39:59 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_061_CMS_Sign_Verify",
+    "defaultCase": "SEC61_TEXT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BNZAFv3sYS5aZ2Knx-do8l8Y",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901206190)/",
+      "LogEnd": "/Date(1794901206573)/",
+      "custom": {
+        "TRN_OutputSha256": "8fQsDNUl4yuaYvF4BpuLP0EEXMNJb/yeRaklfJb7eSY=",
+        "TRN_OutputPreview": "Order SO1001, amount 250",
+        "TRN_Expected": "COMPLETED",
+        "TRN_ScenarioId": "SEC61_TEXT",
+        "TRN_TestResult": "PASS"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:40:03 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_062_Simple_Signer",
+    "defaultCase": "SEC62_TEXT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BNkgAY5D50nx_iRFIiuSTp0b",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901209750)/",
+      "LogEnd": "/Date(1794901210122)/",
+      "custom": {
+        "TRN_OutputSha256": "8fQsDNUl4yuaYvF4BpuLP0EEXMNJb/yeRaklfJb7eSY=",
+        "TRN_TestResult": "PASS",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "Order SO1001, amount 250",
+        "TRN_ScenarioId": "SEC62_TEXT"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:40:05 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_063_XML_Sign_Verify",
+    "defaultCase": "SEC63_XML",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BN3wioPiMhH5ag_wPTsAW1Ql",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901213418)/",
+      "LogEnd": "/Date(1794901213811)/",
+      "custom": {
+        "TRN_OutputPreview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><student><name>Anu</name></student>",
+        "TRN_OutputSha256": "WjdPVM5AD7rq1NPkSzxgcB11Pwxefnn/I8N+bPONzI4=",
+        "TRN_Expected": "COMPLETED",
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "SEC63_XML"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:40:10 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_064_PGP_Encrypt_Decrypt",
+    "defaultCase": "SEC64_TEXT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BODBaHrcMKXAol2bnRYaVxg_",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901216972)/",
+      "LogEnd": "/Date(1794901217302)/",
+      "custom": {
+        "TRN_OutputSha256": "8fQsDNUl4yuaYvF4BpuLP0EEXMNJb/yeRaklfJb7eSY=",
+        "TRN_TestResult": "PASS",
+        "TRN_ScenarioId": "SEC64_TEXT",
+        "TRN_Expected": "COMPLETED",
+        "TRN_OutputPreview": "Order SO1001, amount 250"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:40:13 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  },
+  {
+    "id": "IF_TRN_065_CMS_Signature_Splitter",
+    "defaultCase": "SEC65_TEXT",
+    "expected": "COMPLETED",
+    "verdict": "PASS",
+    "log": {
+      "MessageGuid": "AGr8BOTZT5szIDAQNTmg1lAUrLuO",
+      "Status": "COMPLETED",
+      "LogStart": "/Date(1794901220594)/",
+      "LogEnd": "/Date(1794901220969)/",
+      "custom": {
+        "TRN_OutputSha256": "EUpEkHh3NGD2xT7No2a+7fyAzuXgITNFyc6WViGTVVs=",
+        "TRN_ScenarioId": "SEC65_TEXT",
+        "TRN_Expected": "COMPLETED",
+        "TRN_TestResult": "PASS",
+        "TRN_OutputPreview": "Order SO1001, amount 250"
+      }
+    },
+    "deployment": {
+      "status": "SUCCESS",
+      "version": "3.0.0",
+      "deployedBy": "Kandula Saikalyan",
+      "deployedOn": "Nov 17, 2026, 7:40:17 AM",
+      "deployState": "DEPLOYED",
+      "semanticState": "STARTED"
+    }
+  }
+]

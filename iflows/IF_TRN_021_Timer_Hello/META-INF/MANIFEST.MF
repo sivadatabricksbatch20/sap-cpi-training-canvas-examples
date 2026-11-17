@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: TRN 021 - Timer Hello
 Bundle-SymbolicName: IF_TRN_021_Timer_Hello; singleton:=true
-Bundle-Version: 1.0.2
+Bundle-Version: 3.0.1
 SAP-BundleType: IntegrationFlow
 SAP-NodeType: IFLMAP
 SAP-RuntimeProfile: iflmap

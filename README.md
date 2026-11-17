@@ -1,46 +1,49 @@
 # SAP CPI Training — Canvas Examples
 
-Source-controlled snapshot of the `CPITrainingCanvasExamples` SAP Cloud Integration package.
-
-Private repository: https://github.com/sivadatabricksbatch20/sap-cpi-training-canvas-examples
+Practical SAP Cloud Integration lessons for `CPITrainingCanvasExamples`.
 
 ## Delivery status
 
-- 64 teaching iFlows.
-- Lessons 002–006 are review pilot **2.0.1**, with 49 scenarios: 42 assertion passes, five expected rejections and two documented decoder behaviours.
-- All five pilot defaults completed on the live runtime. The other 59 retain their baseline teaching designs.
-- Baseline limitations: Aggregator 053 has an asynchronous Camel runtime error; EDI conversion 056 needs a matching annotated schema; Externalization 059 remains a baseline troubleshooting lesson. The pilot flows' externalized `ScenarioId` works.
-- Operation Mapping, external polling, EDI validation and IDoc splitting have documented prerequisites rather than a complete runnable implementation.
+- **64 lesson designs; 315 scenarios; 312 verified outcomes**, including positive assertions, intentional failures and measured behaviours.
+- The remaining 59 lessons now use practical fixtures, configuration variants, assertions and explanations, extending the original five-flow review pattern.
+- **63 lessons have working practical exercises.** EDI lesson **056** has a tested missing-schema diagnostic; three conversion cases require the trial’s unavailable UN/EDIFACT licence/runtime XSD.
+- Aggregator **053** works asynchronously and is verified through **057**: ordered delivery, out-of-order delivery, timeout and durable readback. Externalization **059** works with `ScenarioId` and `GreetingPrefix`.
+- Datastore, variables, ID Mapping, idempotency, ProcessDirect and native end states were checked live. Simulation limitations are labelled.
+- The separate original `CPITraining/IF_Hello_World` was preserved.
+
+Start with the [Complete Canvas Lab Handbook](docs/Complete_Canvas_Lab_Handbook.md) ([Word document](docs/Complete_Canvas_Lab_Handbook.docx)): flow tabs, component controls, scenarios, inputs, outputs, Groovy debugging, dependencies and DEV → UAT → PROD practices.
+
+## Run a lesson
+
+1. Import into an authorized tenant or open the existing package. Provision training security aliases separately; keys and credentials are excluded from Git.
+2. Choose **Configure → ScenarioId**, enter a documented case ID, save and deploy. Timer lessons run once per deployment.
+3. Inspect `TRN_ScenarioId`, `TRN_Expected` and `TRN_TestResult` in monitoring. Intentional rejections finish `FAILED`; escalation finishes `ESCALATED`.
+4. Use Simulation for full JSON reports; use live deployment for persistence, real calls and end-state/aggregation proof.
+5. Deploy receivers **049** and **053** first. Exercise 049 through 048/050/051. Follow the handbook’s send → copy batch → verify protocol for 053/057; verification consumes the result.
+6. Restore the documented default after alternatives. Repeated idempotency/ID-mapping keys retain state.
 
 ## Repository layout
 
-- `iflows/<technical-id>/`: unpacked SAP export, including `.iflw`, bundled Groovy/JavaScript, XSLT/mappings, schemas and default parameters.
-- `exports/`: SAP package export for backup/import; unpacked sources are used for code review.
-- `docs/`: baseline student guide, five-flow review document, Git and release instructions.
-- `tests/`: scenario catalogue and sanitized test evidence; no session cookies, credentials or private keys.
-- `manifest.json`: exact exported artifact versions and readiness.
-- `.github/workflows/validate.yml`: offline validation on pushes and pull requests; it does not deploy to SAP.
+- `iflows/<technical-id>/`: unpacked SAP export: `.iflw`, scripts, mappings, schemas and parameter defaults.
+- `exports/`: exact SAP package export for backup/import.
+- `docs/`: complete handbook, readiness and Git/release guidance. Earlier baseline/five-flow documents are historical.
+- `tests/scenario-catalog.json`: full fixtures and assertions for all 315 cases.
+- `tests/evidence/`: sanitized simulation/live results, default checks, design validation and persistence/aggregation proof.
+- `manifest.json`: exact exported versions and readiness.
+- `.github/workflows/validate.yml`: offline validation for pushes and PRs; no SAP deployment.
 
-## Run the pilot
+## Versions and releases
 
-1. Import the package into an authorized Cloud Integration tenant, or open the existing training package.
-2. Provision the documented security dependencies separately; keys and passwords are not part of this repository.
-3. Configure `ScenarioId`: defaults `JX01`, `XJ01`, `XP01`, `BE01`, `BD01` for lessons 002–006.
-4. Deploy a lesson. Its timer fires once. Inspect `TRN_ScenarioId` and `TRN_TestResult` in message monitoring.
-5. Use Simulation to inspect the full JSON assertion report. Documented rejection scenarios deliberately fail.
+Expanded lessons are **3.0.0**, with Timer 021 at **3.0.1**. Pilot processing is retained: 002/003 export at **2.0.2** (existing draft settings match the verified pilot); 004–006 remain **2.0.1**. The manifest is authoritative.
 
-See **Five iFlow Review Pack - All Tabs** for exact inputs, outputs, settings and test boundaries. The baseline handbook predates the expanded five-flow harness.
-
-## Versioning and changes
-
-Use feature branches and pull requests. Keep Groovy changes and their fixtures/assertions in the same PR. Save a CPI artifact version before exporting. Record its version in the manifest; Git commits/tags and deployed CPI versions are separate identities.
-
-This export includes metadata-only versioned snapshots for previously draft baseline artifact descriptions. Their processing logic was not changed or redeployed. The five review flows remain at 2.0.1.
-
-Run:
+Use feature branches and PRs. Keep code, fixtures, assertions and docs together. Save the CPI artifact version before exporting, then run:
 
 ```bash
 python scripts/validate_repository.py
 ```
 
-The initial Git commit is a source snapshot, not a DEV→UAT→PROD release. Do not deploy the unresolved prerequisite/troubleshooting labs as production integrations.
+Promote the same approved artifact through UAT and PROD using the project transport/CI mechanism. Environment endpoints and security material are separate. UAT/PROD deployment is not configured.
+
+Native SAP **Git Access** requires a dedicated credential entered directly in SAP. This export push does not establish the tenant association. See [Git and releases](docs/GIT_AND_RELEASES.md).
+
+Coverage is representative, not every possible input/adapter combination. Operation Mapping and other palette options outside these 64 designs require additional resources or systems. See the handbook for tested controls and boundaries.
