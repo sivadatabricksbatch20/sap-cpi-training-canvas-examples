@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndPoint default="true" xmlns="http://www.sap.com/apimgmt">
+    <name>default</name>
+    <base_path>/trn/api/005</base_path>
+    <properties/>
+    <routeRules>
+        <routeRule>
+            <name>default</name>
+            <targetEndPointName>default</targetEndPointName>
+            <sequence>1</sequence>
+            <faultRules/>
+        </routeRule>
+    </routeRules>
+    <faultRules/>
+    <preFlow>
+        <name>PreFlow</name>
+        <request>
+            <isRequest>true</isRequest>
+            <steps>
+                <step>
+                    <policy_name>ValidateTop</policy_name>
+                    <condition></condition>
+                    <sequence>2</sequence>
+                </step>
+                <step>
+                    <policy_name>MethodNotAllowed</policy_name>
+                    <condition>request.verb != "GET"</condition>
+                    <sequence>1</sequence>
+                </step>
+                <step>
+                    <policy_name>InvalidTop</policy_name>
+                    <condition>training.invalidTop = true</condition>
+                    <sequence>3</sequence>
+                </step>
+                <step>
+                    <policy_name>AcceptJson</policy_name>
+                    <condition></condition>
+                    <sequence>4</sequence>
+                </step>
+            </steps>
+        </request>
+        <response>
+            <isRequest>false</isRequest>
+            <steps/>
+        </response>
+    </preFlow>
+    <postFlow>
+        <name>PostFlow</name>
+        <request>
+            <isRequest>true</isRequest>
+            <steps/>
+        </request>
+        <response>
+            <isRequest>false</isRequest>
+            <steps/>
+        </response>
+    </postFlow>
+    <conditionalFlows/>
+</ProxyEndPoint>

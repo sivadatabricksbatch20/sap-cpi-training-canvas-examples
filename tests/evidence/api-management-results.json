@@ -1,0 +1,269 @@
+{
+  "method": "LIVE_SAP_API_MANAGEMENT",
+  "gatewayBaseUrl": "https://e31930eatrial-trial.integrationsuitetrial-apim.ap21.hana.ondemand.com/e31930eatrial",
+  "proxyCount": 5,
+  "scenarioCount": 21,
+  "passed": 19,
+  "notRun": 2,
+  "testingInstruction": "User requested documentation instead of further testing. No additional test execution was required.",
+  "results": [
+    {
+      "scenarioId": "API01_LIST",
+      "status": 200,
+      "verdict": "PASS",
+      "body": "{\"@odata.context\":\"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products\",\"value\":[{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":1,\"ProductName\":\"Chai\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"10 boxes x 20 bags\",\"UnitPrice\":18.0000,\"UnitsInStock\":39,\"UnitsOnOrder\":0,\"ReorderLevel\":10,\"Discontinued\":false}]}"
+    },
+    {
+      "scenarioId": "API01_MULTIPLE",
+      "status": 200,
+      "verdict": "PASS",
+      "body": "{\"@odata.context\":\"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products\",\"value\":[{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":1,\"ProductName\":\"Chai\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"10 boxes x 20 bags\",\"UnitPrice\":18.0000,\"UnitsInStock\":39,\"UnitsOnOrder\":0,\"ReorderLevel\":10,\"Discontinued\":false},{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":2,\"ProductName\":\"Chang\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"24 - 12 oz bottles\",\"UnitPrice\":19.0000,\"UnitsInStock\":17,\"UnitsOnOrder\":40,\"ReorderLevel\":25,\"Discontinued\":false},{\"@odata.etag\":\"W/\\\"1,2\\\"\",\"ProductID\":3,\"ProductName\":\"Aniseed Syrup\",\"SupplierID\":1,\"CategoryID\":2,\"QuantityPerUnit\":\"12 - 550 ml bottles\",\"UnitPrice\":10.0000,\"UnitsInStock\":13,\"UnitsOnOrder\":70,\"ReorderLevel\":25,\"Discontinued\":false}]}"
+    },
+    {
+      "scenarioId": "API01_FILTER",
+      "status": 200,
+      "verdict": "PASS",
+      "body": "{\"@odata.context\":\"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products\",\"value\":[{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":1,\"ProductName\":\"Chai\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"10 boxes x 20 bags\",\"UnitPrice\":18.0000,\"UnitsInStock\":39,\"UnitsOnOrder\":0,\"ReorderLevel\":10,\"Discontinued\":false}]}"
+    },
+    {
+      "scenarioId": "API01_UNKNOWN",
+      "status": 404,
+      "verdict": "PASS",
+      "body": "{\"error\":{\"code\":\"\",\"message\":\"Resource not found for the segment 'NoSuchResource'.\"}}"
+    },
+    {
+      "scenarioId": "API02_ONE",
+      "status": 200,
+      "verdict": "PASS",
+      "body": "{\"count\":1,\"products\":[{\"id\":1,\"name\":\"Chai\",\"price\":18}]}"
+    },
+    {
+      "scenarioId": "API02_TWO",
+      "status": 200,
+      "verdict": "PASS",
+      "body": "{\"count\":2,\"products\":[{\"id\":1,\"name\":\"Chai\",\"price\":18},{\"id\":2,\"name\":\"Chang\",\"price\":19}]}"
+    },
+    {
+      "scenarioId": "API02_EMPTY",
+      "status": 200,
+      "verdict": "PASS",
+      "body": "{\"count\":0,\"products\":[]}"
+    },
+    {
+      "scenarioId": "API02_HEADER",
+      "status": 200,
+      "verdict": "PASS",
+      "body": "{\"count\":1,\"products\":[{\"id\":1,\"name\":\"Chai\",\"price\":18}]}"
+    },
+    {
+      "scenarioId": "API03_MISSING",
+      "status": 401,
+      "verdict": "PASS",
+      "body": "{\"fault\":{\"faultstring\":\"Failed to resolve API Key variable request.header.X-API-Key\",\"detail\":{\"errorcode\":\"steps.oauth.v2.FailedToResolveAPIKey\"}}}"
+    },
+    {
+      "scenarioId": "API03_INVALID",
+      "status": 401,
+      "verdict": "PASS",
+      "body": "{\"fault\":{\"faultstring\":\"Invalid ApiKey\",\"detail\":{\"errorcode\":\"oauth.v2.InvalidApiKey\"}}}"
+    },
+    {
+      "scenarioId": "API03_VALID",
+      "verdict": "NOT_RUN",
+      "reason": "User asked to skip further testing. Requires a dedicated Developer Hub application/key and the documented lifecycle action."
+    },
+    {
+      "scenarioId": "API03_REVOKED",
+      "verdict": "NOT_RUN",
+      "reason": "User asked to skip further testing. Requires a dedicated Developer Hub application/key and the documented lifecycle action."
+    },
+    {
+      "scenarioId": "API04_FIRST_THREE",
+      "verdict": "PASS",
+      "sequence": [
+        {
+          "scenarioId": "API04_FIRST_THREE",
+          "status": 200,
+          "verdict": "PASS",
+          "body": "{\"@odata.context\":\"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products\",\"value\":[{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":1,\"ProductName\":\"Chai\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"10 boxes x 20 bags\",\"UnitPrice\":18.0000,\"UnitsInStock\":39,\"UnitsOnOrder\":0,\"ReorderLevel\":10,\"Discontinued\":false}]}"
+        },
+        {
+          "scenarioId": "API04_FIRST_THREE",
+          "status": 200,
+          "verdict": "PASS",
+          "body": "{\"@odata.context\":\"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products\",\"value\":[{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":1,\"ProductName\":\"Chai\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"10 boxes x 20 bags\",\"UnitPrice\":18.0000,\"UnitsInStock\":39,\"UnitsOnOrder\":0,\"ReorderLevel\":10,\"Discontinued\":false}]}"
+        },
+        {
+          "scenarioId": "API04_FIRST_THREE",
+          "status": 200,
+          "verdict": "PASS",
+          "body": "{\"@odata.context\":\"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products\",\"value\":[{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":1,\"ProductName\":\"Chai\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"10 boxes x 20 bags\",\"UnitPrice\":18.0000,\"UnitsInStock\":39,\"UnitsOnOrder\":0,\"ReorderLevel\":10,\"Discontinued\":false}]}"
+        }
+      ]
+    },
+    {
+      "scenarioId": "API04_FOURTH",
+      "verdict": "PASS",
+      "sequence": [
+        {
+          "scenarioId": "API04_FOURTH",
+          "status": 200,
+          "verdict": "PASS",
+          "body": "{\"@odata.context\":\"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products\",\"value\":[{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":1,\"ProductName\":\"Chai\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"10 boxes x 20 bags\",\"UnitPrice\":18.0000,\"UnitsInStock\":39,\"UnitsOnOrder\":0,\"ReorderLevel\":10,\"Discontinued\":false}]}"
+        },
+        {
+          "scenarioId": "API04_FOURTH",
+          "status": 200,
+          "verdict": "PASS",
+          "body": "{\"@odata.context\":\"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products\",\"value\":[{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":1,\"ProductName\":\"Chai\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"10 boxes x 20 bags\",\"UnitPrice\":18.0000,\"UnitsInStock\":39,\"UnitsOnOrder\":0,\"ReorderLevel\":10,\"Discontinued\":false}]}"
+        },
+        {
+          "scenarioId": "API04_FOURTH",
+          "status": 200,
+          "verdict": "PASS",
+          "body": "{\"@odata.context\":\"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products\",\"value\":[{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":1,\"ProductName\":\"Chai\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"10 boxes x 20 bags\",\"UnitPrice\":18.0000,\"UnitsInStock\":39,\"UnitsOnOrder\":0,\"ReorderLevel\":10,\"Discontinued\":false}]}"
+        },
+        {
+          "scenarioId": "API04_FOURTH",
+          "status": 429,
+          "verdict": "PASS",
+          "body": "{\"error\": {\"code\": \"TRAINING_QUOTA\", \"message\": \"Three requests per minute exceeded\"}}"
+        }
+      ]
+    },
+    {
+      "scenarioId": "API04_SEPARATE",
+      "status": 200,
+      "verdict": "PASS",
+      "body": "{\"@odata.context\":\"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products\",\"value\":[{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":1,\"ProductName\":\"Chai\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"10 boxes x 20 bags\",\"UnitPrice\":18.0000,\"UnitsInStock\":39,\"UnitsOnOrder\":0,\"ReorderLevel\":10,\"Discontinued\":false}]}"
+    },
+    {
+      "scenarioId": "API04_SPIKE",
+      "method": "LIVE_SAP_API_MANAGEMENT",
+      "verdict": "PASS",
+      "results": [
+        {
+          "request": 0,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 1,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 2,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 3,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 4,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 5,
+          "status": 429,
+          "errorCode": "TRAINING_SPIKE",
+          "proxyMissing": false
+        },
+        {
+          "request": 6,
+          "status": 429,
+          "errorCode": "TRAINING_SPIKE",
+          "proxyMissing": false
+        },
+        {
+          "request": 7,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 8,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 9,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 10,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 11,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 12,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 13,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        },
+        {
+          "request": 14,
+          "status": 200,
+          "errorCode": null,
+          "proxyMissing": false
+        }
+      ],
+      "note": "A controlled 15-request classroom burst; acceptance count depends on scheduling."
+    },
+    {
+      "scenarioId": "API05_VALID",
+      "status": 200,
+      "verdict": "PASS",
+      "body": "{\"@odata.context\":\"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products\",\"value\":[{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":1,\"ProductName\":\"Chai\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"10 boxes x 20 bags\",\"UnitPrice\":18.0000,\"UnitsInStock\":39,\"UnitsOnOrder\":0,\"ReorderLevel\":10,\"Discontinued\":false},{\"@odata.etag\":\"W/\\\"1,1\\\"\",\"ProductID\":2,\"ProductName\":\"Chang\",\"SupplierID\":1,\"CategoryID\":1,\"QuantityPerUnit\":\"24 - 12 oz bottles\",\"UnitPrice\":19.0000,\"UnitsInStock\":17,\"UnitsOnOrder\":40,\"ReorderLevel\":25,\"Discontinued\":false}]}"
+    },
+    {
+      "scenarioId": "API05_ZERO",
+      "status": 400,
+      "verdict": "PASS",
+      "body": "{\"error\": {\"code\": \"INVALID_TOP\", \"message\": \"Use top from 1 to 5\"}}"
+    },
+    {
+      "scenarioId": "API05_TEXT",
+      "status": 400,
+      "verdict": "PASS",
+      "body": "{\"error\": {\"code\": \"INVALID_TOP\", \"message\": \"Use top from 1 to 5\"}}"
+    },
+    {
+      "scenarioId": "API05_LARGE",
+      "status": 400,
+      "verdict": "PASS",
+      "body": "{\"error\": {\"code\": \"INVALID_TOP\", \"message\": \"Use top from 1 to 5\"}}"
+    },
+    {
+      "scenarioId": "API05_METHOD",
+      "status": 405,
+      "verdict": "PASS",
+      "body": "{\"error\": {\"code\": \"METHOD_NOT_ALLOWED\", \"message\": \"Only GET is allowed\"}}"
+    }
+  ]
+}

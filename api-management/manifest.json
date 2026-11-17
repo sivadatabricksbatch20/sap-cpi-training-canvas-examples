@@ -1,0 +1,55 @@
+{
+  "runtime": "Classic API Management",
+  "proxies": [
+    {
+      "name": "TRN_API_001_ProxyBasics",
+      "revisionID": 1,
+      "revisionName": "Revision_1794908084",
+      "state": "DEPLOYED",
+      "version": "1",
+      "directory": "TRN_API_001_ProxyBasics",
+      "archiveSha256": "f7d1823353a2535de9e5b37f18abbdd11eb7013b20816b31024981f9828c66be",
+      "runtimeBaseUrl": "https://e31930eatrial-trial.integrationsuitetrial-apim.ap21.hana.ondemand.com/e31930eatrial/trn/api/001"
+    },
+    {
+      "name": "TRN_API_002_Transform",
+      "revisionID": 1,
+      "revisionName": "Revision_1794908122",
+      "state": "DEPLOYED",
+      "version": "1",
+      "directory": "TRN_API_002_Transform",
+      "archiveSha256": "af734ae7e83eb1945018e72af02cac46df25a20dca3359169f49064319475c46",
+      "runtimeBaseUrl": "https://e31930eatrial-trial.integrationsuitetrial-apim.ap21.hana.ondemand.com/e31930eatrial/trn/api/002"
+    },
+    {
+      "name": "TRN_API_003_APIKey",
+      "revisionID": 1,
+      "revisionName": "Revision_1794908125",
+      "state": "DEPLOYED",
+      "version": "1",
+      "directory": "TRN_API_003_APIKey",
+      "archiveSha256": "40697930b9590cdf3af8a84c87c771b1dce51f8c86760106e091bc6e8e7c7028",
+      "runtimeBaseUrl": "https://e31930eatrial-trial.integrationsuitetrial-apim.ap21.hana.ondemand.com/e31930eatrial/trn/api/003"
+    },
+    {
+      "name": "TRN_API_004_Traffic",
+      "revisionID": 1,
+      "revisionName": "Revision_1794908128",
+      "state": "DEPLOYED",
+      "version": "1",
+      "directory": "TRN_API_004_Traffic",
+      "archiveSha256": "ad5b442a2ad605484c88c770c9b8659e1f23b2b9226d57f2c06c98ea0470d33a",
+      "runtimeBaseUrl": "https://e31930eatrial-trial.integrationsuitetrial-apim.ap21.hana.ondemand.com/e31930eatrial/trn/api/004"
+    },
+    {
+      "name": "TRN_API_005_ValidationFaults",
+      "revisionID": 1,
+      "revisionName": "Revision_1794908131",
+      "state": "DEPLOYED",
+      "version": "1",
+      "directory": "TRN_API_005_ValidationFaults",
+      "archiveSha256": "7062b4a7082f2d646c9b5bc481c88c81a74b616ab5ddb0d80a5f0a1ecf072656",
+      "runtimeBaseUrl": "https://e31930eatrial-trial.integrationsuitetrial-apim.ap21.hana.ondemand.com/e31930eatrial/trn/api/005"
+    }
+  ]
+}

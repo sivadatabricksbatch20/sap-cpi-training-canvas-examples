@@ -1,0 +1,16 @@
+services:
+  broker:
+    image: solace/solace-pubsub-standard@sha256:c0020e53ed487ecffed6a15ef7ff1086ce969fd8b772cb06cfefc044eff5c0c8
+    shm_size: 1g
+    mem_limit: 2g
+    ports:
+      - "127.0.0.1:18080:8080"
+      - "127.0.0.1:15672:5672"
+    environment:
+      username_admin_globalaccesslevel: admin
+      username_admin_password: ${AEM_ADMIN_PASSWORD:?Set AEM_ADMIN_PASSWORD in your shell}
+      system_scaling_maxconnectioncount: "100"
+    ulimits:
+      nofile:
+        soft: 2448
+        hard: 6592

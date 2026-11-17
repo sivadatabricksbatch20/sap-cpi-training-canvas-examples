@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndPoint default="true" xmlns="http://www.sap.com/apimgmt">
+    <name>default</name>
+    <base_path>/trn/api/004</base_path>
+    <properties/>
+    <routeRules>
+        <routeRule>
+            <name>default</name>
+            <targetEndPointName>default</targetEndPointName>
+            <sequence>1</sequence>
+            <faultRules/>
+        </routeRule>
+    </routeRules>
+    <faultRules/>
+    <preFlow>
+        <name>PreFlow</name>
+        <request>
+            <isRequest>true</isRequest>
+            <steps>
+                <step>
+                    <policy_name>SpikeExceeded</policy_name>
+                    <condition>ratelimit.TrainingSpikeArrest.failed = true</condition>
+                    <sequence>5</sequence>
+                </step>
+                <step>
+                    <policy_name>TrainingQuota</policy_name>
+                    <condition>request.header.X-Training-Mode != "spike"</condition>
+                    <sequence>2</sequence>
+                </step>
+                <step>
+                    <policy_name>QuotaExceeded</policy_name>
+                    <condition>ratelimit.TrainingQuota.failed = true</condition>
+                    <sequence>3</sequence>
+                </step>
+                <step>
+                    <policy_name>TrainingSpikeArrest</policy_name>
+                    <condition>request.header.X-Training-Mode = "spike"</condition>
+                    <sequence>4</sequence>
+                </step>
+                <step>
+                    <policy_name>AcceptJson</policy_name>
+                    <condition></condition>
+                    <sequence>1</sequence>
+                </step>
+            </steps>
+        </request>
+        <response>
+            <isRequest>false</isRequest>
+            <steps/>
+        </response>
+    </preFlow>
+    <postFlow>
+        <name>PostFlow</name>
+        <request>
+            <isRequest>true</isRequest>
+            <steps/>
+        </request>
+        <response>
+            <isRequest>false</isRequest>
+            <steps/>
+        </response>
+    </postFlow>
+    <conditionalFlows/>
+</ProxyEndPoint>

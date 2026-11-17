@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-17",
+  "apiManagement": {
+    "capability": "ACTIVE",
+    "developerHub": "ACTIVE",
+    "adminRoleAssigned": true,
+    "runtimeConfigured": true,
+    "runtime": "Classic API Management",
+    "packageId": "APIManagementMeshTraining",
+    "nativeProxiesImported": 5,
+    "nativeGatewayPrefix": "/e31930eatrial",
+    "developerHubOnboardingComplete": true,
+    "passedScenarios": 19,
+    "notRunScenarios": 2
+  },
+  "sapEventMesh": {
+    "availableForAssignment": false,
+    "instancePresent": false
+  },
+  "advancedEventMesh": {
+    "availableForAssignment": false,
+    "instancePresent": false
+  },
+  "localSolaceBroker": {
+    "tested": false,
+    "blocker": "Sandbox does not expose /proc/sys/kernel/core_pattern, which the official broker startup requires."
+  },
+  "testingInstruction": "Further testing waived by user; document unexecuted cases."
+}

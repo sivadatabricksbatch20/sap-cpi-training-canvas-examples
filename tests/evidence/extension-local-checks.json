@@ -1,0 +1,17 @@
+{
+  "javascript": {
+    "method": "LOCAL_JAVASCRIPT_UNIT_TEST",
+    "passed": 11
+  },
+  "eventMesh": {
+    "method": "LOCAL_HTTP_CONTRACT_FIXTURE",
+    "passed": 2,
+    "nativeBrokerTested": false
+  },
+  "advancedEventMesh": {
+    "method": "LOCAL_AMQP_PROTOCOL_FIXTURE",
+    "passed": 2,
+    "nativeBrokerTested": false
+  },
+  "note": "Completed before the user requested no further testing; not SAP broker validation."
+}

@@ -1,0 +1,1 @@
+<AssignMessage xmlns="http://www.sap.com/apimgmt" async="false" continueOnError="false" enabled="true"><Set><Headers><Header name="Accept">application/json</Header></Headers></Set><IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables><AssignTo createNew="false" type="request">request</AssignTo></AssignMessage>

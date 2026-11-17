@@ -1,0 +1,37 @@
+[
+  {
+    "id": "AEM01",
+    "topic": "Guaranteed topic-to-queue delivery",
+    "exercise": "Create a durable queue, add a topic subscription, publish a persistent event and manually acknowledge it.",
+    "readiness": "BLOCKED_CLOUD_SERVICE_UNAVAILABLE",
+    "verification": "AMQP client protocol-fixture checks only; local Solace startup blocked by workspace kernel limitations"
+  },
+  {
+    "id": "AEM02",
+    "topic": "Topic wildcards and fan-out",
+    "exercise": "Use exact and wildcard subscriptions on distinct queues; demonstrate a match and a non-match.",
+    "readiness": "BLOCKED_CLOUD_SERVICE_UNAVAILABLE",
+    "verification": "AMQP client protocol-fixture checks only; local Solace startup blocked by workspace kernel limitations"
+  },
+  {
+    "id": "AEM03",
+    "topic": "Competing consumers",
+    "exercise": "Configure a non-exclusive durable queue and start two consumers; demonstrate work sharing without assuming equal distribution.",
+    "readiness": "BLOCKED_CLOUD_SERVICE_UNAVAILABLE",
+    "verification": "AMQP client protocol-fixture checks only; local Solace startup blocked by workspace kernel limitations"
+  },
+  {
+    "id": "AEM04",
+    "topic": "Release, redelivery and dead-message queue",
+    "exercise": "Release the first delivery, verify redelivery, then exercise configured redelivery limit and DMQ.",
+    "readiness": "BLOCKED_CLOUD_SERVICE_UNAVAILABLE",
+    "verification": "AMQP client protocol-fixture checks only; local Solace startup blocked by workspace kernel limitations"
+  },
+  {
+    "id": "AEM05",
+    "topic": "Expiry, replay and multi-broker design",
+    "exercise": "Test TTL on a training queue. Replay and Dynamic Message Routing require their own enabled resources and feature entitlement; document those prerequisites separately.",
+    "readiness": "BLOCKED_CLOUD_SERVICE_UNAVAILABLE",
+    "verification": "AMQP client protocol-fixture checks only; local Solace startup blocked by workspace kernel limitations"
+  }
+]

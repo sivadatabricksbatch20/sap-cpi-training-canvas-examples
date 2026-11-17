@@ -1,0 +1,1 @@
+<AssignMessage xmlns="http://www.sap.com/apimgmt" async="false" continueOnError="false" enabled="true"><Remove><Headers><Header name="X-API-Key"/></Headers></Remove><IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables><AssignTo createNew="false" type="request">request</AssignTo></AssignMessage>
