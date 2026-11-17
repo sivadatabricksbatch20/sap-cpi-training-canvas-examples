@@ -1,0 +1,138 @@
+{
+  "cases": [
+    {
+      "number": 57,
+      "id": "IF_TRN_057_Aggregator_Trigger",
+      "case": "TRIGGER57_ORDERED",
+      "expected": "COMPLETED",
+      "verdict": "LIVE_PASS",
+      "log": {
+        "MessageGuid": "AGr7_uQfBnW8YGU7qonxiKQCw_kk",
+        "Status": "COMPLETED",
+        "LogStart": "/Date(1794899684609)/",
+        "LogEnd": "/Date(1794899685013)/",
+        "custom": {
+          "TRN_TestResult": "OBSERVED",
+          "TRN_OutputPreview": "<order><batch>TRN053_cde8e188-a0ec-4288-a3af-12edd905a450</batch><sequence>2</sequence><last>true</last></order>",
+          "TRN_OutputSha256": "ylTXThsH1pTJpJTTfvKR6BmIYMtzvQOs/kYfFf0yVLA=",
+          "TRN_Expected": "COMPLETED",
+          "TRN_ScenarioId": "TRIGGER57_ORDERED"
+        }
+      }
+    },
+    {
+      "number": 57,
+      "id": "IF_TRN_057_Aggregator_Trigger",
+      "case": "TRIGGER57_VERIFY",
+      "expected": "COMPLETED",
+      "verdict": "LIVE_PASS",
+      "log": {
+        "MessageGuid": "AGr7_vQAO8qv2qH2KPZsYPzmNfLi",
+        "Status": "COMPLETED",
+        "LogStart": "/Date(1794899700139)/",
+        "LogEnd": "/Date(1794899700482)/",
+        "custom": {
+          "TRN_OutputSha256": "f1IsmQ3G0EFo0Vi5bUCYqgjN9papk9GiT8pACONuzbc=",
+          "TRN_TestResult": "PASS",
+          "TRN_ScenarioId": "TRIGGER57_VERIFY",
+          "TRN_Expected": "COMPLETED"
+        }
+      }
+    },
+    {
+      "number": 57,
+      "id": "IF_TRN_057_Aggregator_Trigger",
+      "case": "TRIGGER57_REVERSED",
+      "expected": "COMPLETED",
+      "verdict": "LIVE_PASS",
+      "log": {
+        "MessageGuid": "AGr7_wXlDHTRgnGK-HXGFhU6A4hr",
+        "Status": "COMPLETED",
+        "LogStart": "/Date(1794899717296)/",
+        "LogEnd": "/Date(1794899717684)/",
+        "custom": {
+          "TRN_OutputSha256": "0LJ6y6JjlXCxXM3CnWbpLWpqGn1H9eV7vAgUXgZQ6tE=",
+          "TRN_TestResult": "OBSERVED",
+          "TRN_OutputPreview": "<order><batch>TRN053_08257635-a8fe-4e45-9b34-b55262280c17_REV</batch><sequence>1</sequence><last>false</last></order>",
+          "TRN_Expected": "COMPLETED",
+          "TRN_ScenarioId": "TRIGGER57_REVERSED"
+        }
+      }
+    },
+    {
+      "number": 57,
+      "id": "IF_TRN_057_Aggregator_Trigger",
+      "case": "TRIGGER57_VERIFY",
+      "expected": "COMPLETED",
+      "verdict": "LIVE_PASS",
+      "log": {
+        "MessageGuid": "AGr7_xPITeRC76hjLZm2dVaSwk4J",
+        "Status": "COMPLETED",
+        "LogStart": "/Date(1794899731422)/",
+        "LogEnd": "/Date(1794899731767)/",
+        "custom": {
+          "TRN_ScenarioId": "TRIGGER57_VERIFY",
+          "TRN_TestResult": "PASS",
+          "TRN_OutputSha256": "gDfwOXdgtG37hFQRCc+tNbSa2zRQ7uC8RDgTbqEMoGE=",
+          "TRN_Expected": "COMPLETED"
+        }
+      }
+    },
+    {
+      "number": 57,
+      "id": "IF_TRN_057_Aggregator_Trigger",
+      "case": "TRIGGER57_TIMEOUT",
+      "expected": "COMPLETED",
+      "verdict": "LIVE_PASS",
+      "log": {
+        "MessageGuid": "AGr7_yFLtP2vx0WanzYHr6JPAfXl",
+        "Status": "COMPLETED",
+        "LogStart": "/Date(1794899745466)/",
+        "LogEnd": "/Date(1794899745821)/",
+        "custom": {
+          "TRN_OutputSha256": "lJMlB60kjWUAHcMNQF0p74RlbNiPpkt4xWPoSqKz6Es=",
+          "TRN_ScenarioId": "TRIGGER57_TIMEOUT",
+          "TRN_OutputPreview": "<order><batch>TRN053_031cb5fe-125c-4744-a9da-1f74f3db76b4_TIMEOUT</batch><sequence>1</sequence><last>false</last></order>",
+          "TRN_Expected": "COMPLETED",
+          "TRN_TestResult": "OBSERVED"
+        }
+      }
+    },
+    {
+      "number": 57,
+      "id": "IF_TRN_057_Aggregator_Trigger",
+      "case": "TRIGGER57_VERIFY_TIMEOUT",
+      "expected": "COMPLETED",
+      "verdict": "LIVE_PASS",
+      "log": {
+        "MessageGuid": "AGr7_3rgYviQ9yA9blc4NHU_-4lw",
+        "Status": "COMPLETED",
+        "LogStart": "/Date(1794899834438)/",
+        "LogEnd": "/Date(1794899834767)/",
+        "custom": {
+          "TRN_TestResult": "PASS",
+          "TRN_Expected": "COMPLETED",
+          "TRN_OutputSha256": "z2XiCslmUeIbybxfgjHvuWHM8aBlCTFVB2vF6jVaYas=",
+          "TRN_ScenarioId": "TRIGGER57_VERIFY_TIMEOUT"
+        }
+      }
+    }
+  ],
+  "aggregatorLogs": [
+    {
+      "MessageGuid": "AGr7_yGKKuDX5EGbJfgO_Kh1It53",
+      "Status": "COMPLETED",
+      "error": ""
+    },
+    {
+      "MessageGuid": "AGr7_yGS70NB-zmcukUR7O4ZUzTD",
+      "Status": "COMPLETED",
+      "error": ""
+    },
+    {
+      "MessageGuid": "AGr7_wVLz3gEpBSeatZUIj32Va-7",
+      "Status": "COMPLETED",
+      "error": ""
+    }
+  ]
+}

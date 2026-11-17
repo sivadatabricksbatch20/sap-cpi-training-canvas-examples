@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ifl="http:///com.sap.ifl.model/Ifl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1">
     <bpmn2:collaboration id="Collaboration_1" name="Default Collaboration">
+        <bpmn2:documentation id="Documentation_1794899396474" textFormat="text/plain">Asynchronous aggregation receiver /trn/canvas/aggregate53. Lesson 057 sends ordered/reversed/incomplete groups and verifies the native aggregated XML through global datastore TRN053_LAB_RESULTS. Plain End prevents a synchronous reply after aggregation. Configure AggregationTimeoutMinutes; default one minute.</bpmn2:documentation>
         <bpmn2:extensionElements>
             <ifl:property>
                 <key>namespaceMapping</key>
-                <value/>
+                <value>xmlns:o=urn:training:orders</value>
             </ifl:property>
             <ifl:property>
                 <key>httpSessionHandling</key>
@@ -35,7 +36,7 @@
             </ifl:property>
             <ifl:property>
                 <key>allowedHeaderList</key>
-                <value/>
+                <value>TRN_ScenarioId|TRN_Course|Content-Type</value>
             </ifl:property>
             <ifl:property>
                 <key>ServerTrace</key>
@@ -165,32 +166,6 @@
                 <value>Required</value>
             </ifl:property>
         </bpmn2:extensionElements>
-        <bpmn2:callActivity id="CallActivity_12" name="Check Aggregated Result">
-            <bpmn2:extensionElements>
-                <ifl:property>
-                    <key>componentVersion</key>
-                    <value>1.1</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>activityType</key>
-                    <value>Script</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.1.2</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>subActivityType</key>
-                    <value>GroovyScript</value>
-                </ifl:property>
-                <ifl:property>
-                    <key>script</key>
-                    <value>CheckAggregation.groovy</value>
-                </ifl:property>
-            </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_102</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_103</bpmn2:outgoing>
-        </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_11" name="Correlate Orders">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -223,7 +198,7 @@
                 </ifl:property>
                 <ifl:property>
                     <key>datastoreName</key>
-                    <value>TRN053_AGGREGATOR_V2</value>
+                    <value>TRN053_AGGREGATOR_V3</value>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
@@ -239,26 +214,59 @@
                 </ifl:property>
                 <ifl:property>
                     <key>timeout</key>
-                    <value>1</value>
+                    <value>{{AggregationTimeoutMinutes}}</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_101</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_102</bpmn2:outgoing>
+            <bpmn2:incoming>SequenceFlow_1053</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_953</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:endEvent id="EndEvent_2" name="End">
             <bpmn2:extensionElements>
                 <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::EndEvent</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>EndEvent</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_9531</bpmn2:incoming>
+        </bpmn2:endEvent>
+        <bpmn2:callActivity id="CallActivity_10" name="Receiver Configuration">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>bodyType</key>
+                    <value>expression</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>propertyTable</key>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;3.0&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;TRN_LabVersion&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;{{ScenarioId}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;ScenarioId&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>headerTable</key>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;CPI&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;TRN_Course&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;xpath&lt;/cell&gt;&lt;cell id='Value'&gt;string(/order/batch)&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;TRN_BatchId&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>wrapContent</key>
+                    <value>${in.body}</value>
+                </ifl:property>
+                <ifl:property>
                     <key>componentVersion</key>
-                    <value>1.1</value>
+                    <value>1.6</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Enricher</value>
                 </ifl:property>
                 <ifl:property>
                     <key>cmdVariantUri</key>
-                    <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+                    <value>ctype::FlowstepVariant/cname::Enricher/version::1.6.6</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_103</bpmn2:incoming>
-            <bpmn2:messageEventDefinition/>
-        </bpmn2:endEvent>
+            <bpmn2:incoming>SequenceFlow_101</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_1053</bpmn2:outgoing>
+        </bpmn2:callActivity>
         <bpmn2:startEvent id="StartEvent_2" name="Start Timer">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -269,46 +277,105 @@
             <bpmn2:outgoing>SequenceFlow_101</bpmn2:outgoing>
             <bpmn2:messageEventDefinition/>
         </bpmn2:startEvent>
-        <bpmn2:sequenceFlow id="SequenceFlow_103" sourceRef="CallActivity_12" targetRef="EndEvent_2"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_102" sourceRef="CallActivity_11" targetRef="CallActivity_12"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_101" sourceRef="StartEvent_2" targetRef="CallActivity_11"/>
+        <bpmn2:callActivity id="CallActivity_901" name="Store Aggregated Result">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>visibility</key>
+                    <value>global</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>alert</key>
+                    <value>1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>encrypt</key>
+                    <value>true</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>expire</key>
+                    <value>2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>messageId</key>
+                    <value>${header.TRN_BatchId}</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.7</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>override</key>
+                    <value>true</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>DBstorage</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::put/version::1.7.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>operation</key>
+                    <value>put</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>storageName</key>
+                    <value>TRN053_LAB_RESULTS</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>includeMessageHeaders</key>
+                    <value>false</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_953</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_9531</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:sequenceFlow id="SequenceFlow_953" sourceRef="CallActivity_11" targetRef="CallActivity_901"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_1053" sourceRef="CallActivity_10" targetRef="CallActivity_11"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_101" sourceRef="StartEvent_2" targetRef="CallActivity_10"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_9531" sourceRef="CallActivity_901" targetRef="EndEvent_2"/>
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
+            <bpmndi:BPMNShape bpmnElement="CallActivity_901" id="BPMNShape_CallActivity_901">
+                <dc:Bounds height="60.0" width="100.0" x="920.0" y="128.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_10" id="BPMNShape_CallActivity_10">
+                <dc:Bounds height="60.0" width="100.0" x="390.0" y="128.0"/>
+            </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="EndEvent_2" id="BPMNShape_EndEvent_2">
-                <dc:Bounds height="0.0" width="0.0" x="930.0" y="142.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="StartEvent_2" id="BPMNShape_StartEvent_2">
-                <dc:Bounds height="0.0" width="0.0" x="292.0" y="142.0"/>
-            </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
-                <dc:Bounds height="220.0" width="750.0" x="250.0" y="60.0"/>
+                <dc:Bounds height="0.0" width="0.0" x="1150.0" y="142.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_11" id="BPMNShape_CallActivity_11">
                 <dc:Bounds height="60.0" width="100.0" x="570.0" y="128.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNShape bpmnElement="CallActivity_12" id="BPMNShape_CallActivity_12">
-                <dc:Bounds height="60.0" width="100.0" x="750.0" y="128.0"/>
+            <bpmndi:BPMNShape bpmnElement="StartEvent_2" id="BPMNShape_StartEvent_2">
+                <dc:Bounds height="0.0" width="0.0" x="292.0" y="142.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_1" id="BPMNShape_Participant_1">
                 <dc:Bounds height="140.0" width="100.0" x="40.0" y="100.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_101" id="BPMNEdge_SequenceFlow_101" sourceElement="BPMNShape_StartEvent_2" targetElement="BPMNShape_CallActivity_11">
+            <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
+                <dc:Bounds height="220.0" width="1050.0" x="250.0" y="60.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1053" id="BPMNEdge_SequenceFlow_1053" sourceElement="BPMNShape_CallActivity_10" targetElement="BPMNShape_CallActivity_11">
                 <di:waypoint x="490.0" xsi:type="dc:Point" y="158.0"/>
                 <di:waypoint x="570.0" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_102" id="BPMNEdge_SequenceFlow_102" sourceElement="BPMNShape_CallActivity_11" targetElement="BPMNShape_CallActivity_12">
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_953" id="BPMNEdge_SequenceFlow_953" sourceElement="BPMNShape_CallActivity_11" targetElement="BPMNShape_CallActivity_901">
                 <di:waypoint x="670.0" xsi:type="dc:Point" y="158.0"/>
-                <di:waypoint x="750.0" xsi:type="dc:Point" y="158.0"/>
+                <di:waypoint x="930.0" xsi:type="dc:Point" y="142.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_103" id="BPMNEdge_SequenceFlow_103" sourceElement="BPMNShape_CallActivity_12" targetElement="BPMNShape_EndEvent_2">
-                <di:waypoint x="850.0" xsi:type="dc:Point" y="158.0"/>
-                <di:waypoint x="930.0" xsi:type="dc:Point" y="158.0"/>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_9531" id="BPMNEdge_SequenceFlow_9531" sourceElement="BPMNShape_CallActivity_901" targetElement="BPMNShape_EndEvent_2">
+                <di:waypoint x="1020.0" xsi:type="dc:Point" y="158.0"/>
+                <di:waypoint x="930.0" xsi:type="dc:Point" y="142.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="MessageFlow_501" id="BPMNEdge_MessageFlow_501" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2">
-                <di:waypoint x="90.0" xsi:type="dc:Point" y="170.0"/>
-                <di:waypoint x="308.0" xsi:type="dc:Point" y="170.0"/>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_101" id="BPMNEdge_SequenceFlow_101" sourceElement="BPMNShape_StartEvent_2" targetElement="BPMNShape_CallActivity_10">
+                <di:waypoint x="490.0" xsi:type="dc:Point" y="158.0"/>
+                <di:waypoint x="570.0" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="MessageFlow_501" id="BPMNEdge_MessageFlow_501" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_2"/>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
 </bpmn2:definitions>

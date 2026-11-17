@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: TRN 002 - JSON to XML
 Bundle-SymbolicName: IF_TRN_002_JSON_to_XML; singleton:=true
-Bundle-Version: 2.0.1
+Bundle-Version: 2.0.2
 SAP-BundleType: IntegrationFlow
 SAP-NodeType: IFLMAP
 SAP-RuntimeProfile: iflmap

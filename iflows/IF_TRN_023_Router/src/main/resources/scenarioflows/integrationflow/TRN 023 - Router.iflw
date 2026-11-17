@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ifl="http:///com.sap.ifl.model/Ifl.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1">
     <bpmn2:collaboration id="Collaboration_1" name="Default Collaboration">
+        <bpmn2:documentation id="Documentation_1794898177543" textFormat="text/plain">Scenario lab 3.0: 6 practical cases. Configure ScenarioId, Save, Deploy. Inspect native steps, runtime settings, header/property/body tabs and assertion reports. Negative cases intentionally fail. See the complete canvas lab handbook.</bpmn2:documentation>
         <bpmn2:extensionElements>
             <ifl:property>
                 <key>namespaceMapping</key>
-                <value/>
+                <value>xmlns:o=urn:training:orders</value>
             </ifl:property>
             <ifl:property>
                 <key>httpSessionHandling</key>
@@ -35,7 +36,7 @@
             </ifl:property>
             <ifl:property>
                 <key>allowedHeaderList</key>
-                <value/>
+                <value>TRN_ScenarioId|TRN_Course|Content-Type</value>
             </ifl:property>
             <ifl:property>
                 <key>ServerTrace</key>
@@ -85,6 +86,59 @@
                 <value>Not Required</value>
             </ifl:property>
         </bpmn2:extensionElements>
+        <bpmn2:callActivity id="CallActivity_800" name="Load Scenario Fixture">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Script</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>GroovyScript</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>script</key>
+                    <value>LoadLabScenario.groovy</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_1800</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_101</bpmn2:outgoing>
+        </bpmn2:callActivity>
+        <bpmn2:callActivity id="CallActivity_900" name="Assert and Explain">
+            <bpmn2:extensionElements>
+                <ifl:property>
+                    <key>componentVersion</key>
+                    <value>1.1</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>activityType</key>
+                    <value>Script</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>cmdVariantUri</key>
+                    <value>ctype::FlowstepVariant/cname::GroovyScript/version::1.1.2</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>subActivityType</key>
+                    <value>GroovyScript</value>
+                </ifl:property>
+                <ifl:property>
+                    <key>script</key>
+                    <value>VerifyLabScenario.groovy</value>
+                </ifl:property>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>SequenceFlow_105</bpmn2:incoming>
+            <bpmn2:incoming>SequenceFlow_104</bpmn2:incoming>
+            <bpmn2:outgoing>SequenceFlow_900</bpmn2:outgoing>
+        </bpmn2:callActivity>
         <bpmn2:endEvent id="EndEvent_2" name="End">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -96,8 +150,7 @@
                     <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:incoming>SequenceFlow_105</bpmn2:incoming>
-            <bpmn2:incoming>SequenceFlow_104</bpmn2:incoming>
+            <bpmn2:incoming>SequenceFlow_900</bpmn2:incoming>
             <bpmn2:messageEventDefinition/>
         </bpmn2:endEvent>
         <bpmn2:callActivity id="CallActivity_30" name="Priority Order">
@@ -138,19 +191,19 @@
             <bpmn2:extensionElements>
                 <ifl:property>
                     <key>bodyType</key>
-                    <value>constant</value>
+                    <value>expression</value>
                 </ifl:property>
                 <ifl:property>
                     <key>propertyTable</key>
-                    <value/>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;3.0&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;TRN_LabVersion&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;{{ScenarioId}}&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;ScenarioId&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
                 </ifl:property>
                 <ifl:property>
                     <key>headerTable</key>
-                    <value/>
+                    <value>&lt;row&gt;&lt;cell id='Action'&gt;Create&lt;/cell&gt;&lt;cell id='Type'&gt;constant&lt;/cell&gt;&lt;cell id='Value'&gt;CPI&lt;/cell&gt;&lt;cell id='Default'&gt;&lt;/cell&gt;&lt;cell id='Name'&gt;TRN_Course&lt;/cell&gt;&lt;cell id='Datatype'&gt;java.lang.String&lt;/cell&gt;&lt;/row&gt;</value>
                 </ifl:property>
                 <ifl:property>
                     <key>wrapContent</key>
-                    <value>&lt;order&gt;&lt;amount&gt;1500&lt;/amount&gt;&lt;/order&gt;</value>
+                    <value>${property.ScenarioId}</value>
                 </ifl:property>
                 <ifl:property>
                     <key>componentVersion</key>
@@ -166,7 +219,7 @@
                 </ifl:property>
             </bpmn2:extensionElements>
             <bpmn2:incoming>SequenceFlow_100</bpmn2:incoming>
-            <bpmn2:outgoing>SequenceFlow_101</bpmn2:outgoing>
+            <bpmn2:outgoing>SequenceFlow_1800</bpmn2:outgoing>
         </bpmn2:callActivity>
         <bpmn2:callActivity id="CallActivity_31" name="Standard Order">
             <bpmn2:extensionElements>
@@ -227,7 +280,7 @@
         </bpmn2:exclusiveGateway>
         <bpmn2:startEvent id="StartEvent_2" name="Start Timer">
             <bpmn2:outgoing>SequenceFlow_100</bpmn2:outgoing>
-            <bpmn2:timerEventDefinition id="TimerEventDefinition_17650">
+            <bpmn2:timerEventDefinition id="TimerEventDefinition_293393">
                 <bpmn2:extensionElements>
                     <ifl:property>
                         <key>scheduleKey</key>
@@ -248,9 +301,11 @@
                 </bpmn2:extensionElements>
             </bpmn2:timerEventDefinition>
         </bpmn2:startEvent>
-        <bpmn2:sequenceFlow id="SequenceFlow_104" sourceRef="CallActivity_30" targetRef="EndEvent_2"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_101" sourceRef="CallActivity_10" targetRef="ExclusiveGateway_20"/>
-        <bpmn2:sequenceFlow id="SequenceFlow_105" sourceRef="CallActivity_31" targetRef="EndEvent_2"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_101" sourceRef="CallActivity_800" targetRef="ExclusiveGateway_20"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_900" sourceRef="CallActivity_900" targetRef="EndEvent_2"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_104" sourceRef="CallActivity_30" targetRef="CallActivity_900"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_1800" sourceRef="CallActivity_10" targetRef="CallActivity_800"/>
+        <bpmn2:sequenceFlow id="SequenceFlow_105" sourceRef="CallActivity_31" targetRef="CallActivity_900"/>
         <bpmn2:sequenceFlow id="SequenceFlow_102" name="Priority" sourceRef="ExclusiveGateway_20" targetRef="CallActivity_30">
             <bpmn2:extensionElements>
                 <ifl:property>
@@ -266,7 +321,7 @@
                     <value>ctype::FlowstepVariant/cname::GatewayRoute/version::1.0.0</value>
                 </ifl:property>
             </bpmn2:extensionElements>
-            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_102_1794846483925" xsi:type="bpmn2:tFormalExpression">/order/amount &gt; 1000</bpmn2:conditionExpression>
+            <bpmn2:conditionExpression id="FormalExpression_SequenceFlow_102_1794898177545" xsi:type="bpmn2:tFormalExpression">/order/amount &gt; 1000</bpmn2:conditionExpression>
         </bpmn2:sequenceFlow>
         <bpmn2:sequenceFlow id="SequenceFlow_103" name="Default Standard" sourceRef="ExclusiveGateway_20" targetRef="CallActivity_31">
             <bpmn2:extensionElements>
@@ -289,16 +344,16 @@
     <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
         <bpmndi:BPMNPlane bpmnElement="Collaboration_1" id="BPMNPlane_1">
             <bpmndi:BPMNShape bpmnElement="ExclusiveGateway_20" id="BPMNShape_ExclusiveGateway_20">
-                <dc:Bounds height="40.0" width="40.0" x="570.0" y="138.0"/>
+                <dc:Bounds height="0.0" width="0.0" x="570.0" y="138.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_10" id="BPMNShape_CallActivity_10">
                 <dc:Bounds height="60.0" width="100.0" x="390.0" y="128.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="EndEvent_2" id="BPMNShape_EndEvent_2">
-                <dc:Bounds height="32.0" width="32.0" x="950.0" y="142.0"/>
+                <dc:Bounds height="0.0" width="0.0" x="1250.0" y="142.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="StartEvent_2" id="BPMNShape_StartEvent_2">
-                <dc:Bounds height="32.0" width="32.0" x="292.0" y="142.0"/>
+                <dc:Bounds height="0.0" width="0.0" x="292.0" y="142.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="CallActivity_30" id="BPMNShape_CallActivity_30">
                 <dc:Bounds height="60.0" width="100.0" x="700.0" y="100.0"/>
@@ -307,13 +362,19 @@
                 <dc:Bounds height="60.0" width="100.0" x="700.0" y="220.0"/>
             </bpmndi:BPMNShape>
             <bpmndi:BPMNShape bpmnElement="Participant_Process_1" id="BPMNShape_Participant_Process_1">
-                <dc:Bounds height="300.0" width="800.0" x="250.0" y="60.0"/>
+                <dc:Bounds height="650.0" width="1100.0" x="250.0" y="60.0"/>
             </bpmndi:BPMNShape>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_104" id="BPMNEdge_SequenceFlow_104" sourceElement="BPMNShape_CallActivity_30" targetElement="BPMNShape_EndEvent_2">
+            <bpmndi:BPMNShape bpmnElement="CallActivity_800" id="BPMNShape_CallActivity_800">
+                <dc:Bounds height="60.0" width="100.0" x="450.0" y="325.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="CallActivity_900" id="BPMNShape_CallActivity_900">
+                <dc:Bounds height="60.0" width="100.0" x="1100.0" y="325.0"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_104" id="BPMNEdge_SequenceFlow_104" sourceElement="BPMNShape_CallActivity_30" targetElement="BPMNShape_CallActivity_900">
                 <di:waypoint x="800.0" xsi:type="dc:Point" y="130.0"/>
                 <di:waypoint x="950.0" xsi:type="dc:Point" y="142.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_105" id="BPMNEdge_SequenceFlow_105" sourceElement="BPMNShape_CallActivity_31" targetElement="BPMNShape_EndEvent_2">
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_105" id="BPMNEdge_SequenceFlow_105" sourceElement="BPMNShape_CallActivity_31" targetElement="BPMNShape_CallActivity_900">
                 <di:waypoint x="800.0" xsi:type="dc:Point" y="250.0"/>
                 <di:waypoint x="950.0" xsi:type="dc:Point" y="142.0"/>
             </bpmndi:BPMNEdge>
@@ -321,7 +382,7 @@
                 <di:waypoint x="292.0" xsi:type="dc:Point" y="142.0"/>
                 <di:waypoint x="390.0" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
-            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_101" id="BPMNEdge_SequenceFlow_101" sourceElement="BPMNShape_CallActivity_10" targetElement="BPMNShape_ExclusiveGateway_20">
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_101" id="BPMNEdge_SequenceFlow_101" sourceElement="BPMNShape_CallActivity_800" targetElement="BPMNShape_ExclusiveGateway_20">
                 <di:waypoint x="490.0" xsi:type="dc:Point" y="158.0"/>
                 <di:waypoint x="570.0" xsi:type="dc:Point" y="158.0"/>
             </bpmndi:BPMNEdge>
@@ -332,6 +393,14 @@
             <bpmndi:BPMNEdge bpmnElement="SequenceFlow_103" id="BPMNEdge_SequenceFlow_103" sourceElement="BPMNShape_ExclusiveGateway_20" targetElement="BPMNShape_CallActivity_31">
                 <di:waypoint x="610.0" xsi:type="dc:Point" y="158.0"/>
                 <di:waypoint x="700.0" xsi:type="dc:Point" y="250.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1800" id="BPMNEdge_SequenceFlow_1800" sourceElement="BPMNShape_CallActivity_10" targetElement="BPMNShape_CallActivity_800">
+                <di:waypoint x="490.0" xsi:type="dc:Point" y="158.0"/>
+                <di:waypoint x="450.0" xsi:type="dc:Point" y="355.0"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="SequenceFlow_900" id="BPMNEdge_SequenceFlow_900" sourceElement="BPMNShape_CallActivity_900" targetElement="BPMNShape_EndEvent_2">
+                <di:waypoint x="1200.0" xsi:type="dc:Point" y="355.0"/>
+                <di:waypoint x="950.0" xsi:type="dc:Point" y="142.0"/>
             </bpmndi:BPMNEdge>
         </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>

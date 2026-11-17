@@ -1,0 +1,7 @@
+{
+  "idMappingSameKeyStable": true,
+  "idMappingDifferentKeyDistinct": true,
+  "idempotentFirstExecuted": true,
+  "idempotentDuplicateSkipped": true,
+  "idempotentNewKeyExecuted": true
+}

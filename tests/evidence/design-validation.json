@@ -1,0 +1,932 @@
+[
+  {
+    "id": "IF_TRN_001_Hello_World",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "H01"
+  },
+  {
+    "id": "IF_TRN_007_GZIP_Roundtrip",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass GZip message to Decoder/GZIP Decompress. Decoder/GZIP Decompress supports GZip input only.",
+          "elementId": "CallActivity_102",
+          "elementType": "CallActivity",
+          "attributeId": "iflow.advance.decoder.tab",
+          "location": "base - GZIP Decompress",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 007 - GZIP Roundtrip.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "L007_1"
+  },
+  {
+    "id": "IF_TRN_008_ZIP_Roundtrip",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass Zip message to Decoder/ZIP Decompress. Decoder/ZIP Decompress supports Zip input only.",
+          "elementId": "CallActivity_102",
+          "elementType": "CallActivity",
+          "attributeId": "iflow.advance.decoder.tab",
+          "location": "base - ZIP Decompress",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 008 - ZIP Roundtrip.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "L008_1"
+  },
+  {
+    "id": "IF_TRN_009_XML_Declaration",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML Modifier. XML Modifier supports XML input only.",
+          "elementId": "CallActivity_190",
+          "elementType": "CallActivity",
+          "location": "substitute - XML Modifier",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 009 - XML Declaration.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML Modifier. XML Modifier supports XML input only.",
+          "elementId": "CallActivity_130",
+          "elementType": "CallActivity",
+          "location": "keep - XML Modifier",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 009 - XML Declaration.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML Modifier. XML Modifier supports XML input only.",
+          "elementId": "CallActivity_160",
+          "elementType": "CallActivity",
+          "location": "clean - XML Modifier",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 009 - XML Declaration.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML Modifier. XML Modifier supports XML input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - XML Modifier",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 009 - XML Declaration.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML Modifier. XML Modifier supports XML input only.",
+          "elementId": "CallActivity_220",
+          "elementType": "CallActivity",
+          "location": "dtd - XML Modifier",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 009 - XML Declaration.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "XML09_REMOVE"
+  },
+  {
+    "id": "IF_TRN_010_XML_to_CSV",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML To CSV Converter. XML To CSV Converter supports XML input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - XML To CSV Converter",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 010 - XML to CSV.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML To CSV Converter. XML To CSV Converter supports XML input only.",
+          "elementId": "CallActivity_160",
+          "elementType": "CallActivity",
+          "location": "pipe - XML To CSV Converter",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 010 - XML to CSV.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML To CSV Converter. XML To CSV Converter supports XML input only.",
+          "elementId": "CallActivity_190",
+          "elementType": "CallActivity",
+          "location": "header - XML To CSV Converter",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 010 - XML to CSV.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML To CSV Converter. XML To CSV Converter supports XML input only.",
+          "elementId": "CallActivity_130",
+          "elementType": "CallActivity",
+          "location": "semi - XML To CSV Converter",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 010 - XML to CSV.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "CSV10_ROWS"
+  },
+  {
+    "id": "IF_TRN_011_XML_JSON_Roundtrip",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML To JSON Converter. XML To JSON Converter supports XML input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - XML To JSON Converter",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 011 - XML JSON Roundtrip.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "RT11_ORDER"
+  },
+  {
+    "id": "IF_TRN_012_Base64_Roundtrip",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "L012_1"
+  },
+  {
+    "id": "IF_TRN_013_SHA256_Digest",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to Message Digest. Message Digest supports XML input only.",
+          "elementId": "CallActivity_220",
+          "elementType": "CallActivity",
+          "location": "MD5 - Message Digest",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 013 - SHA256 Digest.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to Message Digest. Message Digest supports XML input only.",
+          "elementId": "CallActivity_160",
+          "elementType": "CallActivity",
+          "location": "SHA-512 - Message Digest",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 013 - SHA256 Digest.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to Message Digest. Message Digest supports XML input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "SHA-256 - Message Digest",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 013 - SHA256 Digest.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to Message Digest. Message Digest supports XML input only.",
+          "elementId": "CallActivity_190",
+          "elementType": "CallActivity",
+          "location": "SHA-1 - Message Digest",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 013 - SHA256 Digest.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to Message Digest. Message Digest supports XML input only.",
+          "elementId": "CallActivity_130",
+          "elementType": "CallActivity",
+          "location": "SHA-384 - Message Digest",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 013 - SHA256 Digest.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "HASH13_SHA256"
+  },
+  {
+    "id": "IF_TRN_014_General_Splitter_Gather",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "SP14_TWO"
+  },
+  {
+    "id": "IF_TRN_015_Iterating_Splitter_Gather",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "SP15_TWO"
+  },
+  {
+    "id": "IF_TRN_016_Line_Splitter_Gather",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "LINE16_LF"
+  },
+  {
+    "id": "IF_TRN_017_Data_Store_Roundtrip",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "DS17_XML"
+  },
+  {
+    "id": "IF_TRN_018_Data_Store_Missing_Entry",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "DS18_REQUIRED"
+  },
+  {
+    "id": "IF_TRN_019_Persist_Message",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "PERSIST19_XML"
+  },
+  {
+    "id": "IF_TRN_020_MIME_Roundtrip",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "L020_1"
+  },
+  {
+    "id": "IF_TRN_021_Timer_Hello",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "TIMER21_START"
+  },
+  {
+    "id": "IF_TRN_022_Local_Process_Call",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "PC22_DEFAULT"
+  },
+  {
+    "id": "IF_TRN_023_Router",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to Sequence Flow. Sequence Flow supports XML input only.",
+          "elementId": "SequenceFlow_102",
+          "elementType": "SequenceFlow",
+          "attributeId": "iflow.advance.sequenceflow.tab",
+          "location": "Priority",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 023 - Router.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "ROUTE23_HIGH"
+  },
+  {
+    "id": "IF_TRN_024_Parallel_Multicast",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "MC24_BASE"
+  },
+  {
+    "id": "IF_TRN_025_Groovy_Uppercase",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "SCRIPT25_TEXT"
+  },
+  {
+    "id": "IF_TRN_026_JavaScript_Uppercase",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "SCRIPT26_TEXT"
+  },
+  {
+    "id": "IF_TRN_027_XSLT_Mapping",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XSLT Mapping. XSLT Mapping supports XML input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - XSLT Mapping",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 027 - XSLT Mapping.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "XSLT27_NAME"
+  },
+  {
+    "id": "IF_TRN_028_XML_Validator_Valid",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML Validator. XML Validator supports XML input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - XML Validator",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 028 - XML Validator Valid.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "VAL28_VALID"
+  },
+  {
+    "id": "IF_TRN_029_XML_Validator_Invalid",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML Validator. XML Validator supports XML input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - XML Validator",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 029 - XML Validator Invalid.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "VAL29_TEXT"
+  },
+  {
+    "id": "IF_TRN_030_CSV_to_XML",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass Text message to CSV To XML Converter. CSV To XML Converter supports Text input only.",
+          "elementId": "CallActivity_160",
+          "elementType": "CallActivity",
+          "location": "semi - CSV To XML Converter",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 030 - CSV to XML.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass Text message to CSV To XML Converter. CSV To XML Converter supports Text input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - CSV To XML Converter",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 030 - CSV to XML.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass Text message to CSV To XML Converter. CSV To XML Converter supports Text input only.",
+          "elementId": "CallActivity_130",
+          "elementType": "CallActivity",
+          "location": "header - CSV To XML Converter",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 030 - CSV to XML.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "CSV30_ROWS"
+  },
+  {
+    "id": "IF_TRN_031_Sequential_Multicast",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "MC31_BASE"
+  },
+  {
+    "id": "IF_TRN_032_Looping_Process_Call",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "LOOP32_ZERO"
+  },
+  {
+    "id": "IF_TRN_033_Loop_Maximum_Guard",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "LOOP33_GUARD"
+  },
+  {
+    "id": "IF_TRN_034_Idempotent_Process_Call",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "IDEMP34_FIRST"
+  },
+  {
+    "id": "IF_TRN_035_Exception_Handled",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML Validator. XML Validator supports XML input only.",
+          "elementId": "CallActivity_11",
+          "elementType": "CallActivity",
+          "location": "XmlValidator",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 035 - Exception Handled.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "EX35_TEXT"
+  },
+  {
+    "id": "IF_TRN_036_Exception_Rethrown",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML Validator. XML Validator supports XML input only.",
+          "elementId": "CallActivity_11",
+          "elementType": "CallActivity",
+          "location": "XmlValidator",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 036 - Exception Rethrown.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "EX36_TEXT"
+  },
+  {
+    "id": "IF_TRN_037_Error_End_Event",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "END37_TEXT"
+  },
+  {
+    "id": "IF_TRN_038_Escalation_End_Event",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "END38_TEXT"
+  },
+  {
+    "id": "IF_TRN_039_Terminate_Message",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "END39_TEXT"
+  },
+  {
+    "id": "IF_TRN_040_Plain_End_Event",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "END40_TEXT"
+  },
+  {
+    "id": "IF_TRN_041_ID_Mapping",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "MAP41_FIRST"
+  },
+  {
+    "id": "IF_TRN_042_Write_Variables",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "VAR42_TEXT"
+  },
+  {
+    "id": "IF_TRN_043_Data_Store_Select",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "SELECT43_TWO"
+  },
+  {
+    "id": "IF_TRN_044_ZIP_Splitter",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass Base64Encoded message to Decoder/Base64 Decode. Decoder/Base64 Decode supports Base64Encoded input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "attributeId": "iflow.advance.decoder.tab",
+          "location": "base - Base64 Decode",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 044 - ZIP Splitter.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "ARC44_TWO"
+  },
+  {
+    "id": "IF_TRN_045_Tar_Splitter",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass Base64Encoded message to Decoder/Base64 Decode. Decoder/Base64 Decode supports Base64Encoded input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "attributeId": "iflow.advance.decoder.tab",
+          "location": "base - Base64 Decode",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 045 - Tar Splitter.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "ARC45_TWO"
+  },
+  {
+    "id": "IF_TRN_046_Headers_Properties",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "HP46_DEFAULT"
+  },
+  {
+    "id": "IF_TRN_047_XPath_Property",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "XP47_NAME"
+  },
+  {
+    "id": "IF_TRN_048_Request_Reply",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "CALL48_MATCH"
+  },
+  {
+    "id": "IF_TRN_049_Local_Mock_Receiver",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "LIVE"
+  },
+  {
+    "id": "IF_TRN_050_Send_Local_Message",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "CALL50_MATCH"
+  },
+  {
+    "id": "IF_TRN_051_Content_Enricher",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "CALL51_MATCH"
+  },
+  {
+    "id": "IF_TRN_053_Aggregator",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Content Modifier may not pass XML message to Aggregator. Aggregator supports XML input only.",
+          "elementId": "CallActivity_11",
+          "elementType": "CallActivity",
+          "location": "Correlate Orders",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 053 - Aggregator.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "LIVE"
+  },
+  {
+    "id": "IF_TRN_054_EDI_Extractor",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass Text message to EDI Extractor. EDI Extractor supports Text input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - EDI Extractor",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 054 - EDI Extractor.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "EDI54_ORDER"
+  },
+  {
+    "id": "IF_TRN_055_EDI_Splitter",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass non-XML message to EDISplitter. EDISplitter supports non-XML input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - EDI Splitter",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 055 - EDI Splitter.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "EDI55_TWO"
+  },
+  {
+    "id": "IF_TRN_056_EDI_XML_Roundtrip",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass non-XML message to EDI to XML Converter. EDI to XML Converter supports non-XML input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - EDI to XML Converter",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 056 - EDI XML Roundtrip.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "EDI56_NO_SCHEMA"
+  },
+  {
+    "id": "IF_TRN_057_Aggregator_Trigger",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "TRIGGER57_ORDERED"
+  },
+  {
+    "id": "IF_TRN_058_Message_Mapping",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML or JSON message to Message Mapping. Message Mapping supports XML or JSON input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - Message Mapping",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 058 - Message Mapping.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "MM58_NAME"
+  },
+  {
+    "id": "IF_TRN_059_Externalized_Parameter",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "PARAM59_DEFAULT"
+  },
+  {
+    "id": "IF_TRN_060_CMS_Encrypt_Decrypt",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass Binary message to Decryptor. Decryptor supports Binary input only.",
+          "elementId": "CallActivity_102",
+          "elementType": "CallActivity",
+          "location": "base - PKCS7",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 060 - CMS Encrypt Decrypt.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "SEC60_TEXT"
+  },
+  {
+    "id": "IF_TRN_061_CMS_Sign_Verify",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "SEC61_TEXT"
+  },
+  {
+    "id": "IF_TRN_062_Simple_Signer",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "SEC62_TEXT"
+  },
+  {
+    "id": "IF_TRN_063_XML_Sign_Verify",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML Signer. XML Signer supports XML input only.",
+          "elementId": "CallActivity_100",
+          "elementType": "CallActivity",
+          "location": "base - XML Signer",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 063 - XML Sign Verify.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        },
+        {
+          "severity": "Warning",
+          "message": "Script may not pass XML message to XML Verifier. XML Verifier supports XML input only.",
+          "elementId": "CallActivity_102",
+          "elementType": "CallActivity",
+          "location": "base - XML Signature Verifier",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 063 - XML Sign Verify.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "SEC63_XML"
+  },
+  {
+    "id": "IF_TRN_064_PGP_Encrypt_Decrypt",
+    "validation": {
+      "hasValidationIssues": true,
+      "isDeployRestricted": false,
+      "problems": [
+        {
+          "severity": "Warning",
+          "message": "Script may not pass Binary message to PGP Decryptor. PGP Decryptor supports Binary input only.",
+          "elementId": "CallActivity_102",
+          "elementType": "CallActivity",
+          "attributeId": "iflow.advance.pgp.decrypt.tab",
+          "location": "base - PGP Decryptor",
+          "resourcePath": "src/main/resources/scenarioflows/integrationflow",
+          "resourceName": "TRN 064 - PGP Encrypt Decrypt.iflw",
+          "resourceRelativePath": "scenarioflows/integrationflow"
+        }
+      ]
+    },
+    "defaultScenario": "SEC64_TEXT"
+  },
+  {
+    "id": "IF_TRN_065_CMS_Signature_Splitter",
+    "validation": {
+      "hasValidationIssues": false,
+      "isDeployRestricted": false,
+      "problems": []
+    },
+    "defaultScenario": "SEC65_TEXT"
+  }
+]
