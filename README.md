@@ -2,6 +2,8 @@
 
 Source-controlled snapshot of the `CPITrainingCanvasExamples` SAP Cloud Integration package.
 
+Private repository: https://github.com/sivadatabricksbatch20/sap-cpi-training-canvas-examples
+
 ## Delivery status
 
 - 64 teaching iFlows.

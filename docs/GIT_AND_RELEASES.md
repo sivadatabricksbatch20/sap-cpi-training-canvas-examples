@@ -1,21 +1,18 @@
 # Git setup and release workflow
 
-## Intended private repository
+## Private repository
 
-`https://github.com/sivadatabricksbatch20/sap-cpi-training-canvas-examples`
+https://github.com/sivadatabricksbatch20/sap-cpi-training-canvas-examples
 
-The connected GitHub integration returned `Resource not accessible by integration (createRepository)`. A local Git commit and portable source bundle can be prepared, but a remote repository must exist and be accessible before pushing. This is not an SAP authorization problem.
-
-Create an empty **private** repository with the name above, without an initial README/license/gitignore. Grant the connected GitHub app access to it. Do not send passwords or personal access tokens through chat.
-
-After the repository is available:
+The repository holds the complete training source snapshot. Clone it using your authorized GitHub identity:
 
 ```bash
-git remote add origin https://github.com/sivadatabricksbatch20/sap-cpi-training-canvas-examples.git
-# Skip the add command if origin is already set.
-git push -u origin main
-git push origin training-snapshot-2026-11-17
+git clone https://github.com/sivadatabricksbatch20/sap-cpi-training-canvas-examples.git
+cd sap-cpi-training-canvas-examples
+python scripts/validate_repository.py
 ```
+
+For future changes, create a feature branch, commit exported sources and related tests, push the branch and open a pull request. Do not send passwords or personal access tokens through chat.
 
 ## Native SAP Git Push
 
@@ -27,7 +24,7 @@ Observed in this tenant: package → Artifacts → artifact Actions → **Git Pu
 - Branch
 - Commit Message
 
-Use a dedicated, least-privilege GitHub credential for the target private repository and enter it directly in SAP's secure credential field. The connected CLI integration token is not copied into SAP or committed to this repository. Native Git Push has not been claimed configured or tested while remote creation is blocked.
+Use a dedicated, least-privilege GitHub credential for the target private repository and enter it directly in SAP's secure credential field. The connected CLI integration token is not copied into SAP or committed to this repository. The GitHub repository and local origin are configured. Native SAP Git Push authentication remains separate and has not been configured or tested; enter a dedicated repository credential directly in SAP when using that feature.
 
 A native SAP Git push may use a different artifact directory layout from the review-oriented unpacked `iflows/` tree. Test a single artifact on a separate branch before combining both approaches. Do not overwrite `main` from an unverified native layout.
 
